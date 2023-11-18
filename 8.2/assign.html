@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //只想一个对象具有多个对象的功能
+
+         //声明一个人的对象
+        let human = {
+            name:'人',
+            sex:'男',
+            height:'180cm',
+            say(){
+                console.log('说句话～');
+            }
+        }
+
+
+        //声明一个鸟的对象
+        let bird = {
+            sex:'雄性',
+            wing:'带羽毛的翅膀',
+            fly(){
+                console.log('飞起啦啦～')
+            }
+        }
+
+        //声明一个对象
+        let snake = {
+            tail:'细长的尾巴',
+            pen(){
+                console.log('我有毒～');
+            }
+        }
+
+
+        let flyman = Object.assign(human,bird,snake);
+        console.log(flyman)
+        flyman.pen()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

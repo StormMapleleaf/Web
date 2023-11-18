@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        
+
+        //1.声明式函数（允许提升，程序预处理）
+        function go(name){
+            console.log('狗狗'+name+'go了～');
+        }
+
+        //调用函数
+        //go('阿黄');
+
+        //2.表达式函数
+        let come = function (name){
+            console.log('狗狗'+name+'过来～ß');
+        }
+        
+        //调用函数 (不会被提升，必须顺序执行)
+        //come('小黑');
+
+        //3.箭头函数
+        let eat = (name)=>{
+            console.log('狗狗'+name+'爱吃shi～');
+        }
+        //调用函数 (不会被提升，必须顺序执行)
+        //eat('大黄');
+
+
+        //4.表达式函数(不要用)
+        let xuxu = new Function(name,"console.log('狗狗'+name+'爱标注领地')");
+
+        //调用函数
+        xuxu('大黑');
+
+        //所有函数都是对象，所有数据都是对象。
+
+        //查看函数的名称 （对象访问属性的方式）
+        console.log(go.name);
+        console.log(come.name);
+        console.log(eat.name);
+        console.log(xuxu.name);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

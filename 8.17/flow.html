@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+
+        #imgArea li{
+            float:left;
+            border:1px solid red;
+            margin:5px
+        }
+
+        #imgArea li div{
+            margin:10px;
+            box-shadow: 5px 5px 10px  gray;
+        }
+
+        #imgArea img{
+            width:430px;
+            height:430px;
+        }
+
+    </style>
+</head>
+<body>
+    <!---显示图片的区域-->
+    <div id="imgArea">
+        <ul>
+            <li>
+                <!--图片的结构模板
+                <div>
+                    <img src="./images/1.jpg" alt="">
+                </div>
+                -->
+
+            </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+
+    </div>
+
+    <script>
+        //事件操作
+
+        //设置计数变量  页数
+        let page = 1;
+
+        //获取页面中的所有li组成的数组
+        let lis = document.querySelectorAll('#imgArea li')
+
+
+
+        function getImg(){
+            //向服务器获取要加载的图片内容
+            let promise = fetch('http://127.0.0.1:8081/getMore?page='+page+'&no=16')  //http://127.0.0.1:8081/getMore?page=2&no=16  ...
+            
+            //then操作
+            promise
+            .then((response)=>{
+                return response.json();
+            })
+            .then((data)=>{
+
+                //将返回的图片地址加入img标签插入页面中使用
+
+                data.forEach(function(imgurl,index,array){
+                    //创建图片节点
+                    let img = document.createElement('img')
+                    img.src = imgurl;
+
+                    //创建div
+                    let div = document.createElement('div')
+                    div.appendChild(img)
+                    //插入到指定的li中
+                    //平均分布的操作
+                    //console.log(index%4)
+                    lis[index%4].appendChild(div)
+                })  
+
+            })
+        }
+
+
+        //读取第一页的数据
+        getImg()
+
+        //为页面添加滚动事件
+        document.addEventListener('scroll',function(e){
+            //判断是否滚动到了指定的位置
+            //console.log(document.body.scrollHeight)
+            //console.log( document.documentElement.scrollTop)
+
+            if(document.body.scrollHeight - document.documentElement.scrollTop <1000){
+                getImg()
+                //请求过后页数加1
+                page++;
+            }
+            
+
+        })  
+
+
+    </script>
+    
+</body>
+</html>

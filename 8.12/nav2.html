@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+
+        #nav>ul>li{
+            float:left;
+            border:1px solid red;
+            padding:10px 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+        #nav>ul>li>h3{
+            font-size:30px;
+        }
+
+
+        #nav>ul>li>ul{
+            position: absolute;
+            left:0;
+            top:60px;
+            border:1px solid green;
+            display: none;
+        }
+
+        #nav>ul>li>ul>li{
+            width:200px;
+            background-color: brown;
+            padding: 15px;
+            border-bottom:1px solid gray
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li>
+                <h3>张青宇</h3>
+                <ul>
+                    <li>身高：188</li>
+                    <li>体重：188</li>
+                    <li>颜色：屎黄</li>
+                    <li>腰围:88m</li>
+                </ul>
+            </li>
+            <li>
+                <h3>张雨川</h3>
+                <ul>
+                    <li>身高：188</li>
+                    <li>体重：188</li>
+                    <li>颜色：屎黄</li>
+                    <li>腰围:88m</li>
+                </ul>
+            </li>
+            <li>
+                <h3>张恬玉</h3>
+                <ul>
+                    <li>身高：188</li>
+                    <li>体重：188</li>
+                    <li>颜色：屎黄</li>
+                    <li>腰围:88m</li>
+                </ul>
+            </li>
+            <li>
+                <h3>张昭仪</h3>
+                <ul>
+                    <li>身高：188</li>
+                    <li>体重：188</li>
+                    <li>颜色：屎黄</li>
+                    <li>腰围:88m</li>
+                </ul>
+            </li>
+            <li>
+                <h3>张载阳</h3>
+                <ul>
+                    <li>身高：188</li>
+                    <li>体重：188</li>
+                    <li>颜色：屎黄</li>
+                    <li>腰围:88m</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        //获取所有的一级标题li
+        let lis =document.querySelectorAll('#nav>ul>li')
+        console.log(lis)
+
+        //遍历所有一级标题 添加事件
+        lis.forEach(function(li,index,arry){
+            //添加鼠标经过
+            li.addEventListener('mouseover',function(){
+                li.querySelector('ul').style.display='block'
+            })
+
+            //添加鼠标移出
+            li.addEventListener('mouseout',function(){
+                li.querySelector('ul').style.display='none'
+            })
+        })
+
+
+    </script>
+    
+</body>
+</html>

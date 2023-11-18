@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./s.css">
+    <script>
+        //打开时获取设备的方向，根据方向使用不同的样式
+        let angle = window.screen.orientation.angle;
+        //获取link你标签
+        let link = document.getElementsByTagName('link')[0];
+
+
+        //判断设备方向
+        if(angle == 0){//竖屏
+            link.href = './s.css'
+        }else{//横屏
+            link.href = './h.css'
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

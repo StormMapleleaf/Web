@@ -1,0 +1,56 @@
+body{
+        background-color: red;
+    }
+    
+    .row{
+        display: grid;
+        width:100%;
+        grid-template-columns: repeat(12,1fr);
+        gap:10px;
+    }
+    
+    .column-s-12{
+        grid-column: span 12;
+    }
+    
+    .column-s-11{
+        grid-column: span 11;
+    }
+    
+    .column-s-10{
+        grid-column: span 10;
+    }
+    
+    .column-s-9{
+        grid-column: span 9;
+    }
+    
+    .column-s-8{
+        grid-column: span 8;
+    }
+    
+    .column-s-7{
+        grid-column: span 7;
+    }
+    
+    .column-s-6{
+        grid-column: span 6;
+    }
+    
+    .column-s-5{
+        grid-column: span 5;
+    }
+    .column-s-4{
+        grid-column: span 4;
+    }
+    .column-s-3{
+        grid-column: span 3;
+    }
+    .column-s-2{
+        grid-column: span 2;
+    }
+    .column-s-1{
+        grid-column: span 1;
+    }
+    ;
+}

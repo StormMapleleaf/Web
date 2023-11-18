@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #goods{
+            width:500px;
+            height:300px;
+            border: 5px solid green ;
+            position: relative;
+        }
+        #goods>img{
+            width:500px;
+            height:300px;
+        }
+
+        #focusArea{
+            position: absolute;
+            left:0;
+            top:0;
+            background-color:rgba(255,255,0,0.4);
+            width:100px;
+            height:100px;
+        }   
+
+
+        #bigArea{
+            position: absolute;
+            left:505px;
+            top:-5px;
+            width:500px;
+            height:500px;
+            background-color: gray;
+            overflow: hidden;
+            display: none;
+        }
+
+        #bigArea img{
+            position: absolute;
+            width:2500px;
+            height:1500px;
+            left:100px;
+            top:100px;
+        }
+
+    </style>
+    <script src="./jquery-3.7.0.min.js"></script>
+</head>
+<body>
+
+    <div id="goods">
+        <img src="./julia.jpg" alt="">
+        <!--焦点区域-->
+        <div id="focusArea"></div>
+        <!--放大区域-->
+        <div id="bigArea">
+            <img src="./julia.jpg" alt="">
+        </div>
+    </div>
+    <script>
+
+        $(function(){
+
+
+            //获取元素相对于文档的距离
+            let position = $('#goods').offset()
+            console.log(position)
+
+            $('#goods').on('mousemove',function(e){
+                //console.log(e.pageX,e.pageY)
+
+
+                //计算鼠标相对于goodsdiv的距离
+
+                let x = e.pageX - position.left;
+                let y = e.pageY-position.top;
+
+                //将鼠标移动到黄色焦点区域的中间
+                let left = x - 50;
+                let top = y - 50
+
+
+
+                //上下左右的碰边判断
+                //左侧 
+                if(left < 0){
+                    left = 0
+                }
+
+                //顶部
+                if(top<0){
+                    top = 0
+                }
+
+                //右侧
+                if(left + 100>500){
+                    left = 400
+                }
+
+
+                //底部
+                if(top+100>300){
+                    top = 200
+                }
+
+
+                //给元素设置坐标
+
+                $('#focusArea').css('left',left+'px').css('top',top+'px')
+
+                //为大图片设置移动距离
+                $('#bigArea img').css('left',left*-5+'px').css('top',top*-5+'px')
+
+            })
+            .on('mouseover',function(){
+                //显示大图区域
+                $('#bigArea').css('display','block')
+            })
+            .on('mouseout',function(){
+                //隐藏大图区域
+                $('#bigArea').css('display','none')
+            })
+
+            
+
+
+
+
+
+
+
+
+
+        })
+
+    </script>
+</body>
+</html>

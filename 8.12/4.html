@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        //获取元素
+        let mydiv = document.getElementById('mydiv');
+
+        //添加事件 DOM2
+
+        //事件函数
+        function add(){
+            //改变元素背景
+            this.style.background = 'green'
+        }
+        
+        //addEventListener() 添加事件
+        mydiv.addEventListener('click',add,false)
+        
+
+        //取消事件
+        setTimeout(function(){
+            //5秒后取消事件
+            console.log('取消事件')
+            mydiv.removeEventListener('click',add,false)
+        },5000)
+
+    </script>
+</body>
+</html>

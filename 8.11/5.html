@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first">
+        <div>动作捕捉软件</div>
+        <div id="caton1">可以进行二次元直播</div>
+        <div class="red">配合变声器</div>
+        <div class="red green">抠脚大汉秒变奶生萝莉</div>
+    </div>
+
+    <hr>
+    <div>
+        <div>动作捕捉软件</div>
+        <div id="caton2">可以进行二次元直播</div>
+        <div class="red">配合变声器</div>
+        <div class="red green">抠脚大汉秒变奶生萝莉</div>
+    </div>
+    <script>
+        //根据CSS选择器进行元素节点选取操作
+        /*
+
+        //querySelector() 支持所有的CSS选择器  选择符合CSS选择器选中的第一个元素
+        let body = document.querySelector('body')
+        console.log(body)
+
+
+        let div = document.querySelector('div>div')
+        console.log(div)
+
+        let catonDiv = document.querySelector('#caton')
+        console.log(catonDiv)
+
+        
+
+        //querySelectorAll()  选择符合CSS选择器选中的所有元素
+
+        let divs = document.querySelectorAll('div div');
+        console.log(divs)
+
+        */
+
+
+        //getElementsByClassName() 通过class属性获取元素节点、
+        //let divs = document.getElementsByClassName('green')
+        //console.log(divs)
+
+
+        //使用元素.getElementsByClassName
+
+        //获取id为first的元素
+        let first  = document.getElementById('first')
+        console.log(first)
+
+        let divs = first.getElementsByClassName('green')
+        console.log(divs)
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

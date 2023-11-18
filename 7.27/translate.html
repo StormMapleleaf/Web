@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数字类型
+        //1.整型转化 parseInt() 讲一个数据强制转换为整数
+            //浮点数：直接去掉小数部分
+            //字符串：100px ->100   '长度100.5px'->NaN    将字符串最开始部分的数字转换成整数其余舍弃，开始不是数字，都舍弃  变成NaN
+            //布尔值： 不能转换 结果都是NaN
+            //函数：不能转换 结果都是NaN
+            //对象：不能转换 结果都是NaN
+            //undefined:不能转换 结果都是NaN
+            //symbol: 语法报错
+       // let data = '100px';
+        //let result = parseInt(data);
+        //console.log(result,typeof result)
+
+
+        //2。浮点类型转换 parseFloat() 将一个数据强制转换为浮点数
+            //整数 ->浮点数，没有小数点
+            //字符串 :'105.5.6px'->105.5      'width105.5.6px'->NaN   将  字符串最开始部分的数字转换成浮点数数其余舍弃，开始不是数字，都舍弃  变成NaN
+            //布尔值： 不能转换 结果都是NaN
+            //函数：不能转换 结果都是NaN
+            //对象：不能转换 结果都是NaN
+            //undefined:不能转换 结果都是NaN
+            //symbol: 语法报错
+        //let data = Symbol();
+        //let result = parseFloat(data);
+        //console.log(result,typeof result)
+
+
+        //3.Number() 将其他数据转换为number
+            //所有数字类型不会转换
+            //字符串: 只有纯数字字符串可以转换，其余都是NaN
+            //布尔值： true->1  false->0
+            //函数： 不能转换 结果都是NaN
+            //对象：不能转换 结果都是NaN
+            //null: 转换为0
+            //undefined:结果为NaN
+            //symbol: 语法报错
+
+        //let data = Symbol();
+        //let result = Number(data);
+        //console.log(result,typeof result)
+
+        //字符串类型转换
+            // undefined ->undefined字符
+            // 数字->数字字符串
+            //布尔值： 字符串 true  和false字符串
+            //函数：将函数整个格式转换为字符串
+            //对象类型：[object Object]  对象查看结果
+            //symbol()：Symbol()字符串
+            //null: null字符串
+
+        //String()
+        //let data = null;
+        //let result = String(data);
+        //console.log(result,typeof result)
+
+        //toString()
+        
+
+        //let data = 88;
+        //let result = data.toString();
+        //console.log(result,typeof result)
+
+
+        //boolean转换 Boolean()
+        //undefined  ->false
+        //字符串：空字符串->false 其余都是true
+        //number: 0和0.0、NaN 转换为false 其余都是true
+        //function：都是true
+        //object： null-> false 其余都是true
+        //Symbol(); 都是true
+
+        let data = Symbol();
+        let result = Boolean(data);
+        console.log(result,typeof result)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

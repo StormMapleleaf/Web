@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #mydiv{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="mydiv" ></div>
+    <script>
+        //获取div
+        let mydiv = document.getElementById('mydiv')
+
+        //样式操作
+        mydiv.style.width="300px";
+        mydiv.style.height="300px";
+        mydiv.style.backgroundColor = 'red'
+        mydiv.style.border="5px solid green"
+        mydiv.style.fontSize = '50px';
+        mydiv.style.cssFloat = 'right'
+
+        console.log(mydiv.style.display)
+
+
+        //getComputedStyle(元素节点,伪元素字符) 获取指定节点计算后的css样式值  万能的（但是效率低）
+
+        let cssObj = document.defaultView.getComputedStyle(mydiv)
+        console.log(cssObj.display)
+        console.log(cssObj.width)
+        console.log(cssObj.backgroundColor)
+
+    </script>
+    
+</body>
+</html>

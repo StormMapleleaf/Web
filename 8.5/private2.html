@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MyUser(){
+
+            //设置弱映射用于保存私有成员
+            let priavteMemberMap = new WeakMap();
+            /*
+                [对象实例=>{
+                    私有id:999
+                    私有性别：男
+                    私有名：小四
+                }]
+            
+            */
+
+            //声明一个类
+            class User{
+                //声明构造方法
+                constructor(id){
+                    //给私有成员起名(使用Symbel防止属性名冲突，针对不需要访问的成员)
+                    this.idPrivate = Symbol('id');
+                    //调用设置id的方法
+                    this.setId(id)
+                }
+                //设置私有成员的通用方法
+                setPrivate(memberName,value){
+                    //获取所有私有成员组成对象
+                    let privateObj = priavteMemberMap.get(this)||{};//结果是私有成员组成的对象
+                    console.log(privateObj)
+                    //设置id的值
+                    privateObj[memberName]=value;//设置成功后的数据结果是私有成员组成的对象
+                    //将修改完的私有成员对象重新写入弱映射
+                    priavteMemberMap.set(this,privateObj)
+                }
+
+                //设置获取私有成员的方法
+                getPrivate(memberName){
+                    //传入获取私有成员属性名称，返回对应的值
+                    return priavteMemberMap.get(this)[memberName]
+                }
+
+
+                //在原型中添加设置私有成员ID的方法
+                setId(id){
+                    //调用私有成员设置的方法
+                    this.setPrivate(this.idPrivate,id)
+                }
+
+                getId(){
+                    //访问私有成员
+                   let id = this.getPrivate(this.idPrivate)
+                   console.log(id)
+                }
+
+
+
+
+            }
+
+
+
+
+            //返回一个类
+            return User;
+
+
+        }
+
+        let User = MyUser();
+
+
+
+        //实例话对象
+        let xiaosan = new User(8888);
+
+        xiaosan.setId(666)
+
+        xiaosan.getId()
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

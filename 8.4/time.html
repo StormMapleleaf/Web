@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //时间戳：用来表示时间的一种方式， 使用数字来表示时间，js使用整数表示时间
+        //从1970年1月1日0时0分0秒到指定时间的毫秒数（js）
+
+        //如果使用秒来做时间戳  比毫秒数少三位（毫秒数000-999）
+
+        //使用时间问题  PHP 使用时间到2038年的某一天   js还可以使用285616年
+
+
+        //时间类型划分：  本地时间和UTC时间
+
+
+        /*
+        //查看当前时间戳
+        let now = new Date();
+        console.log(now);//直接输出对象，会出发toLocaleString() 
+        console.log(now.valueOf())//输出对象的原始值
+
+        //getDate（） 获取一个月的第几天
+        console.log(now.getDate())
+
+        //getDay() 获取周几
+        console.log(now.getDay())
+
+        //getFullYear() 获取年份
+        console.log(now.getFullYear())
+
+        //getMonth() 获取月份
+        console.log(now.getMonth())
+
+        //getHours()获取小时数
+        console.log(now.getHours())
+
+        //getMinutes()分钟数
+        console.log(now.getMinutes())
+
+        //getSeconds() 获取秒数
+        console.log(now.getSeconds())
+
+        //getMilliseconds()毫秒数
+        console.log(now.getMilliseconds())
+
+        //getTime() 获取时间戳
+        console.log(now.getTime())
+
+        //getTimezoneOffset() 获取时区
+        console.log(now.getTimezoneOffset())
+        */
+
+
+        /*
+        //设置时间 仅对当前页面的当前程序有效
+        //setDate()  设置一个月的第几天
+        let now = new Date();//获取当前是假
+
+        //设置时间
+        now.setDate(9)
+
+        //setFullYear() 设置年份
+        now.setFullYear(2025)
+
+        //setMouth() 设置月份
+        now.setMonth(9)
+
+        //setHours() s设置小时数
+        now.setHours(22)
+
+        //设置分钟
+        now.setMinutes(35)
+
+        //设置秒
+        now.setSeconds(55)
+
+        //设置毫秒
+        now.setMilliseconds(99)
+
+
+        console.log(now)
+        console.log(now.getTime())
+        
+
+
+        //设置整体的时间
+        //在实例话对象的位置设置
+        //let time = new Date('2005/02/02 12:25:36');
+        //let time = new Date('2005-02-02 12:25:36');
+
+
+        //时间戳设置() 设置时间戳时utc时间 获取时候需要区分
+        let time = new Date(0);
+
+
+        //格式话数据后传入时间
+        let time1 = Date.parse('2005/02/02 12:25:36'); //获取时间字符对应的时间戳数字
+        let time2 = new Date(time1);
+        console.log(time2)
+
+        */
+
+
+        //格式话输出
+        let now = new Date();
+
+        //格式话输出
+        console.log(now.toLocaleDateString())
+        console.log(now.toLocaleTimeString())
+
+        console.log(now.toDateString())
+        console.log(now.toTimeString())
+
+        console.log(now.toISOString())
+        console.log(now.toJSON())
+
+        console.log(now.toString())
+        console.log(now.toLocaleString())
+
+        console.log(now.toUTCString())
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

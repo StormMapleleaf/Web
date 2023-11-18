@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //变量的作用域 有效范围
+
+        //1.函数外部的变量可以在函数内部使用（全局变量）
+        //2.函数外部的变量可以在函数外部使用
+
+        //3.函数内部定义的变量，只能在函数内部使用（局部变量）
+        //4.函数内部定义的变量无法在函数外部使用！
+
+        let person = '詹姆斯.赵四';//全局变量  全身麻醉
+
+        function gohome(){
+            console.log(person);
+            //定义变量(局部变量) 局部麻醉
+            let woman = '赵四.夫人';
+        }
+
+        //调用函数
+        gohome();
+
+        //调用函数内部定义的变量
+        console.log(woman)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

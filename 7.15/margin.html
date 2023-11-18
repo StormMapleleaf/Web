@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width:500px;
+            height:500px;
+            background-color: aqua;
+        }
+
+        .son{
+            width:200px;
+            height:200px;
+            background-color: black;
+            /*派生属性*/
+            margin-top:20px;
+            margin-left:20px;
+            margin-right:100px;
+            margin-bottom:100px ;
+        }
+        .shang,.xia{
+            height:100px;
+            background-color: aqua;
+        }
+        .zuo,.you{
+            width:300px;
+            height:300px;
+            background-color: red;
+            float:left
+        }
+
+        .one{
+            height:50px;
+            background-color: blue;
+            margin-top:20px ;
+        }
+
+        .two{
+            height:50px;
+            background-color: blue;
+            margin-bottom: 20px;
+        }
+        .three{
+            width:300px;
+            height:300px;
+            background-color: blue;
+            margin-left:30px;
+            float:left;
+        }
+        .four{
+            width:300px;
+            height:300px;
+            background-color: blue;
+            margin-right:30px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+
+        <div class="son"></div>
+    </div>
+    <hr>
+    <div class="shang"></div>
+    <div class="one"></div>
+    <hr >
+    <div class="two"></div>
+    <div class="xia"></div>
+    <hr>
+
+    <div class="zuo"></div>
+    <div class="three"></div>
+    <hr style="clear:both">
+    <div class="four"></div>
+    <div class="you"></div>
+</body>
+</html>

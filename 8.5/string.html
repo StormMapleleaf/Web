@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串函数
+        let str = 'http://www.baidu.com';
+        let pattern = /\./g;
+        let result = str.matchAll(pattern);
+        console.log(result)
+        for(let i of result){
+            console.log(i)
+        }
+
+        //search() 查找指定字符串的位置
+        //let str1 = '陈晓的和晏紫涵每天都在一起～睡觉！';
+
+        //let result1 = str1.search(/晏紫涵/)
+        //console.log(result1)
+
+
+        //replace() 替换操作
+        //let str2 = 'http://www.baidu.com';
+        //let result2 = str2.replace(/\./g,'-')
+        //console.log(result2)
+
+
+        //let result3 = str2.replaceAll('.','~')
+        //console.log(result3)
+
+        //split() 字符串切割 使用指定的字符将字符串切割成多个字符串保存到数组中
+        //let result4 = str2.split('.')
+        //console.log(result4)
+
+
+        //slice(开始位置，结束位置) 字符串切割的（按照位置,支持负数）
+        //         012345678...
+        let url = 'http://www.google.com';
+        //                    ...,-3-2,-1
+
+        //let result5 = url.slice(-5,-3);
+        //console.log(result5)
+
+        //substr(开始位置，长度)字符串切割的（按照位置）
+        //let result6 = url.substr(-3,2)
+        //console.log(result6)
+
+
+        //substring()字符串切割的（按照位置,不支持负数，负数表示0）
+        //let result7 = url.substring(5)
+        //console.log(result7)
+
+        //concat() 连接字符串
+        let start = '你好';
+        let end = '大爷';
+
+        //let result7 = start.concat(end);
+        let result7 = start+end;
+        console.log(result7)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

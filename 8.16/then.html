@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //实例化promise对象
+        let p = new Promise((resolve,reject)=>{
+            //
+            resolve('9999')
+        })
+
+        console.log(p)
+
+
+        //调用p的方法  then
+        let result = p.then((value)=>{//状态为fulfilled的执行方法  成功
+            console.log(value)
+        },(error)=>{//状态为rejected的执行方法  失败
+            console.log(error)
+        })
+
+        //result.then().then().then().then()  对象的链式操作
+
+
+    </script>
+</body>
+</html>

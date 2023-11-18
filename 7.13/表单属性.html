@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        不可用：
+        <input type="text" name="uid" value="114514" readonly disabled>
+        <hr>
+        必须设置：<input type="text" name="uname" value="默认值" required placeholder="提示" size="5">
+        <hr>
+        设置规则：<input type="password" name="upwd" value="" pattern="\w{4}">
+        <hr>
+        最大/小值：<input type="tel" name="uphone" value="" minlength="8" maxlength="11">
+        <hr>
+        默认选中：
+        <input type="checkbox" name="hobby[]" value="man"> man 
+        <input type="checkbox" name="hobby[]" value="woman" checked> woman
+        <input type="checkbox" name="hobby[]" value="swim" checked>swim
+        <hr>
+        <input type="radio" name="sex" value="gong" checked>公
+        <input type="radio" name="sex" value="mu">母
+        <hr>
+        默认选中：
+        <select name="city">
+            <option value="wh">武汉</option>
+            <option value="jn" selected>济南</option>
+            <option value="cq">重庆</option>
+        </select>
+        多选操作：
+        <input type="file" name="bingli" multiple>
+        <hr>
+        <input type="submit" value="登陆">
+        <hr>
+        <input type="submit" value="自定义提交" formaction="http://www.baidu.com" formtarget="_blank" formmethod="post" formnovalidate>
+    </form>
+    <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="green" />
+    </svg>
+</body>
+</html>

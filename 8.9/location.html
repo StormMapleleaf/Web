@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /*
+        //location 地址栏对象
+
+        for(let i in location){
+            console.log(i,location[i])
+        }
+
+
+       
+        //href属性实现页面跳转
+        setTimeout(()=>{
+            //页面跳转
+            //location.href='http://www.suning.com'
+            //assign（)页面跳转
+            //location.assign('http://www.sougou.com')
+
+            //页面刷新
+            //location.reload(true);
+
+        },3000)
+        */
+
+
+        //地址栏参数提取操作
+
+        function getArgs(){
+            //获取地址栏的数据  search 
+            let searchStr = decodeURIComponent(location.search);
+            //获取？后的字符串
+            let argStr = searchStr.slice(1);
+            
+            //分段操作（标记点&）
+            let argArr = argStr.split('&');
+
+            let argObj = {};
+        
+            argArr.forEach((value,index,array)=>{
+                let result = value.split('=');
+                argObj[result[0]]=result[1]
+            })
+
+            return argObj
+        }
+
+
+        console.log(getArgs())
+
+        //使用内置参数处理类
+        let urlParams = new  URLSearchParams(decodeURIComponent(location.search));
+        console.log(urlParams.entries())
+
+        for(let i of urlParams.entries()){
+            console.log(i[0],i[1])
+        }
+
+        let result = urlParams.get('age')
+        console.log(result)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

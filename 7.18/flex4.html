@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩盒子</title>
+    <style>
+        .contianer{
+            width:800px;
+            height:800px;
+            background-color: aquamarine;
+            /*弹性盒子设置*/
+            display: flex;
+            /*设置排列方向*/
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .contianer>div{
+            width:10px;
+            height:100px;
+            background-color: green;
+        }
+
+        .contianer>div:nth-child(1){
+            /*设置子元素的扩张比例*/
+            flex-grow: 0;
+            background-color: red;
+        }
+
+        .contianer>div:nth-child(2){
+           /*设置子元素的扩张比例*/
+           flex-grow: 0;
+           background-color: orange;
+        }
+
+        .contianer>div:nth-child(3){
+          /*设置子元素的扩张比例*/
+          flex-grow: 5;
+          background-color: yellow;
+        }
+
+        .contianer>div:nth-child(4){
+           /*设置子元素的扩张比例*/
+           flex-grow: 0;
+           background-color: green;
+        }
+
+        .contianer>div:nth-child(5){
+            /*设置子元素的扩张比例*/
+            flex-grow: 0;
+            background-color: cyan;
+        }
+
+        .contianer>div:nth-child(6){
+            /*设置子元素的扩张比例*/
+            flex-grow: 0;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定义一个函数
+        function eat(){
+            //加入判断，根据调用者不同，实现不同的操作 
+            //caller 可以感应到当前函数被其他函数调用
+            //console.log(arguments.callee.caller.name)
+            if(arguments.callee.caller.name == 'xiaode'){
+                //小的调用函数，吃饭
+                console.log('吃满汉全席');
+            }else if(arguments.callee.caller.name == 'xiaogou'){
+                //小狗调用函数，吃屎
+                console.log('吃新鲜的屎');
+            }
+            
+            
+        }
+
+    
+
+
+        //函数1:小的函数
+        function xiaode(){
+            console.log('我小的本人饿了，想要吃饭');
+            //调用eat函数
+            eat();
+        }
+
+        //调用小的函数
+        xiaode();
+
+        //函数2 小狗函数
+        function xiaogou(){
+            console.log('我小狗本狗饿了，想要吃屎');
+            //调用eat
+            eat();
+        }
+        //调用小狗函数
+        xiaogou()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

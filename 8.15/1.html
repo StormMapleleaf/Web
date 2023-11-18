@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="doAjax()">执行操作</button>
+    <script>
+
+        function doAjax(){
+            console.log('执行doAjax()')
+            //1.实例化XHR对象 （W3C）
+            var xhr = new XMLHttpRequest();
+            console.log(xhr) 
+
+            //2.创建/打开一个新的连接
+            xhr.open('get','http://127.0.0.1:8081/test?name=1&sex=2')
+
+            //3.设置头信息
+            //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");  //GET无需设置
+
+            //4.发送请求数据
+            xhr.send(null)
+
+            //5.根据服务器的响应数据做出操作(请请求成功发送，响应页成功发送)
+            //为xhr对象添加状态改变事件
+            xhr.addEventListener('readystatechange',function(){
+                //判断数据是否成功发送到服务器
+                //console.log(xhr.readyState)
+                if(xhr.readyState == 4){//请求已成功，并且服务器响应了请求
+                    //判断服务器响应是否成功
+                    if(xhr.status == 200){//服务器成功响应了数据
+                        //console.log(xhr.response)
+                       //将响应的数据内容写入页面
+                       var p = document.createElement('p')
+                       p.innerHTML = xhr.response;
+                       document.body.appendChild(p)
+                    }
+                }
+            })
+            
+        }
+
+
+    </script>
+</body>
+</html>

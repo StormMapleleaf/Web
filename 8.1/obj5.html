@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Object.assign()合并对象
+
+        //人对象
+        let person = {
+            sex:'man',
+            age:18,
+            eat(){
+                console.log('武汉热干面，端着吃更得劲～')
+            }
+        }
+
+        //学生对象
+        let student = {
+            name:'xiaoer',
+            id:123456,
+            study(){
+                console.log('好好学习，娶个好媳妇～');
+            }
+        }
+
+        //男人对象
+        let man = {
+            taste:'臭臭的～'
+        }
+
+
+        //对象合并
+        let newObj = Object.assign(person,student,man);
+        console.log(newObj)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

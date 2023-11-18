@@ -1,0 +1,19 @@
+<script>  
+    //reduce函数   数组函数
+
+    let arr = [1,2,3,4,5,6,7];
+
+    //reduce(函数，初始值)
+    //函数（初始值，当前数据,索引,数组本身）
+
+    function getSum(total,currentData,index,Myarr){
+        //具有返回值
+        return total + currentData;
+    }
+
+    let result = arr.reduce(getSum,0);
+    console.log(result)
+
+
+
+</script>

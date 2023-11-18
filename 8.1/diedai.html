@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //对象迭代
+        function Teacher(){
+            //使用一个对象直接替代对象原型(Object) ->Objet构造方法
+            Teacher.prototype = Object.assign(Teacher.prototype,{
+                //强制改变对象的构造方法只想
+                constructor:Teacher ,
+                name:'name',
+                sex:'man',
+                age:21,
+                say:function(){
+                    console.log('老公，你说句话啊！')
+                },
+                cry:function(){
+                    console.log(555555)
+                }
+            })
+        }
+
+        
+
+
+        //实例话对象
+        let chen = new Teacher('小的','man',21)
+
+        //console.log()
+        chen.cry()
+        chen.say()
+        //console.log(chen.sex)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getInfo(addInfo)">获取用户信息</button>
+    <hr>
+
+    <script>
+        //成功时的操作函数
+        function addInfo(data){
+            var p = document.createElement('p')
+                p.innerHTML = data
+                document.body.appendChild(p)
+        }
+
+
+        //失败的操作
+
+        function addError(){
+            var p = document.createElement('p')
+                p.innerHTML = 'ajax请求出错！！！'
+                document.body.appendChild(p)
+        }
+
+ 
+        /*
+        //点击执行ajax操作  (回调函数操作)
+        function getInfo(addInfo){
+            //原生操作
+            var xhr = new XMLHttpRequest();
+            xhr.open('get','http://127.0.0.1:8081/getUser?uid=99')
+            xhr.send('null')
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4 && xhr.status ==200){
+                    //请求成功的操作
+                    addInfo(xhr.response)
+                }
+            }
+            //失败的操作
+            xhr.onerror = function(){
+                //失败操作
+                addError('失败了~~~')
+            }
+        }
+
+        */
+
+
+        function getInfo(addInfo){
+
+            //实例化对象
+            let promise = new Promise((resolve,reject)=> {
+
+                //ajax操作
+                let xhr = new XMLHttpRequest()
+                xhr.open('get','http://127.0.0.1:8081/getUser?uid=99')
+                xhr.send('null')
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState == 4 && xhr.status ==200){
+                        //请求成功的操作
+                        resolve(xhr.response)
+                    }
+                }
+                //失败的操作
+                xhr.onerror = function(){
+                    //失败操作
+                    reject('我失败了~')
+                }
+
+            })
+            console.log(promise)
+            //promise的操作
+            promise.then(addInfo,addError)
+
+        }
+
+
+
+     
+
+
+    
+        
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

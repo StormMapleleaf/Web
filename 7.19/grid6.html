@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:600px;
+            height:600px;
+            background-color: aquamarine;
+            display: grid;
+            grid-template-columns: 150px 150px 150px ;
+            grid-template-rows: 150px 150px 150px;
+            /*定义单元格的名称*/
+            grid-template-areas:
+                "a1 a2 a3"
+                "b1 b2 b2"
+                "c1 b2 b2"
+            ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div style="background-color: black;grid-area: b2;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

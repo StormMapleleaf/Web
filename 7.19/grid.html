@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*设置网格布局*/
+        .grid{
+            width:800px;
+            height:800px;
+            background-color: aquamarine;
+            /*设置为网格类型*/
+            display: grid;
+            /*设置布局 几行几列*/
+            grid-template-rows: 200px 200px 200px;/*设置行及行高度*/
+            grid-template-columns: 200px 200px 200px;/*设置列数几每列卷度*/
+            /*设置网格项目的对齐方式【相对于网格单元】 td里边的文字
+            justify-items: center;
+            align-items: center;
+            */
+            place-items: center;
+            /*设置网格整体的对齐方式【相对于（外层）元素】 相当于table针对于外层div
+            justify-content: end;
+            align-content: end;
+            */
+            place-content: start end;
+
+        }
+
+        .grid>div{
+            width: 100px;
+            height:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    
+</body>
+</html>

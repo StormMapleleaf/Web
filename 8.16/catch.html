@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        let p = new Promise((resolve,reject)=>{
+
+            //其他操作
+
+            //如果Promise出现了异常或者错误可以抛出错误被catch接收
+            //throw new Error('对不起今天休假不干活~')
+            reject();
+        })
+        p
+        .then()//针对具体操作内容的结果进行正确和错误的回调函数操作
+        .catch((e)=>{//如果Promise抛出异常对象 catch接收并且处理
+            console.log(e)
+        })
+        .finally(()=>{//无论任何情况，该操作都会被执行
+            console.log('程序最后执行的位置，跟错误、异常、结果无关，一定会执行')
+        })
+
+
+    </script>
+    
+</body>
+</html>

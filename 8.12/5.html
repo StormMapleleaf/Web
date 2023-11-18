@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mydiv"></div>
+    <script>
+        //获取元素
+        var mydiv = document.getElementById('mydiv');
+
+
+        //事件函数
+        function changeBg(){
+            mydiv.style.background = 'red'
+        }
+        mydiv.attachEvent('onclick',changeBg);
+        
+
+        //移除事件
+        setTimeout(function(){
+            console.log('事件已经取消')
+            mydiv.detachEvent('onclick',changeBg)
+        },5000)
+        
+        
+
+    </script>
+    
+</body>
+</html>

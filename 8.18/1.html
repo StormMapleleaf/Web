@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!---引入jquery文件-->
+    <script src="./jquery-3.7.0.js"></script>
+    <script>
+        //引入jquery会自动加载一个变量 $ == jQuery == window.jQuery
+        console.log($)
+        console.log(jQuery)
+        console.log(window.jQuery)
+
+
+        
+
+        /*使用jquery不插入原生DOM的操作
+        window.onload=function(){
+            $('p').css('color','red')
+        }
+        
+
+        //jquery中onload事件
+        $(window).on('load',function(){
+            $('p').css('color','green')
+        })
+        
+
+
+        //jquery中的ready事件
+        $(document).ready(function(){
+            $('p').css('color','blue')
+        })
+        */
+
+
+
+        //使用jquery第一步   所有jquery代码都需要在这里面书写
+
+        $(function(){
+            //jQuery代码的书写
+            $('p').css('color','yellow')
+        })
+                
+
+       
+
+    </script>
+</head>
+<body>
+    <p>你来跟我玩啊~</p>
+</body>
+</html>

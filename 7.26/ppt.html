@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap img{
+            width:250px;
+            height:350px;
+        }
+
+        #wrap{
+            width:250px;
+            height:350px;
+            border:5px solid red;
+            overflow: hidden;
+        }
+
+        .imgs{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: row;
+            animation-name: moveImgs;
+            animation-duration: 6s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+        }
+
+        @keyframes moveImgs {
+            0%{
+                transform: translateX(0);
+            }
+
+            33%{
+                transform: translateX(-250px);
+            }
+            66%{
+                transform: translateX(-500px);
+            }
+            100%{
+                transform: translateX(-750px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="imgs">
+            <div>
+                <img src="./mingri1.jpeg" alt="">
+            </div>
+            <div>
+                <img src="./mingri2.jpeg" alt="">
+            </div>
+            <div>
+                <img src="./mingri3.jpeg" alt="">
+            </div>
+            <div>
+                <img src="./mingri1.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let teacher = {
+            name:'南风',
+            sex:'猛男',
+            age:18,
+            weight:'220斤'
+        }
+
+        //输出teacher的信息
+        console.log(teacher.name);
+        console.log(teacher.sex);
+        console.log(teacher.age);
+        console.log(teacher.weight);
+
+        //with语法  设定一个对象环境，环境中可以直接使用对象的属性，不需要制定对象了
+        with(teacher){
+            console.log(name);
+            console.log(sex);
+            console.log(age);
+            console.log(weight);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //声明一个对象
+
+        let student = {
+            name:'老二',
+            sex:'',
+            _sex:'woman',
+            age:18,
+            say:function(){
+                console.log('滚犊子')
+            }
+        }
+
+        //特性设置
+
+        Object.defineProperty(student,'sex',{
+            get:function(){
+                //返回相反的性别
+                if(this._sex == 'woman'){
+                    return  'man';
+                }else{
+                    return 'woman'
+                }
+            },
+
+            set:function(value){
+                //判断是否是合法的性别值
+                let dataArr = ['woman','man'];
+                dataArr.forEach(function(arrValue,index,array){
+                    if(arrValue == value){
+                        //设置对应的值
+                        this._sex = value
+                        console.log( '设置成功')
+                    }
+                })
+            }
+        });
+
+        //设置性别
+        student.sex = 'man'
+
+
+        //获取对象的性别
+        console.log(student.sex)
+
+    </script>
+    
+</body>
+</html>

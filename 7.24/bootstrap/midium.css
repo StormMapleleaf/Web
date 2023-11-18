@@ -1,0 +1,54 @@
+body{
+    background-color: red;
+}
+
+.row{
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(12,1fr);
+    gap:10px;
+}
+
+.column-m-12{
+    grid-column: span 12;
+}
+
+.column-m-11{
+    grid-column: span 11;
+}
+
+.column-m-10{
+    grid-column: span 10;
+}
+
+.column-m-9{
+    grid-column: span 9;
+}
+
+.column-m-8{
+    grid-column: span 8;
+}
+
+.column-m-7{
+    grid-column: span 7;
+}
+
+.column-m-6{
+    grid-column: span 6;
+}
+
+.column-m-5{
+    grid-column: span 5;
+}
+.column-m-4{
+    grid-column: span 4;
+}
+.column-m-3{
+    grid-column: span 3;
+}
+.column-m-2{
+    grid-column: span 2;
+}
+.column-m-1{
+    grid-column: span 1;
+}

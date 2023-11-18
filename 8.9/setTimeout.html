@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定时器函数
+
+        //设置全局变量保存定时器id
+        let timeId = 0;
+
+       function setFunc(){
+            timeId = setTimeout(()=>{
+                //5秒后弹窗
+                window.alert('乞丐和程序员的区别：乞丐=行行好吧，程序员=行,行，好吧！')
+            },5000)
+       }
+
+
+       //取消定时器
+       function stopFunc(){
+            if(timeId !==0){
+                clearTimeout(timeId);
+                timeId = 0;
+            }
+            
+       }
+    </script>
+</head>
+<body>
+    <button onclick="setFunc()">设置操作</button>
+    <button onclick="stopFunc()">取消定时</button>
+</body>
+</html>

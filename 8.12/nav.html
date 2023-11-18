@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+
+        #nav li{
+            float:left;
+            border:1px solid red;
+            padding:10px 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li>张青宇</li>
+            <li>张雨川</li>
+            <li>张恬玉</li>
+            <li>张昭仪</li>
+            <li>张载阳</li>
+        </ul>
+    </nav>
+
+    <script>
+        //获取页面中的li元素
+        let lis = document.querySelectorAll('#nav li');
+        console.log(lis)
+
+        //遍历所有的li节点 添加事件
+        lis.forEach((li,index,array)=>{
+            
+            //为每个li添加事件
+            //鼠标进入事件
+            li.addEventListener('mouseover',()=>{
+                li.style.backgroundColor = 'pink'
+            })
+            //鼠标移出事件
+            li.addEventListener('mouseout',()=>{
+                li.style.backgroundColor = 'transparent'
+            })
+
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid green;
+            padding:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <div id="three">
+                <div id="four">
+                    <div id="five"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //为元素添加事件
+        //获取5个div
+        let oneDiv = document.getElementById('one')
+        let twoDiv = document.getElementById('two')
+        let threeDiv = document.getElementById('three')
+        let fourDiv = document.getElementById('four')
+        let fiveDiv = document.getElementById('five')
+
+        //console.log(oneDiv,twoDiv,threeDiv,fourDiv,fiveDiv)
+
+        oneDiv.onclick = function(){
+            //输出当前元素的id值
+            console.log(this.id)
+        }
+        
+        twoDiv.onclick = function(){
+            console.log(this.id)
+        }
+
+        threeDiv.onclick = function(){
+            console.log(this.id)
+        }
+
+        fourDiv.onclick = function(){
+            console.log(this.id)
+        }
+
+        fiveDiv.onclick=function(){
+            console.log(this.id)
+        }
+
+
+        //onclick添加的事件。默认流程为从内向外依次触发事件：冒泡流
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

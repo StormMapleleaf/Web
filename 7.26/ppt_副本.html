@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style-type: none;
+        }
+        #wrap img{
+            width:250px;
+            height:350px;
+        }
+
+        #wrap{
+            position: relative;
+            width:250px;
+            height:350px;
+            border:5px solid red;
+            overflow: hidden;
+        }
+
+        .imgs{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: row;
+            animation-name: moveImgs;
+            animation-duration: 6s;
+            animation-timing-function: steps(3,end);
+            animation-iteration-count: infinite;
+           
+        }
+
+        @keyframes moveImgs {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-750px);
+            }
+        }
+
+        #wrap ul{
+            width:100%;
+            height:30px;
+
+            position: absolute;
+            left:0;
+            bottom:0;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+        }
+        
+        #wrap ul li{
+            width:30px;
+            height:30px;
+            background-color: rgba(255,255,0,0.3);
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;;
+            position: relative;
+        }
+
+        #wrap ul::before{
+            content:'';
+            display: block;
+            width:30px;
+            height:30px;
+            border:1px solid black;
+            box-sizing: border-box;
+            background-color: rgba(255,0,0,0.2);
+            border-radius: 50%;
+            position: absolute;
+            left:0;
+            z-index:999;
+            transform: translateX(0px);
+            animation-name: moveNo;
+            animation-duration: 6s;
+            animation-timing-function: steps(3,end);
+            animation-iteration-count: infinite;
+
+        }
+
+
+        @keyframes moveNo {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(90px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="imgs">
+            <div>
+                <img src="./mingri1.jpeg" alt="">
+            </div>
+            <div>
+                <img src="./mingri2.jpeg" alt="">
+            </div>
+            <div>
+                <img src="./mingri3.jpeg" alt="">
+            </div>
+        </div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

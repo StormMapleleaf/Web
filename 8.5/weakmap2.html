@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function(){
+            //获取页面的元素
+            let loginBtn = document.getElementById('login');
+            let logoutBtn = document.getElementById('logout');
+
+
+            let loginStr = new String('login')
+            let logoutStr = new String('logout')
+            //加入弱映射
+            let btnWm = new WeakMap([
+                [loginStr,loginBtn],
+                [logoutStr,logoutBtn]
+            ]);
+
+            console.log(btnWm);
+
+
+            //页面中删除元素
+            document.body.removeChild(loginBtn);
+            //内存清空退出按钮的变量
+            loginBtn = null;
+
+
+
+            console.log(btnWm);
+
+            
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <button id = 'login'></button>
+    <button id = 'logout'></button>  
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #outer{
+            width:600px;
+            height:600px;
+            background-color: aquamarine;
+            position: relative;
+        }
+
+        #inner{
+            width:200px;
+            height:200px;
+            background-color: red;
+            position: absolute;
+            left:150px;
+            top:188px;
+            border:5px solid green;
+            padding-top:50px;
+            transform: translateX(50px);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        //获取inner元素
+        let innerDiv = document.getElementById('inner')
+
+        //元素偏移尺寸
+        //offsetLeft  计算内层元素相对于父元素左侧的偏移距离 (不计算translate的移动距离，只计算定位移动)
+        console.log(innerDiv.offsetLeft)
+
+        //offsetTop  计算内层元素相对于父元素顶部的偏移距离
+        console.log(innerDiv.offsetTop)
+
+        //offsetWidth 元素宽度  内容+padding+border
+        console.log(innerDiv.offsetWidth)
+
+        //offsetHeight元素高度 内容+padding+border
+        console.log(innerDiv.offsetHeight)
+
+        //offsetParent 找到父节点
+        console.log(innerDiv.offsetParent)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>想复制我，没门！</p>
+    <script>
+        //contextmenu  根据上下文调用菜单时候触发
+        document.oncontextmenu=function(){
+            //console.log('contextmenu被触发');
+            alert('禁止右键菜单')
+            //禁用右键菜单
+            return false;
+        }
+
+
+
+        //selectstart事件开始选择的时候触发
+        document.onselectstart = function(){
+            alert('禁止选取')
+            return false
+        }
+
+    </script>
+    
+</body>
+</html>

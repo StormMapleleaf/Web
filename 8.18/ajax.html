@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            //获取元素
+            $('input[name=username]').on('blur',function(){
+                //获取元素的value值
+                let username = $(this).val()
+
+                //ajax操作
+                $.ajax({
+                    url:'http://127.0.0.1:8081/checkName',
+                    method:'post',
+                    dataType:'json',
+                    data:{'username':username},
+                    success:function(result){
+                        //console.log(result)
+                        if(result == 1){
+                            $('span').html('对不起，用户名被注册过').css('color','red')
+                        }else{
+                            $('span').html('恭喜，用户名可以注册').css('color','green')
+                        }
+                    },
+                    error:function(err){
+                        console.log(err)
+                    }
+
+
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+    <input type="text" name="username" ><span></span>
+
+    
+</body>
+</html>

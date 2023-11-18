@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:600px;
+            height:600px;
+            background-color: orange;
+            display: grid;
+            /* 每条线定义一个名称
+            grid-template-rows: [h-1] 150px [h-2] 150px [h-3] 150px [h-4];
+            grid-template-columns: [l-1] 150px [l-2] 150px [l-3] 150px [l-4];
+            */
+
+            /*每条线定义2个名称*/
+            grid-template-rows: [h-1] 150px [h-2 h-22s] 150px [h-3 h-33] 150px [h-4];
+            grid-template-columns: [l-1] 150px [l-2 l-22] 150px [l-3 l-33] 150px [l-4];
+        }
+
+        .container>div{
+            width:100px;
+            height:100px;
+            background: linear-gradient(45deg,green,purple);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>

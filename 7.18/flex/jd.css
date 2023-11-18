@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding:0
+}
+
+li{
+    list-style: none;
+}
+
+/*顶部广告*/
+.topads{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.topads img{
+    width:990px;
+}
+/*顶部区域*/
+#header{
+    display: flex;
+    flex-direction: column;
+}
+
+#userinfo{
+    height:30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pos{
+    width:330px;
+    height:100%;
+    background-color: yellow;
+}
+
+.info{
+    width:660px;
+    height:100%;
+    background-color: orange;
+}
+
+#search{
+    height:120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo{
+    width:200px;
+    height:100%;
+    background-color: darkviolet;
+
+}
+
+.inputsearch{
+    width:790px;
+    height:100%;
+    background-color: pink;
+}
+
+
+#nav{
+    height:30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#nav ul{
+    width:600px;
+    height:100%;
+    background-color: #faf3f1;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+main>div{
+    margin-top:20px;
+}
+
+#goods{
+    width:990px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi{
+    width:150px;
+    height:400px;
+    background-color: red;
+}
+
+.ppt{
+    width:600px;
+    height:400px;
+    background-color: green;
+}
+
+.service{
+    width:150px;
+    height:400px;
+    background-color: blue;
+}
+
+#kill{
+    width:990px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#kill>div{
+    width:190px;
+    height:200px;
+    background-color: red;
+}
+
+#tv{
+    width:990px;
+    height:300px;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#tv>div{
+    width:240px;
+    height:100%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+#tv>div:first-child>div:first-child,#tv>div:nth-child(2)>div:first-child{
+ 
+    width:100%;
+    flex-basis: 200px;
+    background-color: blue;
+}
+
+#tv>div:first-child>div:last-child,#tv>div:nth-child(2)>div:last-child{
+    width:100%;
+    flex-basis: 100px;
+    background-color: red;
+}
+
+#tv>div:nth-child(3)>div:first-child{
+ 
+    width:100%;
+    flex-basis: 100px;
+    background-color: blue;
+}
+
+#tv>div:nth-child(3)>div:nth-child(1),#tv>div:nth-child(4)>div:nth-child(1){
+ 
+    width:100%;
+    flex-basis: 100px;
+    background-color: red;
+}
+
+#tv>div:nth-child(3)>div:nth-child(2),#tv>div:nth-child(4)>div:nth-child(2){
+ 
+    width:100%;
+    flex-basis: 100px;
+    background-color: green;
+}
+#tv>div:nth-child(3)>div:nth-child(3),#tv>div:nth-child(4)>div:nth-child(3){
+ 
+    width:100%;
+    flex-basis: 100px;
+    background-color: blue;
+    
+}
+
+#book{
+    width:990px;
+    height:100px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#book>div{
+    width:100px;
+    height:60px;
+    background-color: aquamarine;
+}
+
+#closth{
+    width:990px;
+    height:200px;
+    background-color: #faf3f1;
+    display: flex;
+    justify-content: space-around;
+}
+
+#closth>div{
+    width:150px;
+    height: 100%;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.up{
+    width:80%;
+    height:100px;
+    background-color: red;
+}
+
+.down{
+    width:90%;
+    height:50px;
+    background-color: green;
+}
+
+
+#footer{
+    
+    height:400px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#footer>div{
+    margin-top:10px
+}
+
+.show{
+    width:990px;
+    height:100px;
+    background-color: red;
+}
+
+.notice{
+    width:990px;
+    height:200px;
+    background-color: green;
+}
+
+.flink{
+    width:990px;
+    height:60px;
+    background-color: blue;
+}
+
+

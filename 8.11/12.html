@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div style="width:300px;height:300px!important;border:1px solid green;background-color: red;"></div>
+
+    <script>
+        //样式存取操作
+        let div = document.querySelector('div')
+        console.log(div)
+
+        //访问元素自身的style属性的样式  是一个css对象
+        let cssObj = div.style;
+        console.log(cssObj)
+
+        //cssText 获取CSS的的字符串值
+        console.log(cssObj.cssText)
+        
+        //length 获取css样式个数，由于缩写属性会自动展开，跟书写可能数量不同
+        console.log(cssObj.length)
+
+        //parentRule
+        console.log(cssObj.parentRule)
+
+        //getPropertyValue(propertyName) 获取css属性值
+        let width = cssObj.getPropertyValue('width')
+        console.log(width)
+
+        //setProperty(propertyName, value, priority) 设置属性值
+        cssObj.setProperty('color','black')
+
+
+        // removeProperty(propertyName) 移除CSS属性
+
+        cssObj.removeProperty('background-color')
+
+
+        // getPropertyPriority(propertyName) 获取属性important的设置
+        let result = cssObj.getPropertyPriority('height')
+        console.log(result)
+
+        //item()获取指定索引的属性名
+        console.log(cssObj.item(11))
+    
+
+
+    
+
+
+
+    </script>
+    
+</body>
+</html>

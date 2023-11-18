@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--导入城市数据-->
+    <script src="./citydata.js"></script>
+</head>
+<body>
+    <select name="sheng" id="sheng">
+        <option value="">请选择</option>
+    </select>
+    <select name="shi" id="shi">
+        <option value="">请选择</option>
+    </select>
+    <select name="diqu" id="diqu">
+        <option value="">请选择</option>
+    </select>
+
+    <script>
+        //将所有的省和直辖市放入一级选择列表中
+
+        let cityData = data;
+        console.log(cityData);
+
+        //获取三个选择器的元素
+        let sheng = document.getElementById('sheng')
+        let shi = document.getElementById('shi')
+        let diqu = document.getElementById('diqu')
+
+        //设置当前省份
+        let currentSheng = null
+        let currentShi = null
+
+
+        //遍历数据，将省份写入一级列表
+        cityData.forEach(function(value,index,array){
+            //console.log(value)
+            sheng.innerHTML += `<option value="${value.name}">${value.name}</option>`;
+        });
+
+        //为一集select添加change事件
+        sheng.addEventListener('change',function(){
+            //console.log(sheng.value)
+            //找到该省对应的城市列表，全部写入二级下拉列表
+            currentSheng = cityData.filter(function(value,index,array){
+                //console.log(value.name)
+                if(sheng.value == value.name){
+                    return true
+                }
+            })[0]
+
+
+            //重置对应的市区内容
+            shi.innerHTML='<option value="">请选择</option>'
+            //将当前省份的城市写入二级列表
+            //console.log(currentSheng.cityList)
+            currentSheng.cityList.forEach(function(value,index,array){
+                shi.innerHTML += `<option value="${value.name}">${value.name}</option>`
+            })
+ 
+        })
+
+
+        //为第二级select 添加change事件
+        shi.addEventListener('change',function(){
+            //获取市的名称
+            //console.log(shi.value)
+
+            //选择当前市区对应的所有地区内容
+            //console.log(currentSheng)
+
+            //在省中过滤出指定的市
+            currentShi = currentSheng.cityList.filter(function(value,index,array){
+                if(shi.value == value.name){
+                    return true;
+                }
+            })[0]  
+
+            console.log(currentShi)
+
+            //清空原有列表
+            diqu.innerHTML = '<option value="">请选择</option>'
+            //将地区写入三级列表
+            currentShi.areaList.forEach(function(value,index,array){
+                diqu.innerHTML += `<option value="${value}">${value}</option>`
+            })
+
+        })
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

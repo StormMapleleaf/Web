@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick = "getUserInfo()">点击获取用户信息</button>
+
+
+
+    <script>
+
+        //原生ajax来进行数据获取
+        function getUserInfo(){
+
+            //第一次ajax请求
+            //ajax获取用户信息
+            var xhr = new XMLHttpRequest()
+            xhr.open('get','http://127.0.0.1:8081/login?uname=xiaoer&upwd=1234');
+            xhr.send(null)
+
+            
+            //异步操作 函数不会在添加的时候运行
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4 & xhr.status == 200){
+                    //请求成功的处理方式
+                    //获取数据成功
+                    //console.log(xhr.response) //这里获取了uid
+                    var uid = xhr.response;
+                    console.log(uid)
+                    //此处才可以使用uid
+
+                    //第二次ajax请求   根据id找昵称
+                    /////////////////////////////////////////////////////////////////////////////////////////////////
+                    var xhr1 = new XMLHttpRequest()
+                    xhr1.open('get','http://127.0.0.1:8081/getName?uid='+uid);
+                    xhr1.send(null)
+                    xhr1.onerror=function(){
+                        //请求失败的处理方式
+                        console.log('请求失败!')
+                    }
+
+                    xhr1.onreadystatechange=function(){
+                        if(xhr1.readyState == 4 & xhr1.status == 200){
+                            //获取响应值
+                            //console.log(xhr1.response)
+                            var nickname = xhr1.response;
+
+                            //第三次ajax请求  根据昵称找用户详情
+                            //---------------------------------------------------------------------
+                            var xhr2 = new XMLHttpRequest()
+                            xhr2.open('get','http://127.0.0.1:8081/getInfo?nickname='+nickname);
+                            xhr2.send(null)
+                            xhr2.onerror=function(){
+                                //请求失败的处理方式
+                                console.log('请求失败!')
+                            }
+                            xhr2.onreadystatechange=function(){
+                                if(xhr2.readyState == 4 & xhr2.status == 200){
+                                    //console.log(xhr2.response)
+                                    //将JSON数据解析为JS的对象
+                                    var obj =JSON.parse(xhr2.response)
+                                    console.log(obj)
+                                }
+
+
+
+                            }
+                            //---------------------------------------------------------------------
+                        }
+                    }
+                    /////////////////////////////////////////////////////////////////////////////////////////////////
+
+                    
+                }
+            }
+            //异步操作  函数不会在添加的时候运行
+            xhr.onerror=function(){
+              //请求失败的处理方式
+                console.log('请求失败!')
+            }
+
+
+    
+
+
+           
+            
+        }
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

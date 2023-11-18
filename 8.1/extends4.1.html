@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //设置一个父对象
+
+        let person = {
+            name:'小瘪三',
+            sex:'man',
+            age:18,
+            say(){
+                console.log('你说句话啊～温老师～');
+            }
+        };
+        //不用新建继承的函数直接Object.create()
+
+        let xiaowang = Object.create(person,{
+            skin:{
+                value:'yellow'
+            },
+            cry:{
+                value:function(){
+                    console.log(55555)
+                }
+            }   
+        });
+
+        //xiaowang 就是子对象实例
+        console.log(xiaowang.name);
+        console.log(xiaowang.sex);
+        xiaowang.say();
+        console.log(xiaowang.skin);
+        xiaowang.cry();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

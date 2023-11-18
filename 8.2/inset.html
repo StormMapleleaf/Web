@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //扩展数组类型（我做的数组）
+        class MyArray extends Array{
+
+            //功能扩展
+            getLast(){
+                return this[this.length-1]
+            }
+
+           
+        }
+
+        let arr = new MyArray(1,2,3,5,6,77777)
+        console.log(arr)
+        console.log(arr.length)
+        let last= arr.getLast()
+        console.log(last)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

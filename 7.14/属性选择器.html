@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        E[attr]  选中具有attr属性名称的符合选择器E的元素
+        E[attr=value]   选中具有attr属性名称并且值=value的符合选择器E的元素
+        E[attr^=str]    选中具有attr属性名称并且值以str开头的符合选择器E的元素
+        E[attr$=str]    选中具有attr属性名称并且值以str结尾的符合选择器E的元素
+        E[attr*=str]    选中具有attr属性名称并且值包含str的符合选择器E的元素
+        E[attr|=str]    选中具有attr属性名称并且以str开头后面带有-的符合选择器E的元素
+        E[attr～=str]    选中具有attr属性名称并且属性值以空格分割切包含str的元素的符合选择器E的元素
+
+        */
+
+        input[id]{
+            background-color: bisque;
+        }
+        
+        input[name=userid]{
+            height:30px
+        }
+
+        input[name^=user]{
+            width:200px;
+        }
+
+        input[name$=d]{
+            border:1px dashed red
+        }
+
+        input[name*=e]{
+            margin-left:30px;
+        }
+
+        input[name|=u]{
+            margin-top:20px
+        }
+
+        input[class~=green]{
+            color:red
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" name="username" value="username" id="uname" class="red" />username
+        <hr>
+        <input type="text" name="u-id" value="u-id" id="uid" class="red green"  />userid
+        <hr>
+        <input type="text" name="face" value="face" id="uface" class="red blue"  />face
+        <hr>
+        <input type="text" name="u-serinfo" value="u-serinfo" id="uinfo" class="green blue"  />uinfo
+        <hr>
+        <input type="password" name="userpassword" value="userpassword" class="red green blue" >password
+
+    </form>
+    
+</body>
+</html>

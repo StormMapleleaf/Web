@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //构造方法
+        function Teacher(name,sex){
+            //为对象原型添加成员(公用的成员放入原型，独享的成员，放入实例更好)
+            Teacher.prototype.name = name;
+            Teacher.prototype.sex = sex;
+
+            Teacher.prototype.say = ()=>{
+                console.log('sayHi')
+            }
+
+            Teacher.prototype.cry=()=>{
+                console.log('女朋友都跑啦～');
+            }
+
+        }
+
+        //查看构造方法的对象原型
+        //console.log(Teacher.prototype)
+        //通过原型查找构造方法
+        //console.log(Teacher.prototype.constructor)
+
+
+        //实例话对象
+        let cong = new Teacher()
+        //console.log(cong)
+        //console.log(cong.__proto__)
+
+        //cong.say()
+        //cong.cry()
+
+
+        //实例话对象
+        let chen = new Teacher()
+        //console.log(cong)
+        //console.log(cong.__proto__)
+
+        //chen.say()
+        //chen.cry()
+
+
+        //遍历对象
+        for(let i in chen){
+            console.log(chen[i])
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

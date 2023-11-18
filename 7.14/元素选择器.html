@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        * 　通用选择器
+
+        E   元素选择器（标签名称）  
+
+        #   id选择器
+
+        .   class选择器
+
+        */
+
+        *{
+            list-style: none;/*取消列表符号*/
+            margin:0;/*取消元素间的距离*/
+            padding:0;/*取消元素内的间隔*/
+        }
+
+        li{
+            border:5px solid green;
+        }
+
+
+        #wangyi{
+            color:cyan;
+        }
+
+
+        .green{
+            color:blueviolet
+        }
+
+        .big{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="green big">腾讯游戏：给钱你就是爸爸</li>
+        <li id="wangyi" >网易游戏：给钱我也是你爸爸</li>
+        <li class="green">steam游戏：给钱才能叫我爸爸</li>
+    </ul>
+</body>
+</html>

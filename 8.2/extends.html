@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //继承操作
+
+        //声明一个类
+
+        /*
+        class Father{
+            constructor(){
+                this.name = '老刘';
+                this.age = 18;
+                this.say = function(){
+                    console.log('你个老六～')
+                }
+            }
+
+            //原型方法
+            chou(){
+                console.log('抽烟～');
+            }
+
+        }
+        */
+
+        //构造方法
+        function Father(){
+            this.name = '老张';
+            this.chou = function(){
+                console.log('吊起来打，根玩陀螺一样～')
+            }
+
+        }
+
+        //为父类原型添加成员谁能给
+        Father.prototype.sex = 'man';
+
+
+        //子类继承父类
+        class Son extends Father{
+
+        }
+
+        //实例话对象
+        let xiaoer = new Son();
+
+        //调用继承的方法
+
+        xiaoer.chou();
+        console.log(xiaoer.sex)
+        console.log(xiaoer.name)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

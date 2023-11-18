@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <hr>
+    <button type="submit">提交按钮</button>
+    <script>
+        //页面加载后，input表单设置获取焦点
+        //let input = document.querySelector('input')
+        //input.focus()
+
+
+        //按钮获取焦点
+        //let button = document.querySelector('button')
+        //button.focus()
+
+        //检测页面是u否存在焦点
+        //let result = document.hasFocus()
+        //console.log(result)
+
+        //检测页面是否加载完毕 可以在加载过程中用做判断
+        if(document.activeElement == null){
+            console.log('页面没有加载完毕')
+        }else{
+            console.log('页面加载完毕')
+        }
+
+    </script>
+    
+</body>
+</html>

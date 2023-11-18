@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            E:first-child  选择第一个指定的子元素
+
+            
+
+            1.找到符合要求的选择器E                 p（所有符合要求的p）
+            2.找到所有选择器E选中元素的父元素         div.child   一共2个
+            3.找到父元素中的第一个子元素            <p>足球小将</p> / <div>足球小将</div>
+            4.验证第三部选中的元素是否符合选择器E的要求     <p>足球小将</p> 
+
+
+            E:last-child  选择第一个指定的子元素
+
+            E:nth-child(n) 选中指定位置的子元素
+
+            E:nth-last-child() 选中指定位置的子元素(倒数)
+
+            E:only-child 选中唯一的子元素
+
+
+        
+
+        p:first-child{
+            color:red
+        }
+
+
+        p:last-child{
+            color:green
+        }
+
+        p:nth-child(4){
+            color:blue
+        }
+
+        p:nth-child(2n+1){
+            background-color: pink;
+        }
+
+        p:nth-last-child(2n+1){
+            border:1px solid cyan;
+        }
+        */
+
+        p:only-child{
+            font-size:30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="child">
+        <p>足球小将</p>
+        <p>灌篮高手</p>
+        <p>排球女将</p>
+        <p>四驱小子</p>
+        <p>电击小子</p>
+        <p>网球王子</p>
+        <p>多来a梦</p>
+        <p>蜡笔小新</p>
+    </div>
+    <hr>
+    <div class="child">
+        <div>足球小将</div>
+        <p>灌篮高手</p>
+        <div>排球女将</div>
+        <p>四驱小子</p>
+        <p>电击小子</p>
+        <p>网球王子</p>
+        <div>多来a梦</div>
+        <p>蜡笔小新</p>
+    </div>
+    <hr>
+    <div>
+        <p>鬼灭之刃</p>
+    </div> 
+    <hr>
+    <div>
+        <p>鬼灭之刃</p>
+        <div>日之呼吸</div>
+    </div> 
+</body>
+</html>

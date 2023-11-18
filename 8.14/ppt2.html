@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        
+        #myppt{
+            width:590px;
+            height:470px;
+            border: 5px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        #myppt>ul{
+            width:2950PX;
+            position: absolute;
+            left:0px;
+            top:0;
+        }
+        #myppt>ul>li{
+            float:left;
+        }
+
+  
+
+
+        #myppt>ol{
+            position: absolute;
+            left:30px;
+            bottom:30px;
+
+        }
+
+        #myppt>ol>li{
+            float: left;
+            width:25px;
+            height:25px;
+            background-color: white;
+            line-height: 25px;
+            text-align: center;
+            margin:5px;
+            border-radius: 13px;
+        }
+
+        #myppt>ol>li.active{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="myppt">
+        <!---图片区域-->
+        <ul>
+            <li  class="active">
+                <img src="./imgs/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/2.webp" alt="">
+            </li>
+            <li>
+                <img src="./imgs/3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/4.webp" alt="">
+            </li>
+            <li>
+                <img src="./imgs/5.jpg" alt="">
+            </li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+
+
+    <script>
+
+        //获取元素 ul
+        let imgUl = document.querySelector('#myppt>ul');
+        //获取编号li集合
+        let NoLis = document.querySelectorAll('#myppt>ol>li')
+
+        //设置ul的left初始值 0
+        let imgUlLeft = 0;
+
+        //设置图标计数变量
+        let currentNo = 1;
+
+    
+
+        //设置多个图的自动播放  负责图片切换 1，2，3，4，5
+
+        setInterval(function(){
+            //假设移动一张图片(负责移动效果)
+            let moveId = setInterval(function(){
+                //每次减少一定的数值用于移动ul元素
+                imgUlLeft--;
+                //判断是否移动了一张图的距离
+                if(imgUlLeft>-590){ //还没有移动一张图的距离
+                    imgUl.style.left = imgUlLeft+'px'
+                }else{//移动距离超过一张图片
+                    //将移出窗口的元素放到ul的最后
+                    imgUl.appendChild(imgUl.firstElementChild)
+                    //重置ul的属性
+                    //1.将计数的变量重置为0
+                    imgUlLeft = 0;
+                    //1.将ul的位置left 重置0   
+                    imgUl.style.left = imgUlLeft+'px'
+                    //2.清除当前的循环
+                    clearInterval(moveId)
+                
+                }
+                
+            },5)
+
+
+            //准备移动图标
+            NoLis.forEach(function(li,index,array){
+                //判断所有的li是否和当前索引一致，一致就变色，不一致就白色
+                if(index == currentNo){
+                    li.style.backgroundColor = 'green'
+                }else{
+                    li.style.backgroundColor = 'white'
+                }   
+            })
+
+
+            //标计数变量 ++
+            currentNo++;
+            if(currentNo > 4){
+                currentNo = 0
+            }
+
+        },5000)
+
+
+        
+
+    </script>
+    
+</body>
+</html>

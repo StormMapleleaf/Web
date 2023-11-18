@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>周桂东</li>
+        <li>杨佳曼</li>
+        <li>张清宇</li>
+        <li>周方正</li>
+    </ul>
+
+    <script>
+        //获取ul的节点
+        let ul = document.querySelector('ul')
+        console.log(ul)
+
+        //查找所有节点
+        //childNodes 
+        //console.log(ul.childNodes)
+
+        //children 获取指定节点中所有的子元素节点
+        console.log(ul.children)
+
+
+        //firstChild
+        //console.log(ul.firstChild)
+
+        //firstElementChild 获取指定节点中的第一个元素子节点
+        console.log(ul.firstElementChild)
+
+
+
+        //lastChild
+        //console.log(ul.lastChild)
+
+        //lastElementChild  获取指定节点中的最后一个元素子节点
+        console.log(ul.lastElementChild)
+
+        //nextSibling 
+
+        //nextElementSibling 获取指定节点的下一个元素兄弟节点
+
+        console.log(ul.firstElementChild.nextElementSibling)
+
+
+        //previousSibling
+
+        //previousElementSibling 获取指定节点的上一个元素兄弟节点
+        console.log(ul.lastElementChild.previousElementSibling)
+
+        console.log(ul.childElementCount)
+
+    </script>
+    
+</body>
+</html>

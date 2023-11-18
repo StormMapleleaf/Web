@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="52px" viewBox="0 0 27 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>右符号</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="27" height="52"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C友会首页" transform="translate(-1533.000000, -2218.000000)">
+            <g id="合作企业" transform="translate(360.000000, 2099.000000)">
+                <g id="右符号" transform="translate(1173.000000, 119.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="蒙版"></g>
+                    <circle id="椭圆形" fill-opacity="0.12" fill="#000000" mask="url(#mask-2)" cx="26" cy="26" r="26"></circle>
+                    <path d="M20.5431687,32.5701883 C21.1522771,31.9971248 21.1522771,31.0679973 20.5431687,30.4949339 L15.7654924,25.9999848 L20.5431687,21.505052 C21.1522771,20.9319885 21.1522771,20.002861 20.5431687,19.4297976 C19.9340602,18.8567341 18.9464916,18.8567341 18.3373831,19.4297976 L12.4568313,24.9623738 C11.8477229,25.5354372 11.8477229,26.4645648 12.4568313,27.0376282 L18.3374003,32.5702045 C18.9465088,33.1432679 19.9340774,33.1432679 20.5431859,32.5701883 L20.5431687,32.5701883 Z" id="路径" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(16.500000, 26.000000) scale(-1, 1) translate(-16.500000, -26.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

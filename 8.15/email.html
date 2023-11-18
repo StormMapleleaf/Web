@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--引入工具对象 -->
+    <script src="./ajax.js" charset="utf-8"></script>
+ </head>
+ <body>
+    <h1 id="time"></h1>
+    <hr>
+    <form action="">
+        <input type="email" name="myemail" id="myemail"><span></span> 
+        <hr>
+        <input type="submit" value="注册">
+    </form>
+    <script>
+        //页面中输出加载页面的事件
+        var now = new Date();
+        document.getElementById('time').innerHTML = now;
+
+
+        //页面中可以直接使用ajaxTools对象
+        console.log(ajaxTools)
+
+        //获取用户名表单
+        var emailInput = document.getElementById('myemail');
+
+        //添加事件
+        emailInput.onblur=function(){
+            //console.log('表单失去焦点')
+            //获取当前表单的value值（用户名）
+            console.log(this.value)
+
+           //通过ajax将用户名发送到服务器验证，判断该名称是否被注册
+           ajaxTools.get('http://127.0.0.1:8081/checkUser?username='+this.value,function(data){
+                console.log(typeof data)
+                //data  服务器返回的数据 可能时字符串1或者0
+                if(data === '1'){//用户名被注册
+                    emailInput.nextSibling.innerHTML = '对不起，该用户名已被注册'
+                }else if(data === '0'){//用户名未被注册可以使用
+                    emailInput.nextSibling.innerHTML = '恭喜，该用户名可以使用'
+                }
+           })
+        }
+
+
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li>香中有别韵</li>
+        <li>清极不知寒</li>
+        <li>松月生夜凉</li>
+        <!--此处适合约会！-->
+        <li>风泉满清听</li>
+        <script>
+            //console.log('好湿')
+        </script>
+    </ul>
+    <hr>
+    <button onclick="changePoem()">点击更换诗词</button>
+
+
+    <script>
+
+        //获取ul元素节点
+        //let ul = document.querySelector('ul')
+
+        //innerText 获取指定节点的所有文本内容（过滤掉标签和注释）   不支持html解析操作，所有内容当作字符串
+        //console.log(ul.innerText)
+
+
+        //outerText 获取指定节点的所有文本内容（过滤掉标签和注释） 不支持html解析操作，所有内容当作字符串
+        //console.log(ul.outerText)
+
+
+        //innerHTML  获取指定节点的所有内容（包含标签等内容）   设置内部的内容
+        //console.log(ul.innerHTML)
+
+
+        //outerHTML 获取指定节点的所有内容+当前节点本身（包含标签等内容）   替换内容
+        //console.log(ul.outerHTML)
+
+
+        function changePoem(){
+            //获取元素
+            let ul = document.querySelector('ul')
+            console.log(ul)
+            //设置ul的内容 
+            //ul.innerHTML = ' <li>春眠不觉晓</li> <li>处处蚊子咬</li>  <li>打上敌敌畏</li>  <li>不知死多少</li>  ';
+
+            //ul.outerHTML =  '<ol> <li>春眠不觉晓</li> <li>处处蚊子咬</li>  <li>打上敌敌畏</li>  <li>不知死多少</li>  </ol>';
+
+            //ul.innerText = ' <li>春眠不觉晓</li> <li>处处蚊子咬</li>  <li>打上敌敌畏</li>  <li>不知死多少</li>  ';
+
+            ul.outerText = '<ol> <li>春眠不觉晓</li> <li>处处蚊子咬</li>  <li>打上敌敌畏</li>  <li>不知死多少</li>  </ol>';
+
+        }
+
+    </script>
+    
+</body>
+</html>

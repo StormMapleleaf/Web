@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数据属性特性（针对属性的设置）
+        let person = {
+            name:'xiaoer',
+            sex:'男',
+            age:18,
+            say:function(){
+                console.log('扒衣见君节～');
+            }
+        }
+
+        //获取属性的特性值
+        let result = Object.getOwnPropertyDescriptor(person,'name');
+        console.log(result)
+
+        //操作属性
+        //设置属性的特性
+        Object.defineProperty(person,'name',{
+            configurable:true,
+            enumerable:false,
+            value:'xiaosan',
+            writable:false
+        });
+
+        //删除
+        //delete person.name;
+        //console.log(person)
+
+        //遍历操作
+        /*
+        for(let i in person){
+            console.log(person[i])
+        }
+        */
+
+        //修改
+        person.name = '陈小二';
+        console.log(person.name)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //声明一个构造函数用于当作父类/父构造方法
+
+        function Father(){
+            this.familyName = '刘';
+            this.sex = '男'
+            this.say=function(){
+                console.log('你个瘪犊子！');
+            }
+        }
+        
+        Father.prototype.walk = function(){
+            console.log('gogogo～');
+        }
+
+
+
+
+        //子构造方法
+        function Son(){
+            //子对象实例中添加成员
+            this.id = 123456;
+            this.hobby = '暴躁';
+            this.study=function(){
+                console.log('学习')
+            }
+        }
+
+
+        //继承操作
+        Son.prototype = new Father();
+
+        //为子对象原型添加成员
+        Son.prototype.run=function(){
+            console.log('run起来～');
+        }
+
+
+        //实例话一个子对象实例
+        let xiaoer = new Son();
+
+        //console.log(xiaoer)
+
+        //查看姓氏
+        console.log(xiaoer.familyName)
+        //说话功能
+        xiaoer.say()
+        //查看id
+        console.log(xiaoer.id)
+
+        xiaoer.study()
+        xiaoer.run()
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

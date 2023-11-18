@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //设置对象作为映射的键
+        let xiaosan = {name:'xiaosan'}
+        let xiaosi = {name:'xiaosi'}
+        let xiaowu = {name:'xiaowu'}
+
+        //实例话对象
+        let mywm = new WeakMap([
+            [xiaosan,'xiaosan11111'],
+            [xiaosi,'woman'],
+            [xiaowu,18]
+        ]);
+        console.log(mywm)
+        //没有任何的遍历迭代操作  弱映射没有真正的引用数据
+        //mywm.delete(xiaosi);
+
+        //mywm.set({},'xiaoliu');
+
+        //console.log(mywm.has(xiaowu));
+
+        console.log(mywm.get(xiaosan))
+
+        console.log(mywm);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

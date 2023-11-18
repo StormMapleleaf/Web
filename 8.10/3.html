@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div id="zhuhao">在喝肥宅快乐水</div>
+        <div class="red">郭溪在睡觉</div>
+    </div>
+    <hr>
+    <form action="">
+        <input type="text" name="username"  />
+        <hr>
+        <input type="password" name="userpwd"  />
+        <hr>
+        <input type="checkbox" name="hobby[]" value="sing" />唱歌
+        <input type="checkbox" name="hobby[]" value="dance" />跳舞
+        <input type="checkbox" name="hobby[]" value="rap" />rap
+        <input type="checkbox" name="hobby[]" value="blueball" />篮球
+
+    </form>
+
+    <script>
+        //文档节点  创建节点 获取节点 快捷获取节点等
+
+        /*
+        //快捷节点
+        //documentElement 代表页面的html节点
+        console.log(document.documentElement)
+
+        //body 代表页面的body节点
+        console.log(document.body)
+
+        //title 获取标题内容
+        console.log(document.title)
+
+        setInterval(()=>{
+            if( document.title == '★☆★陈小二☆★☆'){
+                document.title = '☆★☆陈小二★☆★';
+            }else{
+                document.title = '★☆★陈小二☆★☆';
+            }
+        },500)
+
+        //domain 获取当前域名
+        console.log(document.domain)
+        
+
+
+
+        //获取节点的方法
+        //getElementById() 通过id属性查找元素节点
+        //let zhuhao = document.getElementById('zhuhao')
+        //console.log(zhuhao)
+
+        //getElementsByTagName() 通过标签名获取元素节点集合
+        //let div = document.getElementsByTagName('body')[0];
+        //console.log(div)
+
+        //getElementsByName() 通过name属性获取元素节点集合
+        //获取用户名表单
+        let username = document.getElementsByName('username')[0]
+        console.log(username)
+
+        let hobbys = document.getElementsByName('hobby[]')
+        console.log(hobbys)
+
+        */
+
+
+        //创建节点
+
+        //使用创建节点的方法生成一个表格
+
+        //创建table节点
+        let table = document.createElement('table');
+        console.log(table)
+        //创建属性节点
+        let border = document.createAttribute('border')
+        border.nodeValue = '5';
+        console.log(border)
+
+        let width = document.createAttribute('width')
+        width.nodeValue = '300'
+
+        let height = document.createAttribute('height')
+        height.nodeValue = '300'
+
+
+        //将属性节点添加到元素节点中
+        table.attributes.setNamedItem(border)
+        table.attributes.setNamedItem(width)
+        table.attributes.setNamedItem(height)
+
+
+        //创建tr节点
+
+        for(let i = 0;i<5;i++){
+            let tr =document.createElement('tr');
+            table.appendChild(tr)
+                
+            //创建td节点
+
+            for(let i = 0;i<5;i++){
+                let td = document.createElement('td')
+                tr.appendChild(td);
+                //创建文本节点
+                let txt = document.createTextNode(i)
+                td.appendChild(txt)
+            }
+
+        }
+
+        
+        //将表格插入页面
+        document.body.appendChild(table)
+        
+        
+   
+
+
+
+    </script>
+    
+</body>
+</html>

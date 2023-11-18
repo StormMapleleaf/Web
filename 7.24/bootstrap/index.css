@@ -1,0 +1,21 @@
+/*引入 大尺寸不同尺寸的css*/
+@import url(./large.css)   (min-width:801px);
+
+/*引入 中尺寸不同尺寸的css*/
+@import url(./midium.css)   (min-width:541px) and (max-width:800px);
+
+/*引入 大尺寸不同尺寸的css*/
+@import url(./small.css)   (min-width:320px) and (max-width:540px);
+
+#wrap{
+    width:1200px;
+    height:1000px;
+    background-color: bisque;
+    margin: 0 auto;
+}
+
+.row>div{
+    background-color: blue;
+    height:100px;
+}
+

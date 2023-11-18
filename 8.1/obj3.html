@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //访问器特性（权限控制）
+        let person = {
+            name:'xiaosan',
+            sex:'man',
+            id:666666666,
+            age:18,
+            smile:function(){
+                console.log('微笑～');
+            }
+        }
+
+
+        //设置访问器特性
+        Object.defineProperty(person,'sex',{
+            configurable:true,
+            enumerable:true,
+            //设置获取对象成员时的操作
+            get:function(){
+                //console.log('该属性禁止访问');
+                //具体操作根据实际需求决定
+                return this.id;
+            },
+            //设置修改对象成员时的操作
+            set:function(data){
+                //根据设置的值修改成员  id最后一位变成5
+                 
+                if(data =='女' ||  data == 'woman'){
+                    this.id = 6666665;
+                }
+            }
+        })
+
+
+        //访问性别
+        console.log(person.sex)
+
+        //设置性别
+        person.sex = 'woman'
+
+        console.log(person);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:600px;
+            height:600px;
+            background-color: brown;
+            /*定义网格模式*/
+            display: grid;/*设置盒子的显示方式【内部包含一个表格】*/
+            grid-template-rows: 150px 150px 150px;
+            grid-template-columns: 120px 120px 120px;
+            /*定位表格在当前元素中的对齐方式
+            justify-content: center;
+            align-content: center;
+            */
+            place-content: center center;
+            /*对表格内容进行对齐方式设置  。container里面的div
+            justify-items: center;
+            align-items: center;
+            */
+            place-items: center center;
+
+            
+            .eight{
+                /*设施某个单元格内容的对齐方式
+                align-self: end;
+                justify-self: end;
+                */
+                place-self: end start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--表格外部的div元素-->
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div class="eight">8</div>
+    </div>
+</body>
+</html>

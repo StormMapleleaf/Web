@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        E:first-of-type  
+        1.找到页面中所有符合选择器E的元素   一大堆p
+        2.找到第一步中元素的父元素          <div class="gj"></div>/<div class="gj"></div>
+        3.找到第二部元素中的所有指定类型E的子元素组成的列表
+        4.在同类型的列表中找到第一个子元素
+        
+
+        E:last-of-type    获取指定元素的父元素中最后一个指定类型的元素
+        E:nth-of-type(n)  找到指定位置的子元素
+        E:nth-last-of-type(n)  找到指定位置的子元素（倒数）
+
+        E:only-type  找到父元素的唯一一个指定类型的元素
+        
+
+
+
+    
+        p:first-of-type{
+            color:red
+        }
+
+        p:last-of-type{
+            background-color: brown;
+        }
+
+        p:nth-of-type(3){
+            border:1px solid red;
+        }
+
+        p:nth-of-type(3n){
+            font-style: italic;
+        }
+
+        p:nth-last-of-type(2){
+            font-size:30px;
+        }
+*/
+        p:only-of-type{
+            text-decoration: line-through;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="gj">
+        <p>俄罗斯：谁打我我就打谁</p>
+        <p>美国：想打谁就打谁</p>
+        <p>中国：谁打架我就骂谁</p>
+        <p>朝鲜：谁打我我就打韩国</p>
+        <p>印度：我就蹭蹭不敢打</p>
+        <p>蒙古：谁都不敢打我</p>
+    </div>
+    <hr>
+    <div class="gj">
+        <div>俄罗斯：谁打我我就打谁</div>
+        <p>美国：想打谁就打谁</p>
+        <p>中国：谁打架我就骂谁</p>
+        <p>朝鲜：谁打我我就打韩国</p>
+        <p>印度：我就蹭蹭不敢打</p>
+        <h4>蒙古：谁都不敢打我</h4>
+    </div>
+    <hr>
+    <div>
+        <p>乌克兰：欧洲粮仓</p>
+    </div>
+    <hr>
+    <div>
+        <div>北约</div>
+        <div>北约</div>
+        <div>北约</div>
+        <div>北约</div>
+        <p>乌克兰：欧洲粮仓</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            width:400px;
+            height:300px;
+            border:5px solid black;
+            position: relative;
+        }
+
+        #img img{
+            width:400px;
+            height:300px
+        }
+
+        #rect{
+            width:100px;
+            height:100px;
+            background-color: rgba(100,100,100,0.5);
+            position:absolute;
+            left:0;
+            bottom:0
+            
+        }
+
+        #big{
+            position: absolute;
+            left: 100%;
+            top:0;
+            border: 1px solid black;
+            width:500px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        #big img{
+            width: 2000px;
+            height:1500px;
+            position: absolute;
+            left:0;
+            top:0
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="img">
+        <img src="./img/1.jpg" alt="" id="tu">
+        <div id="rect"></div>
+        <div id="big">
+            <img src="./img/1.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        //设置放大倍数  3倍   CSS中小图与大图必须符合该比例
+
+
+        //小图添加鼠标事件
+
+        let img = document.getElementById('tu');
+        let rect = document.getElementById('rect')
+
+        let bigimg = document.querySelector('#big img')
+
+        //获取整体外层元素的位置
+        let position = tu.getBoundingClientRect();
+
+
+        //鼠标进入事件，设置位置
+        img.addEventListener('mouseover',function(e){
+            let left = e.clientX - position.left-50;
+            let top = e.clientY - position.top-50;
+
+            //处理x方向
+            if(left<=0){
+                left = 0;
+            }else if(left>=300){
+
+                left=400-100
+            }
+
+            //处理Y方向
+            if(top<=0){
+                top = 0;
+            }else if(top>=200){
+
+                top=300-100
+            }
+
+
+            //获取鼠标位置
+            rect.style.left = left+'px';
+            rect.style.top = top+'px'
+        })
+
+        
+        //鼠标移动时设置位置
+        rect.addEventListener('mousemove',function(e){
+            //获取鼠标位置
+            
+            let left = e.clientX - position.left-50;
+            let top = e.clientY - position.top-50;
+
+            //处理x方向
+            if(left<=0){
+                left = 0;
+            }else if(left>=300){
+
+                left=400-100
+            }
+
+            //处理Y方向
+            if(top<=0){
+                top = 0;
+            }else if(top>=200){
+
+                top=300-100
+            }
+
+            //将遮罩层设置坐标（鼠标位置）
+            rect.style.left = left+'px';
+            rect.style.top = top+'px';
+
+
+            //移动大图片
+            let imgLeft = -(left) *5
+            let imgTop = -(top) * 5
+
+            bigimg.style.left = imgLeft+'px'
+            bigimg.style.top = imgTop+'px'
+
+        },false)
+
+
+        
+
+    </script>
+</body>
+</html>

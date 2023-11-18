@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border:10px solid black;
+        }
+
+        section{
+            background-color: gray;
+            height:500px
+        }
+
+        .btn_group{
+            position:fixed;
+            right:10px;
+            bottom:100px;
+        }
+    </style>
+    <script>
+        //跳转到指定的位置
+
+        function go(num){
+            window.scrollTo(0,1000)
+        }
+
+        //设置为全局变量
+        let scrollId = 0 ;
+
+        //小说阅读滚动操作
+        function auto(){
+            //设置自动循环
+            scrollId = setInterval(()=>{
+                window.scrollBy(0,10)
+            },50)
+        }
+
+        //设置停止滚动的函数
+        function stop(){
+            //判断是否有循环器
+            if(scrollId !== 0){
+                //清除循环器的函数
+                clearInterval(scrollId)
+                //将循环id重置为0
+                scrollId = 0;
+            }
+            
+        }
+
+        //返回顶部按钮
+        function goTop(){
+            //直接返回顶部
+            //window.scrollTo(0,0)
+
+
+            //渐渐的返回顶部
+
+           
+            let topId = setInterval(()=>{
+                 //获取当前滚动条的高度
+                let sh = window.scrollY;
+                if(sh>0){
+                    //减小滚动条的高度
+                    scrollBy(0,-100) 
+                }else{
+                    //停止循环
+                    clearInterval(topId);
+                }
+            },10)
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <article>
+        <section>
+            <h2>第1章</h2>
+            <p>彭永康大战周公，300回合败下阵来，跟周公一起睡了~</p>
+        </section>
+        <section>
+            <h2>第2章</h2>
+            <p>彭永康大战周公，300回合败下阵来，跟周公一起睡了~</p>
+        </section>
+        <section>
+            <h2>第3章</h2>
+            <p>彭永康大战周公，300回合败下阵来，跟周公一起睡了~</p>
+        </section>
+        <section>
+            <h2>第4章</h2>
+            <p>彭永康大战周公，300回合败下阵来，跟周公一起睡了~</p>
+        </section>
+        <section>
+            <h2>第5章</h2>
+            <p>彭永康大战周公，300回合败下阵来，跟周公一起睡了~</p>
+        </section>
+        
+    </article>
+    
+    <div class="btn_group">
+        <button onclick = "goTop()">返回顶部</button>
+        <button onclick = "go(2)">跳转到第N张</button>
+        <button onclick="auto()">自动阅读</button>
+        <button onclick="stop()">停止阅读</button>
+    </div>
+</body>
+</html>

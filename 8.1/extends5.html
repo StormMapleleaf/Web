@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //父对象
+        let person = {
+            name:'小瘪三',
+            sex:'man',
+            age:18,
+            say(){
+                console.log('你说句话啊～温老师～');
+            }
+        };
+
+        //寄生式继承
+        function extendObj(obj){
+            //复制改对象成员做一个新对象
+            let newObj = Object.create(obj);
+
+            //添加子对象成员
+            newObj.skin = 'yellow';
+            newObj.cry = function(){
+                console.log(5555555)
+            }
+
+            //返回对象
+            return newObj;
+        }
+
+
+        //继承操作
+        let xiaochen = extendObj(person);
+        console.log(xiaochen.name);
+        console.log(xiaochen.sex);
+        xiaochen.say()
+        console.log(xiaochen.skin)
+        xiaochen.cry()
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

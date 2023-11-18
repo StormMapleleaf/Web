@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--图片-->
+    <img src="./yl.webp" alt="这是王宝强的照片" title="这是王宝强的照片" width="200" height="200">
+    <hr>
+    <!--内容描述-->
+    <figure>
+        <img src="./yl.webp" alt="这是王宝强的照片" title="这是王宝强的照片" width="200" height="200" />
+        <figcaption>
+            这是一个神一样的男人，手搓核弹，脚搓cpu！
+        </figcaption>
+    </figure>
+    <hr>
+    最简单的版本：
+    <video src="./r6.mp4" controls width="200" height="150">
+        你的破浏览器不支持视频播放，请下载新版本浏览器（兼容性提示）
+    </video>
+    <hr>
+    设置封面：
+    <video src="./r6.mp4" controls width="200" height="150" poster="./yl.webp">
+        你的破浏览器不支持视频播放，请下载新版本浏览器（兼容性提示）
+    </video>
+    <hr>
+    自动播放：
+    <video src="./r6.mp4" controls autoplay width="200" height="150">
+        你的破浏览器不支持视频播放，请下载新版本浏览器（兼容性提示） 绝大多数浏览器不允许
+    </video>
+    <hr>
+    静音设置：
+    <video src="./r6.mp4" controls width="200" height="150" muted>
+        你的破浏览器不支持视频播放，请下载新版本浏览器（兼容性提示）
+    </video>
+    <hr>
+    多资源播放：
+    <video  controls width="200" height="150">
+        <source src="./r6.mp4" type="video/mp4"  />
+        <source src="./r6.webp" type="video/webm"  />
+        你的破浏览器不支持视频播放，请下载新版本浏览器（兼容性提示）
+    </video>
+    <hr>
+    音频标签：
+    <audio src="https://www.ihaoge.net/server/1/283847824.mp3" controls autoplay muted>
+        你的破浏览器该扔了不支持mp3播放
+    </audio>
+    <hr>
+    <audio  controls autoplay muted>
+        <source src="https://www.ihaoge.net/server/1/283847824.mp3" type="audio/mp3">
+        <source src="https://www.ihaoge.net/server/1/283847824.ogg" type="audio/ogg">
+        你的破浏览器该扔了不支持mp3播放
+    </audio>
+    <hr>
+    带字幕的视频：
+    <video controls
+    src="./friday.mp4">
+    <track default
+            kind="captions"
+            srclang="en"
+            src="/friday.vtt">
+    Download the
+    <a href="/media/cc0-videos/friday.mp4">MP4</a>
+    video, and
+    <a href="/media/examples/friday.vtt">subtitles</a>.
+    </video>
+    <hr>
+
+    插入页面：
+    <iframe src="http://player.bilibili.com/player.html?aid=230224792&bvid=BV1bh411P7xk&cid=1176122018&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+    <hr>
+    插入网页
+    <iframe src="https://www.360.com" sandbox frameborder="1" width="1000" height="500" scrolling="no"></iframe>
+    <hr>
+    <object data="SEO基本原理与操作.pdf" type="application/pdf" width="600" height="600">
+        你的破浏览器不识别pdf文件
+    </object>
+    <hr>
+    svg：<img src="adafruit.svg" alt="" width="280" height="280">
+    <hr>
+    <svg width="500" height="300">
+        <rect width="50%" height="50%" fill="red" />
+        <circle cx="50" cy="50" r="50"/>
+    </svg>
+    <hr>
+    <picture>
+        <source srcset="./small.jpg" media="(max-width: 799px)">
+        <source srcset="./big.webp" media="(min-width:800px)">
+        <img src="./big.webp" alt="">
+    </picture>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="yjm">杨佳曼，你的视频呢？</p>
+
+
+    <script>
+        //获取文本节点
+        //获取p元素节点
+        let pElement = document.getElementById('yjm');
+        //查找其中的子节点
+        let txtNode = pElement.firstChild;
+        console.log(txtNode)
+
+        //修改任何文本节点，通过nodeValue进行操作
+
+
+        //修改文本节点完全可以通过字符串函数处理~
+        //txtNode.nodeValue = '杨六郎，你的视频呢？'
+        //console.log(txtNode.nodeValue)
+        //文本节点插入内容
+        txtNode.appendData('醒过来吧~');
+        //txtNode.insertData(3,'李沁芸')
+
+        //文本节点删除内容
+        //txtNode.deleteData(6,2);
+
+        //文本节点替换内容
+        //txtNode.replaceData(0,3,'李沁芸')
+
+
+        //文本分段
+        console.log(pElement.childNodes.length)
+        txtNode.splitText(3)
+        console.log(pElement.childNodes.length)
+
+        //文本截取
+        //let result = txtNode.substringData(4,4)
+        //console.log(result)
+
+
+        //处理连续的文本节点
+        document.normalize()
+        console.log(pElement.childNodes.length)
+
+
+
+
+    </script>
+    
+</body>
+</html>

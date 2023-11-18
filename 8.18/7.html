@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width:200px;
+            height:300px;
+            background-color: black;
+        }
+    </style>
+    <script src="./jquery-3.7.0.js"></script>
+    <script>
+
+        $(function(){
+            $('button:first').click(function(){
+
+                $('#mydiv').fadeIn(1000)
+
+            })
+
+            $('button:eq(1)').click(function(){
+
+                $('#mydiv').fadeOut(1000)
+
+                })
+
+
+            $('button:last').click(function(){
+
+                 $('#mydiv').fadeTo('slow',0.4)
+
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <button>fadein</button><button>fadeout</button><button>fadeTo</button>
+    <hr>
+    <div id="mydiv"></div>
+    <hr>
+    
+</body>
+</html>

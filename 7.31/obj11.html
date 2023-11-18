@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //声明对象
+        let chenyantong = {
+            name:'陈妍彤',
+            sex:'女',
+            age:18,
+            study(){
+                console.log('我爱学习皮肤好好～')
+            }
+        }
+
+        //将对象总的成员赋值给变量
+        //let name = chenyantong.name;
+        //let sex = chenyantong.sex;
+        //let age = chenyantong.age;
+        //let study = chenyantong.study;
+
+       // console.log(name,sex,age);
+        //study();
+
+        //对象解构语法{成员名:变量名,......}
+        //let {name:nameVar,sex:sexVar,age:ageVar,study:studyVar} = chenyantong;
+        //console.log(nameVar,sexVar,sexVar);
+        //studyVar();
+
+        //成员名与变量名相同情况(常见)
+        let {name,sex,age} = chenyantong;
+        console.log(name,sex,age)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

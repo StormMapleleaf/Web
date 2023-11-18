@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //设置私有属性id  id不允许直接访问
+
+        //声明一个弱映射用于存储私有成员
+        let priavteMember = new WeakMap(); //使用对象实例当作映射的键
+
+        /*
+        {
+
+            对象实例：{
+                id(asdasdad121231):567
+                name:234,
+                sex:123123
+            }
+        }
+        */
+        class User{
+
+            constructor(id){
+                //设置一个关于id的成员名称
+                this.idProperty = Symbol('id');
+                //设置id
+                this.setId(id);
+            }
+
+
+            //设置私有成员的方法
+            setPrivate(memberName,value){
+                //获取所有的私有成员
+                let priavteMembers = priavteMember.get(this)||{};
+                //修改私有你成员的值
+                priavteMembers[memberName] =value;
+                //将修改后的所有私有成员再次保存进弱映射中
+                priavteMember.set(this,priavteMembers)
+                
+            }
+
+            //原型里直接添加一个方法
+            setId(id){
+                this.setPrivate(this.idProperty,id);
+            }
+
+            //原型中添加一个获取id的方法
+            getId(){
+                return priavteMember.get(this)[this.idProperty]
+            }
+        }
+
+
+        //实例话对象
+        let xiaosan = new User(999);
+
+        console.log(xiaosan.getId())
+
+        //直接通过弱映射访问
+        console.log(priavteMember.get(xiaosan))
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

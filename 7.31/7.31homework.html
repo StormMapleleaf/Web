@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        let a=new Object();
+        console.log(typeof a);
+        a.name='大学生';
+        console.log(a.name);
+        a.bala=function(){
+            console.log('放屁');
+        }
+        console.log(a);
+        let teacher={
+            sex:'第三者',
+        }
+        console.log(teacher);
+        function son(){
+            console.log('good');
+        }
+        let cong=new son();
+        function Stu(name,zhuanye){
+            let stu=new Object();
+            stu.name=name;
+            stu.zhuanye=zhuanye;
+            return stu;
+        }
+        let tom=new Stu('tom','computer');
+        console.log(tom);
+        function doc(name,age,sex){
+            this.name=name;
+            this.age=age;
+            doc.prototype.sex=sex;
+        }
+        let hao=new doc('hao','99','man');
+        console.log(hao);
+        for(let i in hao){
+            console.log(hao[i])
+        }
+        function Sttu(){
+            
+        }
+        Sttu.prototype = {
+            constructor:Sttu ,
+            name:'name',
+            sex:'man',
+            age:10,
+        }
+        let han=new Sttu('sh','woman','18');
+        console.log(han.sex,han.name);
+        for(let i in han)
+        console.log(han[i]);*/
+        let a={
+            name:'tom',
+            age:'19'
+        }
+        a.sex='man';
+        a.name='jerry';
+        delete a.age;
+        console.log(a);
+        let ssex='man';
+        let attr='nname'
+        let b={
+            ssex,
+            [attr]:'jerry'
+        }
+        console.log(b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

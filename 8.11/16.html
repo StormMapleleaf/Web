@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width:300px;
+            height:200px;
+            padding:10px;
+            border: 5px solid red;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mydiv"></div>
+
+    <script>
+        //获取客户端属性 
+        let mydiv = document.getElementById('mydiv')
+        //clientWidth 是内容区宽度加左、右内边距宽度   内容+padding
+        console.log(mydiv.clientWidth)
+
+
+        //clientHeight
+        console.log(mydiv.clientHeight) 
+    </script>
+    
+</body>
+</html>

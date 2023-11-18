@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //写一个自执行函数
+        (function (){
+            //获取用户代理信息 userAgent
+            let userAgent = window.navigator.userAgent.toLowerCase();
+            //书写正则规则，包含所有手持设备的字符串
+            let pattern = /phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i;
+
+            //判断是否包含规则中的字符串
+            if(pattern.test(userAgent)){
+                //跳转到手机设备页面
+                window.location.href='http://www.baidu.com'
+            }else{
+                //跳转到pc设备页面
+                window.location.href='http://www.jd.com'
+            }
+        })()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

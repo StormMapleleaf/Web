@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Human(name,age){
+            //为对象实例添加成员
+            this.name=name
+            this.age = 18;
+            this.say = function(){
+
+            }
+        }
+
+        //对象原型添加成团
+        Human.prototype.sex = 'man';
+        Human.prototype.run = function(){
+            console.log('gogogo');
+        }
+
+
+
+        //声明一个人类
+
+        class Person{
+            //构造方法
+            constructor(name,age){
+                //为对象实例添加成员
+                this.name = name;
+                this.age = age;
+                this.say = function(){
+
+                }
+            }
+
+            
+            //类中直接定义的函数就是给原型加的成员
+            run(){
+                console.log('run起来～')
+            }
+
+            //类中无法直接定义成员属性（成员值为非函数类的）
+            //类中间接定义成员属性（借助访问器定义属性成员）
+            get sex(){
+                if(this._sex === undefined){
+                    return 'man';
+                }else{
+                    return this._sex;
+                }
+                
+            }
+
+            set sex(data){
+                //console.log(data)
+                //设置值
+                //console.log(this)
+                this._sex = data
+            }
+
+            //为当前类添加一个成员
+            static create(){
+                return '人类'
+            }
+
+            static aaa(){
+                console.log('aaaaa')
+            }
+
+        }
+
+        //实例话一个person
+        let p = new Person('郭溪',18);
+        console.log(p)
+        console.log(p.sex)
+        p.sex = 'woman'
+        console.log(p.sex)
+
+
+        let result = Person.create();
+        console.log(result)
+
+        Person.aaa();
+
+        
+
+        //为类添加成员
+        Person.skin = 'yellow';
+        console.log(Person.skin)
+
+        //为类的原型添加成员
+        Person.prototype.walk = function(){
+            console.log('没病走两步')
+        }
+
+        p.walk();
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

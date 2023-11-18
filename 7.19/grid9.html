@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*设置网格布局*/
+        .grid{
+            width:600px;
+            height:600px;
+            background-color: aquamarine;
+            /*设置为网格类型*/
+            display: grid;
+            /*设置布局 几行几列*/
+            grid-template-rows: 120px 120px 120px 120px 120px;
+            grid-template-columns: 120px 120px 120px 120px 120px;
+
+            grid-auto-flow: row dense;
+        }
+        .grid>div{
+            width: 100px;
+            height:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div style="grid-area: 1/2/2/3;">2</div>
+        <div style="grid-column-start: 3;grid-column-end:4 ;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    
+</body>
+</html>

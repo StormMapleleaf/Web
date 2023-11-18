@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩盒子</title>
+    <style>
+        .contianer{
+            width:8800px;
+            height:500px;
+            background-color: aquamarine;
+            /*弹性盒子设置*/
+            display: flex;
+            /*设置排列方向*/
+            flex-direction: row;
+        }
+
+        .contianer>div{
+            width:200px;
+            height:100px;
+            background-color: green;
+        }
+
+        .contianer>div:nth-child(1){
+            flex-basis: 200px;
+        }
+
+        .contianer>div:nth-child(2){
+            flex-basis: 200px;
+        }
+
+        .contianer>div:nth-child(3){
+            flex-basis: 200px;
+        }
+
+        .contianer>div:nth-child(4){
+            flex-basis: 200px;
+        }
+
+        .contianer>div:nth-child(5){
+            flex-basis: 200px;
+        }
+
+        .contianer>div:nth-child(6){
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

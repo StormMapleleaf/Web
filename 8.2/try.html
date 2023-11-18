@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //try..catch
+        let result = 0;
+        try{
+            //尝试执行的代码
+            let num1 = 99;
+            let num2 = 88;
+            //判断数据是否合法
+            if(num2 !== 0){//数据合法
+                //除法操作
+                result = num1/num2;
+            }else{
+                //手动抛出一个错误,进入catch代码块不再往后运行当前代码块的其他内容
+                throw new Error('程序异常，被除数不能为0');
+                
+            }   
+            //查看操作结果
+            console.log(result)
+           
+
+        }catch(e){
+            //捕获错误之后的处理
+            console.log(typeof e,e)
+            //解决错误
+            //..
+            
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

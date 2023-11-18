@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: PingFang SC, Microsoft YaHei, Helvetica Neue, Helvetica, Hiragion Sans GB, Arial, sans-serif;
+}
+html {
+  font-size: 16px;
+}
+header {
+  cursor: pointer;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+header nav {
+  width: 75rem;
+  height: 3.13rem;
+  margin: 0 auto;
+}
+header nav .logo {
+  float: left;
+}
+header nav .logo .q {
+  line-height: 3.13rem;
+  height: 3.13rem;
+  float: left;
+  margin-left: 0.75rem;
+}
+header nav .logo .w {
+  float: left;
+  line-height: 3.13rem;
+  margin-left: 9px;
+}
+header nav .logo .qqq {
+  line-height: 3.13rem;
+  height: 3.13rem;
+  float: left;
+  margin-left: 0.75rem;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -2px;
+}
+header nav .logo .qq {
+  line-height: 3.5rem;
+  height: 3.13rem;
+  margin-left: 0.5rem;
+  float: left;
+}
+header nav .C {
+  float: left;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: white;
+  width: 5rem;
+  height: 3.13rem;
+  line-height: 3.13rem;
+  background-color: #FE5102;
+  margin-left: 8.61rem;
+  text-align: center;
+}
+header nav .list {
+  width: 50.06rem;
+  height: 3.13rem;
+  float: right;
+  display: flex;
+}
+header nav .list li {
+  padding: 0 20px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #111111;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0 auto;
+}
+.sec1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  height: 35.63rem;
+  background-color: #dad8d8;
+}
+.sec1 .a {
+  width: 75rem ;
+  height: 35.63rem;
+  margin: 0 auto;
+}
+.sec1 .a img {
+  margin-top: 1.25rem;
+  cursor: pointer;
+}
+.sec1 .b {
+  height: 8.75rem;
+  width: 75rem;
+  margin: 0 auto;
+  margin-top: -12.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sec1 .b li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 18rem;
+  background-color: white;
+  height: 8.75rem;
+  border-top: 1px solid #FE5102;
+}
+.sec1 .b li .aa {
+  height: 2rem;
+  width: 18rem;
+}
+.sec1 .b li .aa img {
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-left: 3.88rem;
+}
+.sec1 .b li .aa p {
+  margin-left: 0.5rem;
+  margin-top: -3px;
+  float: left;
+  font-size: 24px;
+  color: black;
+  letter-spacing: 0;
+  line-height: 32px;
+  font-weight: 400;
+}
+.sec1 .b li .bb {
+  border-radius: 22px;
+  margin: 0 auto;
+  width: 9.88rem;
+  height: 2.25rem;
+  background-color: #FE5102;
+}
+.sec1 .b li .bb p {
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 6px;
+  cursor: pointer;
+}

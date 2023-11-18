@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //兼容性处理问题~！
+        //获取所有浏览器的视窗尺寸~
+
+        function getPage(){
+            //获取浏览器的视窗(高版本)
+            let pageW = window.innerWidth;
+            let pageH = window.innerHeight;
+
+            let viewWidth=0;
+            let viewHeight=0;
+
+            //检测是否获取了长度
+            if(typeof pageW == 'number'){//获取到了尺寸
+                viewWidth = pageW;
+                viewHeight = pageH;
+            }else{//低版本浏览器
+                viewWidth= document.documentElement.clientWidth;
+                viewHeight = document.documentElement.clientHeight;
+
+            }
+
+            return {
+                width:viewWidth,
+                height:viewHeight
+            }
+        }
+
+
+        //获取页面宽高
+        let result = getPage();
+        console.log(result)
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

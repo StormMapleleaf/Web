@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        
+        let manSet = new Set(['陈小二','晏子涵','廖桃李','张玉川','张恬玉']);
+
+        let womanSet = new Set(['曾静怡','张恬玉','晨曦','陈娟','晏子涵']);  
+
+        //并集操作 将多个集合的数据合成一个新的集合
+        let student = new Set([...manSet,...womanSet])
+        console.log(student)
+
+        //交集  存在一个集合同时同在与另一个集合中的数据组成的集合就是交集
+        let same = new Set([...manSet].filter(function(data){
+            //检测数据是否存在与womanSet中
+            if(womanSet.has(data)){
+                return true;
+            }  
+        }))
+
+        console.log(same)
+
+        //差集 在一个集合中但是不存在与另一个集合中的数据组成的集合
+        let different = new Set([...manSet].filter(function(data){
+            if(!womanSet.has(data)){
+                return ture;
+            }
+        }))
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

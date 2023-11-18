@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>444444</title>
+</head>
+<body>
+
+
+    <a href="1.html">第1页</a> |
+    <a href="2.html">第2页</a> |
+    <a href="3.html">第3页</a> |
+    <a href="4.html">第4页</a> |
+    <a href="5.html">第5页</a> |
+
+    <hr>
+    <button onclick = "shang()">上一页</button>
+    <button onclick = "xia()">下一页</button>
+    <script>
+        //history 属性  length 表示记录的个数
+        console.log(history.length)
+
+
+        //返回上一页的函数
+        function shang(){
+            history.go(-1)
+        }
+
+
+
+        //返回下一页的函数
+        function xia(){
+            history.go(1)
+        }
+
+
+
+
+    </script>
+</body>
+</html>

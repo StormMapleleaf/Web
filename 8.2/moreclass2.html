@@ -1,0 +1,65 @@
+<script>
+
+    //声明一个基本的类
+    class EmptyClass{}
+
+
+    //可以继承类的函数
+
+
+    let humanFunc = (FatherClass)=>{
+        return class Human extends FatherClass {
+            say(){
+                console.log('说话功能')
+            }
+        }
+    }
+
+
+    //声明一个可以继承鸟类的函数
+    let birdFunc = (FatherClass)=>{
+        return class Bird extends FatherClass{
+            fly(){
+                console.log('我要飞的更高～')
+            }
+        }
+    }
+    
+
+    //声明一个可以继承蛇类的函数
+
+    let snakeFunc = (FatherClass)=>{
+        return class Snake extends FatherClass{
+            pen(){
+                console.log('来让我咬一口～');
+            }
+        }
+    }
+
+
+
+    //想实现类的多继承
+    function mixin(BaseClass,...moreClass){//实现多类继承/混入
+
+        //console.log(moreClass);//包含三个函数的数组
+        function func(BaseClass,current){
+            //current 为函数 humanFunc,birdFunc,snakeFunc
+            return current(BaseClass);
+        }
+
+        return moreClass.reduce(func,BaseClass);
+
+    }
+
+    //多继承的操作格式
+    let finalClass = mixin(EmptyClass,humanFunc,birdFunc,snakeFunc);
+    
+    let o = new finalClass();
+
+    o.say();//人的功能
+    o.fly();//鸟的功能
+    o.pen();//蛇的功能
+
+
+
+</script>

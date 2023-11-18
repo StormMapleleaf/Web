@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        //传入n个数据 前2个参数相加  其余参数相乘
+
+        function func(x,y){
+            //相加
+            console.log(x+y);
+            //arguments接受参数(所有实参组成的列表和形参无关！)
+            console.log(arguments);
+            //相乘
+            let total = 1;
+            for(let i =2;i<arguments.length;i++){
+                total*=arguments[i];
+            }
+            console.log(total);
+        }
+
+        //调用函数
+        func(3,5,6,8,9)
+        */
+
+
+        //收集参数：可以接受没有形参接受的所有实参组成一个新的数组
+        function func(x,y,...values){
+            //相加
+            console.log(x+y);
+
+            //查看收集参数变量
+            //console.log(values)
+
+            //相乘
+            let total = 1;
+            for(let i = 0;i<values.length;i++){
+                total*= values[i]
+            }
+
+            console.log(total)
+        }
+
+
+
+        //调用函数
+        func(3,5,6,8,9)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

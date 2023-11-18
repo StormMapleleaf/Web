@@ -1,0 +1,93 @@
+nav{
+    border: 2px solid red;
+    height: 60px;
+}
+header{
+    height:120px;
+    border: 2px solid blue;
+}
+.logo{
+    float: left;
+    height: 60px;
+    width: 40%;
+    background-color: aqua;
+}
+.sousuo{
+    height: 60px;
+    width: 30%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+.wode{
+    height: 60px;
+    width: 25%;
+    background-color: blue;
+    float: left
+}
+.lie li{
+    height: 30px;
+    width: 8%;
+    float: left;
+    list-style-type: none;
+}
+.bao{
+    height: 400px;
+    width: auto;
+    border: 2px solid black;
+}
+.zuo{
+    height: 100%;
+    width: 70%;
+    border: 2px solid aquamarine;
+    float: left;
+}
+.zuolie{
+    height: 10%;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 0%;
+    float: left;
+}
+#zuo li{
+    list-style-type: none;
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-top: 33%;
+}
+#right li{
+    margin-top: 10px;
+    list-style-type: none;
+    height: 50px;    
+}
+.bao2{
+    height: 600px;
+    width: auto;
+    border: 2px solid black;
+}
+.bao3{
+    height: 300px;
+    width: auto;
+    border: 2px solid rosybrown;
+}
+.bao4{
+    height: 800px;
+    width: auto;
+    border: 2px solid rgb(128, 0, 6);
+}
+.bao5{
+    height: 300px;
+    width: auto;
+    background-color: rgb(19, 131, 97);
+}
+.ft{
+    height: 200px;
+    background-color: aqua;
+}
+.a{
+    height: 100%;
+    width: 25%;
+    float: left;
+    border: 2px solid purple;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //分类：
+        //最底层：只有一中类型 对象   基于对象的语言。
+        //数据特征：基本数据类型和引用数据类型    基本数据：数字，字符。。   引用数据类型  对象  函数。。
+        //根据检测结果：7大类
+        /*
+            1.undefined 类型   只有一个值 undefined     （1.变量没声明，默认undefined 2.直接赋值undefined） 
+            2.number 类型     包含具体的数据类型：1。整型  2.浮点数  3.NaN
+
+                1，整型   
+                    直接声明10进制  
+                    直接声明8进制   必须以0开头
+                    直接声明16进制  必须以0x开头
+                    
+                2，浮点型 小数
+                    使用小数、
+                    科学计数法   e
+
+                3.NaN类型  Not a Number  不是一个数字  (他是错误)
+                    1.直接赋值NaN  
+                    2.错误运算会产生NaN  1 * 'a'
+                    注意：不要主动赋值NaN
+                        1.NaN不等于任何值，包括NaN本身
+                        2.NaN不能参与运算结果肯定是NaN
+
+            3.boolean类型 真假类型  千万别加''  运算/判断都可以获得布尔值
+
+                    true 表示真的，对的
+                    false 表示错的，假的
+
+            4.string 类型  带有引号的字符就是字符串与内容无关
+                    1. 单引号声明  不能解析变量     可以解析转义字符
+                    2. 双引号声明  不能解析变量     可以解析转义字符
+                    3. 反引号声明  能解析变量 ${变量名} 可以解析转义字符   （es6标准）
+
+                    选择：如果没变量，选择单引号，有变量就选反引号  (双引号尽量不用，是因为留给html了)
+
+            5.function 类型 函数类型
+
+                1. 声明函数 
+                2. 匿名函数/表达式函数
+                3. 箭头函数 
+                4. 对象声明函数  (尽量别用)
+
+            6.object 类型  对象类型
+
+                1. 对象创建   new Object()
+                2. 字面量     {}
+
+            7.symbol类型  不是用来当一个简单的数据值，而是为了给对象添加一个属性使用的（属性名称）
+
+
+
+
+        
+        
+        */
+
+        
+        //let name = '法外狂徒';
+        //let num =`98\\76\n5432${name}`;
+        //console.log(num);
+        //console.log(typeof num);
+        //document.documentElement.innerHTML = '<div id="goods"></div>'
+
+        /*
+            //声明函数
+            function chi(){
+                //...   
+            }
+
+            console.log(chi);
+            console.log(typeof chi)
+
+            //匿名函数/表达式函数
+            let he = function(){
+                //..
+            }
+            
+            console.log(he);
+            console.log(typeof he)
+
+            //箭头函数
+            let piao = ()=>{
+                //...
+            }
+            console.log(piao);
+            console.log(typeof piao)
+
+            //对象声明函数
+            let du = new Function();
+
+            console.log(du);
+            console.log(typeof du)
+        
+
+
+            //声明对象  
+            let student = new Object();
+            console.log(student)
+            console.log(typeof student)
+
+            //对象字面量方式   特定格式
+            let teacher = {sex:'男',age:18};
+            console.log(teacher)
+            console.log(typeof teacher)
+
+            //特殊对象 null
+            console.log(null)
+            console.log(typeof null)
+        */
+
+        //console.log(undefined == null) //比较值
+        //console.log(undefined === null) //比较类型和值
+
+        /*
+        undefined 
+            类型 undefined 
+            变量为定义的默认值
+
+            混吃等死没目标 就是undefined
+
+
+        null      
+            类型  object
+            定义一个变量的类型就是object
+
+            有志青年，想找一个IT工作  就是null
+
+        */
+
+        //symbol  定义一个唯一不重复的数据值
+        let name = Symbol();
+        console.log(name)
+        console.log(typeof name)
+
+        let name2 = Symbol();
+        //比较
+        console.log(name == name2)
+
+        //特征：单独定义的两个symbol值不相等
+ 
+        let name3 = Symbol('sex'); //sex标识类似注释 方便开发者找到这个Symbol
+        console.log(name3);
+
+        let name4 = Symbol('sex');
+
+        console.log(name3 ==name4)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

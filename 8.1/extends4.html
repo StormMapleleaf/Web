@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script>
+        //父对象
+
+        let person = {
+            name:'小瘪三',
+            sex:'man',
+            age:18,
+            say(){
+                console.log('你说句话啊～温老师～');
+            }
+        }
+
+        //复制对象的方法
+        function extendObject(obj){
+            //构造方法（临时）
+            function F(){
+                //可以给子对象实例 添加成员
+                this.eat=function(){
+                    console.log('我喜欢吃茄子～')
+                }
+            }
+            //指定构造方法F的原型（参数传入）
+            F.prototype = obj;
+            //在子对象的原型中添加内容
+            F.prototype.smile=function(){
+                console.log('hahahahah')
+            }
+
+            //实例话对象
+            let o = new F();
+            return o;
+        }
+
+        //继承操作
+        let xiaoming = extendObject(person);
+
+        //为子对象实例添加内容
+        xiaoming.skin = 'yellow';
+        xiaoming.cry = function(){
+            console.log(5555555)
+        }
+
+        console.log(xiaoming.name)
+        console.log(xiaoming.sex)
+        xiaoming.say()
+        xiaoming.smile()
+        xiaoming.cry();
+        xiaoming.eat();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

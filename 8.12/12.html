@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <script>
+        //keydown 按下键盘
+        username.onkeydown = function(e){
+            console.log('按下按键',e)
+        }
+
+        //keyup  释放键盘
+        username.onkeyup = function(e){
+            console.log('抬起按键',e)
+        }
+
+        //keypress 一次案件操作i
+
+        username.onkeypress = function(e){
+            console.log('一次按键操作',e)
+        }
+    </script>
+    
+</body>
+</html>

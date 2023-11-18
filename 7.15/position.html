@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page{
+            width:800px;
+            margin:0 auto ;
+
+        }
+        header{
+            height:150px;
+            background-color: aquamarine;
+        }
+
+        main{
+            float:left;
+            width:70%;
+            height:1000px;
+            background-color: orange;
+
+        }
+
+        aside{
+            float:right;
+            width:29%;
+            height:1000px;
+            background-color: chocolate;
+        }
+
+        footer{
+            height:150px;
+            background-color: brown;
+        }
+        .mb10{
+            height:10px;
+            clear:both
+        }
+
+        .ads-left{
+            /*绝对定位于相对定位的位置都是以参考元素的原点进行计算的
+                参考原点：距离元素外层最近的非static元素，如果没有那就是body
+            
+            */
+            width:150px;
+            height:400px;
+            background-color: green;
+            position: absolute;
+            left:50px;
+            top:100px;
+        }
+
+        .ads-right{
+            width:150px;
+            height:400px;
+            background-color: green;
+            position: absolute;
+            right:50px;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header></header>
+        <div class="mb10"></div>
+        <main>
+            
+        </main>
+        <aside></aside>
+        <div class="mb10"></div>
+        <footer></footer>
+    </div>
+    <div class="ads-left"></div>
+    <div class="ads-right"></div>
+    
+</body>
+</html>

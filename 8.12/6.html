@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #mydiv{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mydiv"></div>
+
+    <script>
+
+        //兼容性的事件处理工具
+
+        var EventTools = {
+            //添加事件的方法
+            addEvent:function(element,type,eventFunc){
+
+                //事件添加操作 根据不同的浏览器进行选择
+
+                //检测是否支持addEventListener操作  W3C
+                if(typeof element.addEventListener =="function"){
+                    element.addEventListener(type,eventFunc,false)
+                }else if(typeof element.attachEvent == 'function'){//检测是否支持attachEvent ie
+                    element.attachEvent('on'+type,eventFunc)
+                }else{//其他浏览器只能onclick这样的事件
+                    element['on'+type] = eventFunc
+                }
+
+
+            },
+
+
+            //移除事件的方法
+            removeEvent:function(element,type,eventFunc){
+                //检测是否支持addEventListener操作  W3C
+                if(typeof element.removeEventListener =="function"){
+                    element.removeEventListener(type,eventFunc,false)
+                }else if(typeof element.detachEvent == 'function'){//检测是否支持attachEvent ie
+                    element.detachEvent('on'+type,eventFunc)
+                }else{//其他浏览器只能onclick这样的事件
+                    element['on'+type] = null;
+                }
+
+            }
+        }
+
+
+
+        //添加事件
+        //EventTools.addEvent('需要添加事件的元素','事件类型','事件函数')
+
+        var mydiv = document.getElementById('mydiv')
+
+
+
+
+        function func(){
+            console.log('事件添加')
+            mydiv.style.background='green'
+        }
+
+
+        EventTools.addEvent(mydiv,'click',func)
+
+
+        //5秒后取消事件
+        setTimeout(function(){
+            console.log('事件已经取消')
+            //取消事件
+            EventTools.removeEvent(mydiv,'click',func)
+        },5000)
+
+    </script>
+    
+</body>
+</html>

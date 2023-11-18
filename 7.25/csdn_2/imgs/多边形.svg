@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="147.224319px" height="170px" viewBox="0 0 147.224319 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>多边形</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#44B9FA" offset="0%"></stop>
+            <stop stop-color="#0145B0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BSV首页" transform="translate(-739.387841, -2236.000000)" fill="#FFFFFF" stroke="url(#linearGradient-1)" stroke-width="6">
+            <g id="renz" transform="translate(360.000000, 2150.000000)">
+                <g id="徽章" transform="translate(0.000000, 86.000000)">
+                    <g id="1" transform="translate(368.000000, 0.000000)">
+                        <path d="M85,3.46410162 L155.612159,44.2320508 L155.612159,125.767949 L85,166.535898 L14.3878407,125.767949 L14.3878407,44.2320508 L85,3.46410162 Z" id="多边形"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

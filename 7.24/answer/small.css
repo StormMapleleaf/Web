@@ -1,0 +1,15 @@
+.cm12{
+    grid-column: span 12;
+}
+
+
+.row{
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(12,1fr);
+   
+}
+html{
+    font-size: 10px;
+}
+

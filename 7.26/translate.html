@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .translate{
+            width:200px;
+            height:200px;
+            background-color: black;
+            transition-property:border-radius ,background-color;
+            transition-duration:3s;
+            transition-timing-function:ease-in;
+            transition-delay:1s
+        }
+
+        .translate:hover{
+            border-radius: 50%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="translate">
+
+    </div>
+    <hr>
+    <span class="time">0ms</span>
+    <script>
+        //找到元素translate
+        let div = document.getElementsByClassName('translate')[0];
+        //找到元素time
+        let span = document.getElementsByClassName('time')[0];
+        div.onmouseover = function(){
+            t=0;
+            setInterval(function(){
+                t++
+                span.innerHTML=t +'00ms'
+            },100);
+        }
+
+    </script>
+
+    
+</body>
+</html>

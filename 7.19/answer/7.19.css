@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.head{
+    width: 1200px;
+    height: 50px;
+    background-color: red;
+    margin: 0 auto;
+}
+.a1{
+    width: 1200px;
+    background-color: bisque;
+    height: 250px;
+    margin: 0 auto;
+}
+.a2{
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-template-rows: 294px;
+    grid-template-columns: 180px 420px 420px 180px;
+    background-color: blue;
+    place-items: center;
+}
+.a2b1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.a2b1 li{
+    background-color: aquamarine;
+    width: 180px;
+    height: 42px;
+    border: 4px red;
+}
+.a2b2{
+    width: 390px;
+    height: 294px;
+    background-color: blueviolet;
+}
+.a2b3{
+    width: 390px;
+    height: 294px;
+    background-color: blueviolet;
+}
+.a2b4{
+    width: 180px;
+    height: 294px;
+    background-color: yellow;
+}
+.md20{
+    clear: both;
+    height: 20px;
+}
+.a3{
+    height: 300px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.a3 li{
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+}
+.a3 li:nth-child(2){
+    flex-grow: 1;
+}
+.a4{
+    height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.a4 li{
+    width: 200px;
+    height: 500px;
+    background-color: aqua;
+}
+.a4 li:nth-child(2){
+    flex-grow: 1;
+}
+.a5{
+    height: 150px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.a5 li{
+    background-color: aqua;
+    height: 150px;
+    width: 195px;
+}
+.a6{
+    height: 200px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.a6 li:nth-child(1){
+    background-color: bisque;
+    width: 145px;
+    height: 200px;
+}
+.a6 li:nth-child(2){
+        background-color: rgb(122, 77, 22);
+        width: 263px;
+        height: 200px;
+}
+.a6 li:nth-child(3){
+    background-color: rgb(34, 155, 108);
+    width: 263px;
+    height: 200px;
+}
+.a6 li:nth-child(4){
+    background-color: rgb(18, 25, 90);
+    width: 263px;
+    height: 200px;
+}
+.a6 li:nth-child(5){
+    background-color: rgb(126, 38, 92);
+    width: 263px;
+    height: 200px;
+}
+.a7{
+    height: 300px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.a7 li{
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+}
+.a7 li:nth-child(2){
+    flex-grow: 1;
+}
+.a8{
+    height: 300px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.a8 li{
+    width: 200px;
+    height: 300px;
+    background-color: aqua;
+}
+.a8 li:nth-child(2){
+    flex-grow: 1;
+}
+.a8 li:nth-child(3){
+    flex-grow: 1;
+}
+.a9{
+    height: 200px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.a9 li{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+.a9 li:nth-child(2){
+    flex-grow: 1;
+}
+.foot{
+    width: 1200px;
+    margin: 0 auto;
+    height: 700px;
+    background-color: blue;
+}

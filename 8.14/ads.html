@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #ads{
+            width:150px;
+            height:150px;
+            border:1px solid red;
+            border-radius: 50%;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="ads" style="left:0px;top:0px"></div>
+    <script>
+
+        //获取元素ads
+        let ads = document.getElementById('ads')
+
+        //获取页面的宽度与高度
+        let pageWidth = window.innerWidth;
+        let pageHeight = window.innerHeight;
+
+        //设置每次移动的距离（速度）
+        let moveX= 5;
+        let moveY = 5;
+
+        console.log(pageWidth,pageHeight)
+
+
+        //添加页面大小调整事件 重新获取页面宽高
+        window.addEventListener('resize',function(){
+            pageWidth = window.innerWidth;
+            pageHeight = window.innerHeight;
+        })
+
+        //开始循环移动元素
+        setInterval(function(){
+            //获取当前元素的left与top值
+            let adsLeft = parseInt(ads.style.left);
+            let adsTop = parseInt(ads.style.top);
+            console.log(adsLeft)
+
+
+
+
+            //添加碰撞判断
+
+            //顶部碰撞检测
+            if(adsTop < 0){
+                moveY = -moveY
+            }
+
+            //底部碰撞检测
+            if(adsTop > pageHeight - 150){
+                moveY = -moveY
+            }
+
+            //左侧碰撞检测
+            if(adsLeft < 0){
+                moveX = -moveX;
+            }
+
+            //右侧碰撞检测
+
+            if(adsLeft > pageWidth - 150){
+                moveX = -moveX;
+            }
+
+
+            //再计算移动后的值
+            let finalLeft = adsLeft + moveX;
+            let finalTop = adsTop + moveY;
+
+            ads.style.left  = finalLeft + 'px';
+            ads.style.top = finalTop + 'px';
+        },10)
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <input type="text" name="username" value="">
+
+
+
+    <script>
+        //元素节点的属性  元素节点的方法都是直接操作属性值，没有属性节点的事情
+        let username = document.getElementsByName('username')[0];
+
+        //tageName 标签名
+        console.log(username.tagName)
+        console.log(username.nodeName)
+
+        //获取元素节点的所有属性集合对象
+        console.log(username.attributes)
+
+
+        //方法 
+        //添加属性  setAttribute()
+
+        //username.setAttribute('id','uname');
+        //username.setAttribute('type','file')
+
+        //删除属性
+        //username.removeAttribute('name')
+
+        //获取属性值
+        let result = username.getAttribute('name')
+        console.log(result)
+
+
+    </script>
+    
+</body>
+</html>

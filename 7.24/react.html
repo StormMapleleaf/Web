@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen and (min-width:801px)">
+
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+
+        #header{
+            width:100%;
+            height:65px;
+            background-color: pink;
+            position: fixed;
+            left:0;
+            top:0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+
+
+        .logo{
+            flex-grow: 1;
+            height:65px;
+            background-color: black;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo input{
+            display: none;
+        }
+
+        .logo div{
+            width:50px;
+            height:50px;
+            background-color: white;
+        }
+
+        .logo>label>.menu,.logo>div:last-child{
+            margin: 0 10px;
+        }
+
+    
+
+        .search{
+            flex-grow: 5;
+            height:65px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search input{
+            width:90%;
+            height:50px;
+
+        }
+        #menulist+.nav{
+            display: none;
+        }
+
+        .nav{
+            flex-grow: 3;
+            height:65px;
+            background-color: pink;
+            display: flex;
+        }
+
+        .nav ul{
+            width:100%;
+            height:65px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .nav li{
+            width:20%;
+            line-height: 65px;;
+        }
+
+
+        .login{
+            flex-grow: 1;
+            height:65px;
+            background-color: red;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .search_btn{
+            display:none
+        }
+
+        .month{
+            width:50px;
+            height:50px;
+            background-color: brown;
+        }
+
+        .login_btn{
+            width:50px;
+            height:50px;
+            background-color: aquamarine;
+        }
+
+
+
+
+
+        #container{
+            height:1000px;
+            background-color: green;
+            margin-top:65px;
+        }
+        #footer{
+            height:300px;
+            background-color: cyan;
+        }
+    </style>
+
+<style media="screen and (max-width:800px)">
+
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    #header{
+        width:100%;
+        height:65px;
+        background-color: pink;
+        position: fixed;
+        left:0;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        z-index: 9999;
+    }
+
+
+    .logo{
+        height:65px;
+        background-color: black;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login>label>.menu{
+        background-color: pink;
+    }
+    .logo>label,.logo>div:last-child{
+        margin:0 10px;
+    }
+
+    .logo>div:last-child{
+        width:50px;
+        height:50px;
+        background-color: white;
+    }
+
+    .menu{
+        display: block;
+        width:50px;
+        height:50px;
+        background-color: green;
+    }
+
+    /*收缩效果*/
+    #menulist{
+        display: none;
+    }
+
+    #menulist+.nav{
+        display: none;
+    }
+    #menulist:checked+.nav{
+        display: block;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .search input{
+        width:90%;
+        height:50px;
+
+    }
+
+    .nav{
+        background-color: white;
+        position: fixed;
+        left:0;
+        top:65px;
+        width:100%;
+        display: none;
+    }
+
+    .nav ul{
+        width:100%;
+        display: flex;
+        flex-direction:column ;
+        justify-content: space-around;
+
+    }
+
+    .nav li{
+        width:100%;
+        height:50px;
+        border:1px solid red;
+        text-align: center;
+        line-height: 50px;;
+    }
+
+
+    .login{
+        height:65px;
+        background-color: pink;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .login>div{
+        margin:0 10px;
+    }
+    .month{
+        width:50px;
+        height:50px;
+        background-color: brown;
+    }
+
+    .login_btn{
+        width:50px;
+        height:50px;
+        background-color: aquamarine;
+    }
+
+    .search_btn{
+        width:50px;
+        height:50px;
+        background-color: yellow;
+    }
+
+
+
+
+    #container{
+        height:1000px;
+        background-color: green;
+        margin-top:65px;
+    }
+    #footer{
+        height:300px;
+        background-color: cyan;
+    }
+</style>
+</head>
+<body>
+    <!--页面最外层元素-->
+    <div id="wrap">
+        <!--页面顶部元素-->
+        <header id="header">
+            
+            <div class="logo">
+                <label for="menulist">
+                    <div class="menu"></div>
+                </label>
+                <input type="checkbox" name="abc" id="menulist"> 
+                <div class="nav">
+                    <ul>
+                        <li>亚洲天团</li>
+                        <li>亚洲天团</li>
+                        <li>亚洲天团</li>
+                        <li>亚洲天团</li>
+                    </ul>
+    
+                </div>
+                <div></div>
+            </div>
+            <div class="search">
+                <input type="text">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>亚洲1天团</li>
+                    <li>亚洲天团</li>
+                    <li>亚洲天团</li>
+                    <li>亚洲天团</li>
+                </ul>
+
+            </div>
+            <div class="login">
+                <div class="search_btn"></div>
+                <div class="month"></div>
+                <div class="login_btn"></div>
+            </div>
+        </header>
+        <!--页面主体元素-->
+        <main id="container"></main>
+        <!--页面底部元素-->
+        <footer id="footer"></footer>
+    </div>
+    
+</body>
+</html>

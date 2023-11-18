@@ -1,0 +1,15 @@
+1
+
+16个  从服务器中读取所有图片的 0-15个    （服务器读取的所有图片组成的数组）  ['trrp://www.baidu.com/1.jpg','trrp://www.baidu.com/1.jpg','trrp://www.baidu.com/1.jpg','trrp://www.baidu.com/1.jpg','trrp://www.baidu.com/1.jpg',]
+
+
+2
+
+16个     16-31
+
+3  
+
+16        32 -47
+
+4
+n    ((n-1)*16)

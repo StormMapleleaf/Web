@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            width:300px;
+            height:200px;
+            background-color: blue;
+            position: absolute;
+            left: 20px;
+            top:20px;
+            z-index:88;
+        }
+        
+        .my{
+            width:300px;
+            height:200px;
+            background-color: red;
+            position: absolute;
+            left:40px;
+            top:40px;
+            z-index:1000;/*所有absolute元素默认的z-index都是0*/
+        }
+
+        .foot{
+            width:300px;
+            height:200px;
+            background-color: yellow;
+            position: absolute;
+            left:60px;
+            top:60px;
+            z-index:99;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="my"></div>
+    <div class="foot"></div>
+</body>
+</html>

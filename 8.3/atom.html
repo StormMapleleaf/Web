@@ -1,0 +1,126 @@
+<script>
+    //在正则中原子是组成正则的最小单位
+    //1.任何一个字符都是一个原子
+    //2.特殊原子 特定格式
+    //     \d    数字  0~9 中任意一个数字字符
+    //     \D     除了0～9之外的任意一个字符
+    //     \s    space  表示任意一个空白字符 \n \t \r 空格等
+    //     \S    除了空白字符之外的任意一个可见字符
+    //     \w   表示数字,字母，下划线中的任意一个字符  一般用于匹配变量
+    //     \W   除了\w之外的任意一个字符 
+    //     .    表示任意一个字符,除了\n   使用s模式修正符可以匹配任意字符 包含\n
+
+
+    //2.元字符（原子修饰符）
+    //     []原子列表修饰符  [abcdefg] 表示abcdefg中的任意一个字符  如果在ascii码中连续的字符 可以使用缩写[开始字符-结束字符]
+    //     [^] 排除原子列表  [^abcdefg] 表示除了abcdefg外的任意一个字符
+
+    //     ?  表示没有制定的原子或者有1个指定的原子
+    //     +  表示1个以上的原子
+    //     *  表示任意个制定的原子
+    
+    //     {m} 表示m个制定的原子
+    //     {m,} 表示m个以上的原子
+    //     {m,n} 表示m-n个原子
+    
+
+    //     \b  词边界  英语单词获取
+    //     \B  非词边界  数字和字母属于非词边界  1th 3rd..
+
+
+    //     ^  表示以制定字符开头的
+    //     $  表示以制定字符结尾的
+    //     ^内容$  精确匹配 
+
+
+    //     | 逻辑运算  左右两个原子2选1  两侧分别代表两份数据 最好配合() 改变运算优先级   
+            //二大爷｜三大爷  在二大爷和三大爷都行
+            //二｜三大爷    在二和三大爷之间2选1
+            //推荐使用() 改变优先级
+            //（二｜三）大爷 在二大爷和三大爷都行
+
+    //     () 1.改变运算的优先级
+    //        2.会被暂时存到内存当中去，方便后期引用,如果要取消存储功能在括号最前面添加?:
+
+ 
+
+    //模式修正符
+    //  i  忽略大小写
+    //  g  全局匹配模式 需要借助字符串函数
+    //  m  多行模式 可以将多行当作多个字符串分别匹配
+    //  s  超级模式可以使得.匹配到任意字符 包含\n
+    //  d  索引获取模式，可以匹配出字符的开始和结束位置
+
+
+    //所有在正则中使用到的符号当作字符匹配必须使用\进行转义操作
+
+
+
+    /*
+    //声明一个正则(正则至少包含一个原子)
+    let pattern = /\\/; //  gogle google gooogle  gooooogle
+
+    //声明一个字符串
+    let str = 'www.goo\\gle.com';//www.baidu.com   www.google.com  www.sougou.com'
+    console.log(str)
+
+    let result = pattern.exec(str);
+    console.log(result);
+    
+
+    //使用字符串函数中的正则函数
+    let str1 = '百度是搜索引擎，百度是国内的最大的搜索引擎，我看好百度';
+
+    let pattern1 = /百度/g;
+
+    let result1 = str1.match(pattern1);//非g模式相当于 pattern1.exec(str1)    g模式下会获取所有复合的数据字符
+    console.log(result1)
+   
+
+    //compile() 重新修改正则规则
+    let pattern2 = /baidu/;//本质是实例话一个对象
+    let str2 = 'www.baidu.com';
+    let result2 = pattern2.exec(str2);
+    console.log(result2);
+    //正则编译操作，修改原来正则对象的规则,提高性能而已
+    pattern2.compile(/com/)
+    let result3 = pattern2.exec(str2)
+    console.log(result3)
+     
+
+    //test()正则测试
+    let pattern4 = /phone66/;
+    let str4 = '我买了一个iphone15';
+    let result4 = pattern4.test(str4);
+    console.log(result4)
+    */
+
+    //toSting()
+    let pattern5 = /helloworld/igm;
+    console.log(pattern5.toString());
+
+    console.log(pattern5.ignoreCase);
+    console.log(pattern5.global)
+    console.log(pattern5.multiline)
+    console.log(pattern5.flags)
+    console.log(pattern5.hasIndices)
+    console.log(pattern5.dotAll)
+    console.log(pattern5.source)
+
+
+    
+
+
+
+
+    ////使用正则函数 必须在d模式下使用
+    //let [start,end] = pattern.exec(str).indices[0];
+    //console.log(start,end)
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick = "getUserInfo()">点击获取用户信息</button>
+
+
+
+    <script>
+
+
+            //定义get进行ajax的请求函数
+            
+            function getData(url){
+
+                //实例化promise
+                return  promise = new Promise((resolve,reject)=>{
+                    var xhr = new XMLHttpRequest()
+                    xhr.open('get',url);
+                    xhr.send(null)
+                    xhr.onerror=function(){
+                        //失败区域
+                        reject('出错啦！');//改变promise的状态和结果值
+                    }
+                    xhr.onreadystatechange=function(){
+                        if(xhr.readyState == 4 & xhr.status == 200){
+                        //成功区域
+                        resolve(xhr.response);
+                        }
+                    }
+                });
+                }
+
+
+
+
+        //原生ajax来进行数据获取
+        function getUserInfo(){
+
+
+            //操作成功和失败。直接promise的then可以传入成功失败
+
+
+
+
+            //第一次ajax请求
+            //ajax获取用户信息
+            // 请求失败的处理方式    console.log('请求失败!')
+           
+            //
+
+            //url http://127.0.0.1:8081/login?uname=xiaoer&upwd=1234
+            //
+
+            getData('http://127.0.0.1:8081/login?uname=xiaoer&upwd=1234')
+            .then( (uid)=>{
+                //根据id获取昵称
+                return getData('http://127.0.0.1:8081/getName?uid='+uid)
+            }, (error)=>{//失败的处理操作
+                //请求失败的处理方式
+                console.log('请求失败!')
+            })
+            .then((nickname)=>{ //成功的处理操作
+                return getData('http://127.0.0.1:8081/getInfo?nickname='+nickname);
+            },(error)=>{//失败的处理操作
+                //请求失败的处理方式
+                console.log('请求失败!')
+            }).then((value)=>{
+                
+                let p =  document.createElement('p')
+                p.innerHTML=value
+                document.body.appendChild(p)
+            } )
+
+
+        }
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

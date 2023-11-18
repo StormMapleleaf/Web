@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+
+        $(function(){
+            /*
+            //选择元素   使用jquery获取的元素 经过jquery包装的元素，不可以使用原生DOM操作
+            let elements = $('ul li')
+            console.log(elements)
+
+            //添加css样式
+
+            //elements.css('border','1px solid red');
+            elements.css({
+                'color':'red',
+                'fontSize':"30px",
+                'background':'green'
+            })
+
+            
+            
+
+            $('ul li').css({
+                'color':'red',
+                'fontSize':"30px",
+                'background':'green'
+            })
+            
+            
+
+
+
+            //过滤属性（配合选择器）和过滤器(专用函数)
+            //奇数过滤器
+            $('ul li:odd').css('color','red')
+
+            //偶数过滤器
+            $('ul li:even').css('color','green')
+
+            //索引过滤器
+            $('ul li:eq(2)').css('fontSize','50px')
+
+            */
+
+
+            /*
+            $('ul li:eq(3)').css('color','red')
+
+            $('ul li').eq(3).css('font-size','30px')
+            */
+
+            //两部操作 如果第二步的元素属于第一次选择的内容，可以使用过滤器提高效率
+            //$('ul li').css('background','red')
+            //$('ul li:eq(2)').css('color','white')
+            //$('ul li').css('background','red').eq(2).css('color','white')
+
+            /*
+            $('ul li').css('background','red').map(function(index,element){
+                //不允许直接使用原生DOM 
+               if( $(element).is(':contains(三上悠雅)')){
+                $(element).css('color','white')
+               }
+            })
+           
+
+            $('ul li').css('background','red').filter(':contains(三上悠雅)').css('color','white')
+           
+            */
+
+          
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>明日花绮罗</li>
+        <li>京香JULIA</li>
+        <li>三上悠雅</li>
+        <li>樱井莉亚</li>
+        <li>朝光桐</li>
+        <li>羽月希</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>明日花绮罗</li>
+        <li>京香JULIA</li>
+        <li>三上悠雅</li>
+        <li>樱井莉亚</li>
+        <li>朝光桐</li>
+        <li>羽月希</li>
+    </ul>
+
+    <script>
+        //let uls = document.querySelectorAll('ul')
+        //console.log(uls)
+
+    </script>
+    
+</body>
+</html>

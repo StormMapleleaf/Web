@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            width:300px;
+            height:300px;
+            position: relative;
+            left:100px;
+            top:100px;
+            background-color:hsla(120,100%,50%,0.5);
+          
+
+            /*
+            颜色表示方式1: 英语单词   red,blue
+            颜色表示方式2:rgb颜色    rgb(red值,green值,blue值)   0-255
+            颜色表示方式3:rgba颜色   rgba(red值,green值,blue值)   0-255 a透明度 0-1
+            颜色表示方式4：hex模式    #red值,green值,blue值     每个值都是16进制00-ff（ 0-255）
+            颜色表示方式5 hsl模式     hsl(颜色,饱和度,亮度) 颜色0-360 饱和度0%-100%  亮度0%-100%
+            颜色表示方式5 hsla模式     hsl(颜色,饱和度,亮度,透明度) 颜色0-360 饱和度0%-100%  亮度0%-100% a透明度 0-1
+            
+
+            */
+        }
+        
+        .ck{
+            width:300px;
+            height:300px;
+            background-color: black;
+        }
+
+
+        .bgi{
+            width:300px;
+            height:300px;
+            border:30px solid transparent;
+            padding:20px;
+            background-image: url(./mm2.jpeg);
+            background-size:contain ;
+            background-repeat:no-repeat ;
+            background-origin: border-box;
+            background-clip:content-box ;
+        }
+
+
+        .txt{
+            width:300px;
+            height:300px;
+            background-image:url(./mm.jpeg) ;
+            background-size:contain;
+
+            font-size:200px;
+            text-align: center;
+            -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+
+            /*
+            浏览器前缀： 根据浏览器内核设置的（实验性质属性）
+            -ms-   ie系列浏览器     win10以上使用edge浏览器webkit内核
+            -o-    opera浏览器     opera新版本使用webkit内核
+            -moz-  火狐浏览器       【记住】
+            -webkit-   谷歌浏览器 【记住】
+            */
+        }
+
+        .position{
+            width:300px;
+            height:300px;
+            border:1px solid red;
+            background-image: url(./mm.jpeg);
+            background-size:100px 100px ;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-attachment: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="ck"></div>
+    <hr>
+    <div class="bgi"></div>
+
+    <hr>
+    <div class="txt">
+        德
+    </div>
+    <hr>
+    <div class="position"></div>
+    
+</body>
+</html>

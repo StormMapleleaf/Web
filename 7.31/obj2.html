@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //构造方法：不再对象中的方法，在页面中的方法（也是也不是函数）
+
+        function Teacher(){
+            //console.log(new.target)
+            if(new.target === undefined){
+                console.log('老师好～');//函数时候运行
+            }
+            //。。。
+        }
+
+        //当作函数使用
+        Teacher();
+
+        //当作构造方法使用
+        let cong = new Teacher();
+        console.log(cong,typeof cong)
+
+        //命名规范～ 驼峰命名方法
+        //1.大驼峰  每个单词的首字母大写 构造方法名、类名、    ChenErGou
+        //2.小驼峰  除了第一个单词外，每个单词首字母大写  普通变量、对象实例、函数  eatFood
+
+        //分割线命名
+        //chen_er_gou
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

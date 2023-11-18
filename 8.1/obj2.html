@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数据属性特性（针对属性的设置:数据相关）
+        let person = {
+            name:'xiaoer',
+            sex:'男',
+            age:18,
+            say:function(){
+                console.log('扒衣见君节～');
+            }
+        }
+
+        
+
+
+        //设置多个成员的属性特性
+        Object.defineProperties(person,{
+            name:{
+                configurable:true,
+                enumerable:false,
+                value:'xiaosan',
+                writable:true
+            },
+            sex:{
+                configurable:true,
+                enumerable:false,
+                value:'man',
+                writable:true
+            },
+            skin:{
+                configurable:true,
+                enumerable:false,
+                value:'yellow',
+                writable:true
+            }
+
+        })
+
+        console.log(person)
+
+        //获取对象所有属性特性
+        let results = Object.getOwnPropertyDescriptors(person);
+        console.log(results)
+
+        //遍历对象成员
+        for(let i in person){
+            console.log(person[i]);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

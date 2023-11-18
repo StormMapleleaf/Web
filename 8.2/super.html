@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //声明一个父类
+        class Father{
+            constructor(fname,sex,age){
+                this.familyName = fname;
+                this.sex = sex;
+                this.age = age;
+                this.say=function(){
+                    console.log('老子说的～')
+                }
+            }
+        
+        }
+
+        //声明一个子类
+        class Son extends Father{
+            //构造方法添加(重写构造方法)
+            constructor(fname,sex,age,skin){
+                //父类的内容(构造方法的第一句必须是super 关键字,不是函数)
+                //super(fname,sex,age);
+                
+                //子类的内容
+                this.skin = skin;
+            }
+
+            
+        }
+
+        //实例话子对象
+        let erzi = new Son('老陈','man',21,'yellow');
+        console.log(erzi.sex)
+        console.log(erzi.familyName)
+        erzi.say()
+        console.log(erzi.skin)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

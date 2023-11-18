@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+            height:600px;
+            background-color: aquamarine;
+        }
+
+        #center{
+            height:1500px;
+            background-color: red;
+        }
+
+        #foot{
+            height: 800px;
+            background-color: green;
+        }
+
+        .btn_group{
+            position: fixed;
+            right:30px;
+            bottom:30px
+        }
+    </style>
+</head>
+<body>
+    <div id="head">陈小的大战闫子涵</div>
+    <div id="center">张甜玉大战曾静一</div>
+    <div id="foot">李子豪大战李雨桐</div>
+    <div class="btn_group">
+        <a href="#head">顶部</a>
+        <a href="#center">中间</a>
+        <a href="#foot">底部</a>
+    </div>
+    <script>
+
+        function onread(hash){
+            if(hash.slice(1) == 'head'){
+                head.style.fontSize = '50px'
+                head.style.fontWeighbt = 800;
+                center.style.fontSize = '14px'
+                center.style.fontWeighbt = 400;
+                foot.style.fontSize = '14px'
+                foot.style.fontWeighbt = 400;
+            }else if(hash.slice(1) == 'center'){
+                head.style.fontSize = '14px'
+                head.style.fontWeighbt = 400;
+                center.style.fontSize = '50px'
+                center.style.fontWeighbt = 800;
+                foot.style.fontSize = '14px'
+                foot.style.fontWeighbt = 400;
+            }else if(hash.slice(1) == 'foot'){
+                head.style.fontSize = '140px'
+                head.style.fontWeighbt =400;
+                center.style.fontSize = '14px'
+                center.style.fontWeighbt = 400;
+                foot.style.fontSize = '50px'
+                foot.style.fontWeighbt = 800;
+            }
+           
+            
+        }
+
+        //hashchange 锚点改变时候触发
+        window.onhashchange=function(){
+            //console.log('锚点已经改变',location.hash)
+            onread(location.hash)
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //构造方法模式（系统自动构建一个同名对象原型Teacher）
+        function Teacher(name,sex,girlfriends){
+            //为对象实例添加成员
+            //this表示的是未来的对象实例。
+            this.name = name;
+            this.sex = sex;
+            this.girlfriends = girlfriends;
+
+            this.eat=function(){
+                console.log('吃饭');
+            }
+
+            this.drink=function(){
+                console.log('喝酒');
+            }
+        }
+
+        //实例话操作
+        let cong = new Teacher('从了我','男',['小张','小王','小珠']);
+
+        //查看对象实例
+        console.log(cong)
+
+        console.log(cong instanceof Teacher)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

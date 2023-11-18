@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            width:100%;
+            height:200px;
+            background-color: pink;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(100px,1fr));/*尽可能多的填充单元格的数量*/
+            /*grid-template-columns: repeat(auto-fit,minmax(100px,1fr));尽可能多的将空白区域平均分配给已有单元格的数量*/
+        }
+
+        .grid{
+            height:100px;
+            background:linear-gradient(45deg,red,green) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

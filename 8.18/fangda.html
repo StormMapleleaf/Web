@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #goods{
+            width:500px;
+            height:300px;
+            border: 5px solid green ;
+            position: relative;
+        }
+        #goods>img{
+            width:500px;
+            height:300px;
+        }
+
+        #focusArea{
+            position: absolute;
+            left:0;
+            top:0;
+            background-color:rgba(255,255,0,0.4);
+            width:100px;
+            height:100px;
+        }   
+
+
+        #bigArea{
+            position: absolute;
+            left:505px;
+            top:-5px;
+            width:500px;
+            height:500px;
+            background-color: gray;
+            overflow: hidden;
+            display: none;
+        }
+
+        #bigArea img{
+            position: absolute;
+            width:2500px;
+            height:1500px;
+            left:100px;
+            top:100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="goods">
+        <img src="./julia.jpg" alt="">
+        <!--焦点区域-->
+        <div id="focusArea"></div>
+        <!--放大区域-->
+        <div id="bigArea">
+            <img src="./julia.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        //鼠标移动问题，焦点区域需要跟随鼠标移动
+
+        //获取3个div
+        let goodsDiv = document.getElementById('goods')
+        let focusDiv = document.getElementById('focusArea')
+        let bigsDiv = document.getElementById('bigArea')
+        let bigImg = document.querySelector('#bigArea img');
+
+        
+        //获取goodsdiv相对于视窗的距离
+        let goodsinfo = goodsDiv.getBoundingClientRect();
+        //console.log(goodsinfo)
+        let goodsLeft = goodsinfo.x;
+        let goodsTop = goodsinfo.y;
+
+
+        //添加鼠标移动事件
+        goodsDiv.addEventListener('mousemove',function(e){
+
+            //获取鼠标型对于文档的距离（视窗）
+            let clientX = e.clientX;
+            let clientY = e.clientY;
+
+            //console.log(clientX,clientY)
+
+            //使用鼠标相对于视窗的坐标 - 元素相对于i视窗的坐标 = 鼠标相对于元素的坐标
+            let moveX = clientX - goodsLeft;
+            let moveY= clientY-goodsTop
+
+            let left = moveX -50;
+            let top =  moveY -50;
+
+
+            //区域限制
+
+            //顶部区域
+            if(top < 0){
+                top= 0;
+            }
+
+            //底部区域
+            if(top>300-100){
+                top=300-100
+            }
+
+            //左侧区域
+            if(left<0){
+                left =0;
+            }
+
+            //右侧区域
+            if(left >500-100){
+                left =500-100
+            }
+
+
+            //将移动后的坐标设置给焦点div
+            focusDiv.style.left = left+'px';
+            focusDiv.style.top = top+'px';
+
+            //设置大图相对于bigarea的坐标
+            bigImg.style.left = -5*left +'px'
+            bigImg.style.top = -5*top+'px'
+        })  
+
+
+        goodsDiv.addEventListener('mouseout',function(){
+            bigsDiv.style.display='none'
+        })
+
+
+        goodsDiv.addEventListener('mouseover',function(){
+            bigsDiv.style.display='block'
+        })
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

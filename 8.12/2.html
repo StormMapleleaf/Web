@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid green;
+            padding:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <div id="three">
+                <div id="four">
+                    <div id="five"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //为元素添加事件
+        //获取5个div
+        let oneDiv = document.getElementById('one')
+        let twoDiv = document.getElementById('two')
+        let threeDiv = document.getElementById('three')
+        let fourDiv = document.getElementById('four')
+        let fiveDiv = document.getElementById('five')
+
+        //console.log(oneDiv,twoDiv,threeDiv,fourDiv,fiveDiv)
+
+     
+        //添加事件
+        oneDiv.addEventListener('click',function(){
+            console.log(this.id)
+        },true)
+
+        twoDiv.addEventListener('click',function(){
+            console.log(this.id)
+        },true)
+
+        threeDiv.addEventListener('click',function(){
+            console.log(this.id)
+        },true)
+
+        fourDiv.addEventListener('click',function(){
+            console.log(this.id)
+        },true)
+
+        fiveDiv.addEventListener('click',function(){
+            console.log(this.id)
+        },true)
+
+
+
+    </script>
+    
+</body>
+</html>

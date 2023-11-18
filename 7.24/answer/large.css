@@ -1,0 +1,22 @@
+
+
+.row{
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(12,1fr);
+
+}
+.cl12{
+    grid-column: span 12;
+}
+
+.cl8{
+    grid-column: span 8;
+}
+
+.cl4{
+    grid-column: span 4;
+}
+html{
+    font-size: 18px;
+}

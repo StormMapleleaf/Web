@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //创建一个对象
+        let person = {
+            name:'廖桃李',
+            sex:'男',
+            age:18,
+            say:function(size){
+                console.log('i am coming'+size)
+            }
+        }
+        
+        //添加成员
+        person.height='15cm';
+        person.cry=function(){
+            console.log('我又迟到了！')
+        }
+
+        //访问属性
+        console.log(person.name)
+        //访问方法
+        person.say(10);
+
+        //修改对象成员(如果可以修改)
+        console.log(person.sex)
+        person.sex = '女';
+        console.log(person.sex)
+
+        //删除对象成员
+        console.log(person)
+        delete person.age;
+        console.log(person)
+
+        //遍历对象成员(如果可以遍历)
+        for(let i in person){
+            console.log(i,person[i]);
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

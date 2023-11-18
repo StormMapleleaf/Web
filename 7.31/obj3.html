@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //工厂方式创建对象
+        function createObj(name,sex,age,say){
+
+            //基于object对象直接构建
+            //1.创建空对象
+            let o = new Object();
+            //2.为创建的空对象添加成员
+            o.name = name;
+            o.sex = sex;
+            o.age = age;
+            o.say = say;
+
+            //3.返回创建的对象
+            return o;
+
+        }
+
+        let sayHi = function(){
+            console.log('大妹子你好啊，约吗～');
+        }
+        //创建对象1
+        let xiaoer = createObj('xiaode','man',21,sayHi);
+        console.log(xiaoer)
+        console.log(typeof xiaoer)
+
+
+        //创建对象2
+        let xiaoer2 = createObj('dade','man',22,sayHi);
+        console.log(xiaoer2)
+        console.log(typeof xiaoer2)
+
+
+        //缺点：构造方法和原型都是Object
+        console.log(xiaoer instanceof Object);
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

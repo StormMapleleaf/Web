@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid green;
+            padding:30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <div id="three">
+                <div id="four">
+                    <div id="five"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //为元素添加事件
+        //获取5个div
+        let oneDiv = document.getElementById('one')
+        let twoDiv = document.getElementById('two')
+        let threeDiv = document.getElementById('three')
+        let fourDiv = document.getElementById('four')
+        let fiveDiv = document.getElementById('five')
+
+        //console.log(oneDiv,twoDiv,threeDiv,fourDiv,fiveDiv)
+
+
+        
+     
+        //添加事件
+        oneDiv.addEventListener('click',function(e){
+            console.log(this.id,e)
+             //阻止冒泡
+             e.stopPropagation()
+        })
+
+        twoDiv.addEventListener('click',function(e){
+            console.log(this.id,e)
+             //阻止冒泡
+             e.stopPropagation()
+        })
+
+        threeDiv.addEventListener('click',function(e){
+            console.log(this.id,e)
+             //阻止冒泡
+             e.stopPropagation()
+        })
+
+        fourDiv.addEventListener('click',function(e){
+            console.log(this.id,e)
+             //阻止冒泡
+             e.stopPropagation()
+        })
+
+        fiveDiv.addEventListener('click',function(e){
+            console.log(this.id,e)
+            //阻止冒泡 w3c
+            //e.stopPropagation()
+            //ie版本阻止冒泡
+            //e.cancelBubble=true
+
+            /*
+            //兼容性操作    
+            if(e.stopPropagation){
+                e.stopPropagation()
+            }else{
+                e.cancelBubble=true
+            }
+            */
+
+
+    
+
+
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

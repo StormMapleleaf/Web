@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-color: brown;
+        }
+
+        .fl{
+            float:left;
+        }
+
+        .red{
+            color:red;
+            width:300px;
+            height:300px;
+        }
+
+        .green{
+            color:red;
+            width:500px;
+            height:500px;
+        }
+
+        .other{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg fl" id="article" style="border:1px solid blue"></div>
+    <script>
+
+        //修改class样式值
+
+        //元素节点修改
+        let div = document.querySelector('div')
+       // div.setAttribute('class','fl red')
+
+        //在JS中当作对象直接处理
+        //console.log(div.id)
+        //console.log(div.style)
+        //console.log(div.className)
+        //div.className = 'fl green'
+
+        //扩展操作
+        //console.log(div.classList)
+
+        //add() 添加一个class值
+        //div.classList.add('other')
+
+        //remove() 删除一个class值
+        //div.classList.remove('fl')
+
+        //contains() 检测是否具有指定的class
+        //let result = div.classList.contains('red')
+        //console.log(result)
+
+        //toggle() 切换操作，存在就删除，不存在就添加
+        //div.classList.toggle('red')
+
+
+
+    </script>
+    
+</body>
+</html>

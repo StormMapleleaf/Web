@@ -1,0 +1,172 @@
+@media screen and (min-width:320px) and (max-width:540px){
+    html{
+        font-size:16px;
+    }
+}
+
+@media screen and (min-width:541px) and (max-width:800px){
+    html{
+        font-size:32px
+    }
+}
+
+@media screen and (min-width:801px){
+    html{
+        font-size:50px
+    }
+}   
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+#wrap{
+    width:23.44rem;
+    margin:0 auto;
+}
+
+
+#header{
+    width:23.44rem;
+    height:4rem;
+    line-height: 4rem;;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.close{
+    padding-left:0.79rem;
+    box-sizing: border-box;
+    width:2rem;
+}
+
+
+.search{
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+
+.more{
+    width:2rem;
+    box-sizing: border-box;
+}
+
+
+.more ul{
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+    height:4rem;
+    align-items: center;
+}
+.more ul li{
+    list-style: none;
+    width:0;
+    height:0;
+    border:2px solid black;
+    border-radius: 2px;;
+}
+
+
+.head{
+    width:23.44rem;
+    height:3.13rem;
+    background-color: #00368C;;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding:0 0.75rem;
+}
+
+.logo{
+
+}
+
+.menu{
+
+}
+
+.menu img{
+    width:1.5rem;
+    height:1.5rem;
+    background-color: white;
+}
+
+main{
+    width:23.44rem;
+    height:34.56rem;
+    background-color: green;
+}
+
+.art{
+    padding-top:2.5rem;
+    padding-left:0.75rem;
+    background: url(../imgs/BG.svg);
+}
+
+.art h1{
+    margin-top:0;
+    width:18rem;
+    height:2.13rem;
+    font-size:1.5rem;
+    color:white;
+
+}
+
+.art h3{
+    margin:0.63rem 0;
+    font-size:0.75rem;
+    color:white;
+}
+
+.art p{
+    font-size:0.75rem;
+    color:white;
+    opacity: 0.6;
+    width:21.94rem;
+    height:6rem;
+    line-height: 1.5rem;
+}
+
+.img img{
+    margin-top:1.25rem;
+    width:21.94rem;
+    height:12.38rem;
+
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:1.88rem;
+}
+
+.btn>div{
+    width:10.38rem;
+    height:3rem;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 3rem;
+    
+}
+.btn>div:first-child{
+    background:url(../imgs/btnh5.png);
+    background-repeat: no-repeat;
+    background-size:cover ;
+    color:#fff;
+    
+}
+.btn>div:last-child{
+    background:url(../imgs/btnh5w.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#00368C
+}

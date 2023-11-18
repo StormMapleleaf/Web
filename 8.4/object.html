@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //object对象的成员
+        //属性
+        console.log(Object.constructor);//Object构造方法的构造方法
+        console.log(Object)
+        console.log(Object.prototype)
+
+        //方法：
+        //toLocaleString() 输出对象的本地字符串格式
+        //toString()  输出对象的字符串格式
+        //valueOf（） 输出对象的原始值
+
+        let now = new Date();
+        console.log(now.toLocaleString())
+        console.log(now.toString())
+        console.log(now.valueOf())
+
+
+        //声明一个数组
+        let arr = new Array(1,2,3,4,5,6,7);
+        console.log(arr)
+        console.log(arr.toString())
+        console.log(arr.toLocaleString())
+        console.log(arr.valueOf())
+
+
+        /*
+        //hasOwnProperty() 检测属性是不是对象实例上的成员
+        function Son(){
+            this.name = 'xiaoer';
+            this.sex = 'man';
+            this.say = function(){
+                console.log('我自己能说话');
+            }
+        }
+
+        Son.prototype.age = 18;
+        Son.prototype.run = function(){
+
+        }
+
+        //实例话对象
+        let son = new Son();
+
+        let result = son.hasOwnProperty('age');
+        console.log(result)
+        
+
+        
+
+    function Father(){
+
+    }
+
+
+
+    function Son(){
+
+    }
+
+    let f = new Father();
+    Son.prototype = f;
+
+    //实例话对象
+    let son = new Son();
+
+    let result  = f.isPrototypeOf(son)
+    console.log(result)
+
+    let o = {};
+    let result2 = o.isPrototypeOf(son)
+    console.log(result2)
+    */
+
+    //propertyIsEnumerable() 检测某个成员是否可以遍历
+
+    let o = {
+        name:'小儿'
+    }
+
+    for(let i in o){
+        console.log(o[i])
+    }
+
+    
+    let result = o.propertyIsEnumerable('name');
+    console.log(result)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="880px" viewBox="0 0 1920 880" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BG_1</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.7352491%" id="linearGradient-1">
+            <stop stop-color="#DFE4FF" offset="0%"></stop>
+            <stop stop-color="#F7F7F8" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(0.000000, -1382.000000)" fill="url(#linearGradient-1)">
+            <path d="M1920,1454 C1625.95536,1411.41979 1336.44419,1428.27474 1051.46652,1504.56484 C624,1619 152.316885,1522.08903 0,1382.47402 C0,1382.47402 0,1679.31601 0,2273 L1920,2273 L1920,1454 Z" id="BG_1"></path>
+        </g>
+    </g>
+</svg>

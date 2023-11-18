@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        function alertFunc(){
+            //alert() 系统警告弹窗
+            let result = window.alert('玩归玩，闹归闹，别拿学习开玩笑·');
+            console.log(result)
+        }
+        
+
+        function confirmFunc(){
+            //系统选择弹窗
+            let result = window.confirm('你愿意嫁给我吗?');
+            console.log(result)
+            //根据用户选择进行操作
+            if(result){
+                window.open('http://www.youziwedding.com/','_blank');
+            }else{
+                window.open('http://www.baihe.com/','_blank');
+            }
+        }
+
+
+        function promptFunc(){
+            //系统输入弹窗
+            let result = window.prompt('请输入你的昵称','八腿大螃蟹');
+            console.log(result)
+        }
+        
+
+        function printFunc(){
+            //调用打印弹窗
+            window.print();
+        }
+
+        function findFunc(){
+            window.find();
+        }
+        
+    </script>
+</head>
+<body>
+    <BUtton onclick = "alertFunc()">alert</BUtton>
+
+    <BUtton onclick = "confirmFunc()">confirm</BUtton>
+
+    <BUtton onclick = "promptFunc()">prompt</BUtton>
+
+    <BUtton onclick = "printFunc()">print</BUtton>
+
+    <BUtton onclick = "findFunc()">find</BUtton>
+
+    
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        
+        #myppt{
+            width:590px;
+            height:470px;
+            border: 5px solid black;
+            position: relative;
+        }
+
+
+        #myppt>ul>li{
+            display: none;
+        }
+
+        #myppt>ul>li.active{
+            display: block;
+        }
+
+
+        #myppt>ol{
+            position: absolute;
+            left:30px;
+            bottom:30px;
+
+        }
+
+        #myppt>ol>li{
+            float: left;
+            width:25px;
+            height:25px;
+            background-color: white;
+            line-height: 25px;
+            text-align: center;
+            margin:5px;
+            border-radius: 13px;
+        }
+
+        #myppt>ol>li.active{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="myppt">
+        <!---图片区域-->
+        <ul>
+            <li  class="active">
+                <img src="./imgs/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/2.webp" alt="">
+            </li>
+            <li>
+                <img src="./imgs/3.jpg" alt="">
+            </li>
+            <li>
+                <img src="./imgs/4.webp" alt="">
+            </li>
+            <li>
+                <img src="./imgs/5.jpg" alt="">
+            </li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+
+
+    <script>
+
+        //自动播放的情况下 逐个显示每个图片
+
+        //获取所有的图片li元素节点
+        let imgLis = document.querySelectorAll('#myppt>ul>li')
+
+        //获取所有的序号li
+        let NoLis = document.querySelectorAll('#myppt>ol>li')
+        console.log(NoLis)
+
+
+        //设置当前播放的图片索引
+        let activeImg = 0;
+
+        //循环的id
+        let roopId = 0;
+        //处理用户鼠标操作
+        NoLis.forEach(function(li,index,array){
+            //为每个noli添加鼠标事件   显示指定图片  mouseover 进入   mouseout 移出事件
+            li.addEventListener('mouseover',function(){
+                //停止自动播放
+                clearInterval(roopId)        
+                //显示对应的图片
+                showActive(index)
+            })
+
+            //添加鼠标移出事件   开始自动播放
+            li.addEventListener('mouseout',function(){
+                //开启自动循环                
+                autoPlay();
+                //鼠标移出时，将当前的索引设置为公共索引，方便自动播放在当前位置向后播放
+                activeImg=index;
+                console.log(activeImg)
+            })
+        })
+
+
+        //显示图片及序号函数
+        function showActive(activeIndex){  
+            //判断所有li中该激活那个图片
+            imgLis.forEach(function(li,index,array){
+                if(index == activeIndex){
+                    //li.className = 'active';
+                    li.classList.add('active')
+                }else{
+                    li.classList.remove('active')
+                }
+            })
+
+            //判断编号图标该激活哪一个
+            NoLis.forEach(function(li,index,array){
+                if(index == activeIndex){
+                    li.className = 'active';
+                }else{
+                    li.className = '';
+                }
+            })
+        }
+
+        //自动播放函数
+        function autoPlay(){ 
+            roopId = setInterval(function(){
+                //调用显示图片的函数
+                showActive(activeImg)
+                //播放完一张，增加索引准备播放下一张v
+                activeImg++;
+                //判断索引是否超出范围
+                if(activeImg>4){
+                    activeImg=0;
+                }
+            },2000)
+        }
+
+        //第一次调用自动播放
+        autoPlay()
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //页面加载完成之后再执行函数操作
+        window.onload=function(){
+            //获取页面中的元素 保存到映射中
+
+            let btnMap = new Map();
+
+            let loginBtn = document.getElementById('login');
+            let logoutBtn = document.getElementById('logout');
+            console.log(loginBtn,logoutBtn)
+
+            //保存到映射
+            btnMap.set('loginBtn',loginBtn)
+            btnMap.set('logoutBtn',logoutBtn)
+
+       
+
+
+            //页面中删除按钮
+            let body = document.getElementById('mybody')
+            body.removeChild(loginBtn)
+
+            console.log(btnMap)
+
+        }
+
+       
+    </script>
+ 
+</head>
+<body id="mybody">
+    <button id="login">登陆</button>
+    <button id="logout">退出</button>
+
+
+
+
+    <script>
+        //实例话一个map
+        /*
+        Object={
+            name:'下入',
+            sex:'man',
+            age:18,
+            say:funcion(){
+
+            }
+        }
+
+
+
+
+        */
+
+        //
+        let idSyb = Symbol('id');
+
+
+        let o = {
+            'name':'下入',
+            'sex':'man',
+            'age':18,
+            'say':function(){
+               
+            },
+            idSyb:123456,
+            
+        }
+
+        console.log(o)
+
+
+        //声明函数作为键
+        let func = function(){};
+
+        //映射对于键而言没有类型限制
+        let myMaq = new Map([
+            ['name','小二'],
+            ['sex','man'],
+            ['age','18'],
+            [func,function(){}]
+        ]);
+
+        console.log(myMaq)
+
+        //clear()清空映射
+        //myMaq.clear();
+        //console.log(myMaq)
+
+        //delete() 删除指定的映射值
+        //myMaq.delete(func)
+        //console.log(myMaq)
+
+        //set() 设置值
+        //myMaq.set('run',function(){});
+        //console.log(myMaq)
+
+        //has() 检测是否具有指定映射
+        //let result = myMaq.has(func);
+        //console.log(result)
+
+        //size属性 获取映射个数
+        //console.log(myMaq.size)
+
+        /*
+        //keys()获取键的迭代器   for-of 遍历迭代器  for..in用于遍历对象成员
+        let mykeys = myMaq.keys()
+        console.log(mykeys);
+
+        for(let i  of mykeys){
+            console.log(i)
+        }
+
+        //values（） 获取值的迭代器
+        let myvalues = myMaq.values();
+        console.log(myvalues);
+        for(let i  of myvalues){
+            console.log(i)
+        }
+
+        //entries（） 获取键和值的迭代器
+        let myent = myMaq.entries();
+        console.log(myent)
+
+        for(let [x,y] of myent){
+            console.log(x,y)
+        }
+        
+
+        //forEach(）对每个键值对进行函数操作
+        myMaq.forEach(function(x,y){
+            //遍历同时进行操作
+            document.write(x,y+'<br />')
+        })
+        */
+
+        
+
+    </script>
+</body>
+</html>

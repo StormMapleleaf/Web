@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //创建一个对象
+        let obj = new Object();
+        console.log(obj)
+
+        console.log(typeof obj)
+
+        //基于对象就是基于Object对象原型（万物皆基于Object创建）
+
+
+        //内置对象
+        let date = new Date();
+        console.log(date)
+
+        //检测对象是否基于某个对象原型创建
+        console.log(date instanceof Date)
+        console.log(date instanceof Object)
+
+
+        let arr = new Array();
+        console.log(arr)
+
+        //检测对象是否基于某个对象原型创建
+        console.log(arr instanceof Array)
+        console.log(arr instanceof Object)
+
+
+        console.log(window)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

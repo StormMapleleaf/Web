@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrap{
+        width: 900px;
+        height: 400px;
+        margin: 0 auto;
+        background-color: aqua;
+    }
+    .left{
+        float: left;
+        position: relative;
+      margin-top: -200px;
+    }
+    .right{
+        float: right;
+        position: relative;
+      margin-top: -200px;
+    }
+</style>
+<body>
+    <div class="wrap" id="wrap">
+        <img src="1.jpeg" alt="" width="900" height="400" id="img">
+        <button class="left" id="left">上一页</button>
+        <button class="right" id="right">下一页</button>
+    </div>
+</body>
+</html>
+<script>
+    let arrImg = ["1.jpeg","2.jpeg","3.jpeg","4.jpeg"]
+    let left = document.getElementById('left')
+    let right = document.getElementById('right')
+    let wrap = document.getElementById('wrap')
+    let img = document.getElementById('img')
+    let num = 0
+    left.onclick = function(){
+        num-=1
+        if(num == -1){
+            num=3
+        }
+        img.src = arrImg[num]
+        console.log(num)
+    }
+    right.onclick = function(){
+        num+=1
+       if(num == 4){
+        num=0
+       }
+       img.src = arrImg[num]
+       console.log(num)
+    }
+</script>

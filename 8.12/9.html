@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <script>
+
+        let username = document.getElementById('username')
+
+
+        /*
+        //blur 失去焦点
+        username.onblur=function(){
+            this.style.background = ''
+        }
+
+        //focus  获取焦点
+        username.onfocus = function(){
+            //元素背景变黄色
+            this.style.background='yellow'
+        }
+        */
+ 
+         //focusout 失去焦点   仅IE
+         username.onfocusout=function(){
+            username.style.background = ''
+        }
+
+        //focusin  获取焦点 仅IE
+        username.onfocusin = function(){
+            //元素背景变黄色
+            username.style.background='yellow'
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function createTable(border=1,width=300,height=300,trNum=1,tdNum=1,node=document.body){
+            //创建表格
+            //创建table元素节点
+            let table = document.createElement('table');
+            table.setAttribute('border',border)
+            table.setAttribute('width',width)
+            table.setAttribute('height',height)
+
+            for(let i = 0;i<trNum;i++){
+                //创建tr元素节点
+                let tr = document.createElement('tr')
+                table.appendChild(tr)
+                for(let j = 0 ;j<tdNum;j++){
+                    //创建td元素节点
+                    let td = document.createElement('td')
+                    tr.appendChild(td)
+                }
+            }
+        
+
+            //节点插入操作
+            node.appendChild(table)
+        }
+
+        //调用函数
+        createTable(5, 300, 300,5,6)
+        
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //抽象类：也是类的一种，他不会被实例话，只是用于定义继承该类规则的类。
+
+        //抽象基类
+        /*  
+            class 动物{
+                有眼睛,
+                有脚,
+                头,
+                会呼吸,
+                会运动,
+                会繁殖
+            }
+
+
+
+            class Dog extends 动物{
+
+                黑色的眼睛,
+                四只脚,
+                狗头,
+                哈哈哈,
+                跑起来,
+                下崽
+            }
+
+            new Dog（）
+
+
+            class Bird extends 动物{
+                视力很好的眼睛,
+                两只脚,
+                鸟头,
+                微弱的呼吸,
+                蹦着跑
+                下单
+
+            }
+
+            new Bird（）
+
+        */
+
+
+        class Animal{
+            //不能被实例话对象
+            constructor(){
+                //console.log(new.target)
+                //判断是否正在执行实例话操作
+                if(new.target === Animal){
+                    throw new Error('当前对象不可以被实例话操作');
+                }
+
+                //添加抽象类中成员规则判断
+                if(!this.run){
+                    throw new Error('未能实现抽象基类中的run属性');
+                }
+
+                if(!this.eye){
+                    throw new Error('未能实现抽象基类中的eye属性');
+                }
+
+            }
+        }
+
+        //使用子类继承抽象基类
+        class Dog extends Animal{
+            constructor(){
+                super();
+            }
+
+            //实现抽象基类的成员
+            run(){
+                console.log('四只脚跑起来');
+            }
+
+
+        }
+        Dog.prototype.eye = '两只黑眼睛'
+
+
+        //实例话操作
+        let xiaohei = new Dog();
+        console.log(xiaohei)
+        console.log(xiaohei.eye)
+        xiaohei.run()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

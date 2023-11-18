@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ajax.js"></script>
+</head>
+<body>
+    <button onclick="getUser()">ajax操作</button>
+
+
+    <script>
+        //定义一个获取用户信息的函数
+        function getUser(){
+
+            //ajax操作成功的处理函数
+            function success(data){
+                console.log(data)
+            }
+
+
+            //ajax失败的处理
+            function error(error){
+                //
+                console.log(error)
+            }
+
+
+            //使用ajax进行数据请求
+            ajaxTools.get('http://127.0.0.1:8081/getUserInfo?uid=99',success,error);
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

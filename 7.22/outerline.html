@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            position: relative;
+            left:100px;
+            top:100px;
+            width:200px;
+            height:200px;
+            border:1px solid red;
+            background-color: gray;
+            outline:30px dashed green;
+            outline-offset:20px;
+            cursor: wait;
+        }
+    </style>
+</head>
+<body style="zoom:1">
+    <div class="outer">
+
+    </div>
+    <hr>
+    <button onclick="fd()"> 点击放大两倍</button>
+    <script>
+        function fd(){
+            document.body.style.zoom=2
+        }
+    </script>
+</body>
+</html>

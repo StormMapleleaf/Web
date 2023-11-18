@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">去百度</a>
+    <hr>
+    <a href="javascript:void(0)" >去soso</a>
+    <script>
+        let a = document.querySelector('a')
+
+        a.onclick = function(e){
+            //阻止默认行为u 例如跳转，提交表达等
+            //return false
+
+            //阻止默认行为
+            e.preventDefault()
+
+            //页面变色
+            document.body.style.background='red'
+            //alert(e.cancelable)
+
+            //target 获取事件的目标元素
+
+            console.log(e.target)
+        }
+
+    </script>
+    
+</body>
+</html>

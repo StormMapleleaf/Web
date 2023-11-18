@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+        //根据页面的宽度动态调整html的字体大小
+        (function(){
+            //获取页面的宽度
+            let pageW = document.documentElement.clientWidth;
+            //将页面宽度划分n等分
+            let rem = pageW/24;
+            //将尺寸设置为html的font-size大小
+            document.documentElement.style.fontSize=rem + 'px'
+        })()
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="close">x</div>
+            <div class="title">BSV区块链微认证</div>
+            <div class="more">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </header>
+        <div class="head">
+            <div class="logo">
+                <img src="./imgs/logo@1x.png" alt="">
+            </div>
+            <div class="menu">
+                <img src="./imgs/mineicon.svg" alt="">
+            </div>
+        </div>
+        <main>
+            <article class="art">
+                <h1>区块链开发工程师能力认证</h1>
+                <h3>BSV区块链——全球唯一遵循中本聪最初设计与愿景的比特币</h3>
+                <p>区块链开发工程师能力测评BSV微认证项目是CSDN与BSV共同设计与开发的基于BSV区块链技术构建特定场景下区块链应用开发能力的考试认证。BSV微认证将对接CSDN软件工程师能力认证体系，培养区块链细分领域的专业性人才。</p>
+                <div class="img">
+                    <img src="./imgs/轮播图@1x.png" alt="">   
+                </div>
+                <div class="btn">
+                    <div class="study">开始学习</div>
+                    <div class="justify">开始认证</div>
+                </div>
+            </article>
+
+        </main>
+    </div>
+</body>
+</html>

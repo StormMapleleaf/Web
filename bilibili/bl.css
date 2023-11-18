@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: PingFang SC, Microsoft YaHei, Helvetica Neue, Helvetica, Hiragion Sans GB, Arial, sans-serif;
+}
+.wrap {
+  width: 1670px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.wrap #lnav {
+  visibility: hidden;
+  position: fixed;
+  height: 60px;
+  width: 1670px;
+  border: 2px solid red;
+  line-height: 56px;
+  background-color: white;
+}
+.banner {
+  width: 1670px;
+  height: 240px;
+}
+.banner p {
+  position: absolute;
+  height: 60px;
+  width: 1670px;
+  border: 2px solid red;
+  line-height: 56px;
+  background-color: none;
+}
+.water {
+  margin: 0 auto;
+  width: 1400px;
+  height: 200px;
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.water li {
+  width: 270px;
+  height: 200px;
+  background-color: red;
+}
+#ppt {
+  width: 1000px;
+  height: 400px;
+  background-color: aliceblue;
+  margin: 0 auto;
+}
+#ppt img {
+  position: absolute;
+}
+#ppt li {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 350px;
+  margin-left: 50px;
+  border-radius: 11111px;
+  background-color: grey;
+  cursor: pointer;
+}
+#ppt #l {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  margin-left: 600px;
+  font-size: 30px;
+  cursor: pointer;
+}
+#ppt #r {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  font-size: 30px;
+}
+#pp {
+  width: 1000px;
+  height: 800px;
+  background-color: aliceblue;
+  margin: 0 auto;
+}
+#fresh {
+  visibility: hidden;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  bottom: 140px;
+  background-color: aqua;
+}
+#fk {
+  visibility: hidden;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  bottom: 140px;
+  background-color: grey;
+}
+#topp {
+  visibility: hidden;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  bottom: 40px;
+  background-color: grey;
+}
+#more {
+  visibility: hidden;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  bottom: 90px;
+  background-color: grey;
+}
+#kf {
+  visibility: hidden;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 100px;
+  bottom: 90px;
+  background-color: grey;
+}

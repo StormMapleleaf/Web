@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.js"></script>
+    <script>
+        $(function(){
+            //添加属性
+            //$('p').attr('title','小日子').attr('id','japan').attr('class','xiaorizi')
+        
+
+            //移出属性
+            //$('p').removeAttr('title')
+
+
+            //class专用属性操作
+            //$('p').addClass('red')
+            //$('p').removeClass('red')
+
+            /*
+            $('P').on('click',function(){
+                $(this).toggleClass('red')
+            })
+            */
+
+
+            $('P').on('click',function(){
+                if($(this).hasClass('red')){
+                    $(this).removeClass('red')
+                }else{
+                    $(this).addClass('red')
+                }
+                
+            })
+
+
+
+        });
+    </script>
+
+    <style>
+        .red{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>日美大片正在上映中~</p>
+
+
+    
+</body>
+</html>

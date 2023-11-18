@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //声明一个函数
+    
+        function tubie(num){
+            //1.直接输出当前变量
+            console.log(num);
+
+            //2.判断num是否>0
+            if(num>0){
+                tubie(num-1);
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量
+            console.log(num);
+        }
+
+
+        //调用函数
+        tubie(5);
+
+        /*
+
+        1.
+        function tubie(5){
+            //1.直接输出当前变量
+            console.log(5);
+
+            //2.判断num是否>0
+            if(5>0){
+                tubie(5-1); //调用函数 tubie(4)  //去执行该函数
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量   //等待tubie(4)执行完毕
+            console.log(num);
+        }
+        
+        tubi(4)
+
+        function tubie(4){
+            //1.直接输出当前变量
+            console.log(4);
+
+            //2.判断num是否>0
+            if(4>0){
+                tubie(4-1); tubie(3) //去执行tubie(3)
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量 //等待tubie(3)执行完毕
+            console.log(num);
+        }
+        
+        tubie(3)
+        function tubie(3){
+            //1.直接输出当前变量
+            console.log(num);
+
+            //2.判断num是否>0
+            if(3>0){
+                tubie(3-1);   tubie(2) //去执行tubie（2）
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量
+            console.log(num); //等待tubie(2)执行完毕
+        }
+        
+        tubie(2)
+
+        function tubie(2){
+            //1.直接输出当前变量
+            console.log(2);
+
+            //2.判断num是否>0
+            if(2>0){
+                tubie(2-1);  tubie(1)
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量
+            console.log(num); //等待tubie(1)执行完毕
+        }
+        
+        tubie（1）
+
+        function tubie(1){
+            //1.直接输出当前变量
+            console.log(1);
+
+            //2.判断num是否>0
+            if(1>0){
+                tubie(1-1);  tubie(0) //执行tubie(0)
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量
+            console.log(1);  //等待土鳖(0)执行完毕
+        }
+
+        tubie(0)
+        function tubie(0){
+            //1.直接输出当前变量
+            console.log(0);
+
+            //2.判断num是否>0
+            if(0>0){
+                tubie(num-1);
+            }else{
+                console.log('-------')
+            }
+
+
+            //3.直接输出当前变量
+            console.log(0);
+        }
+        
+        
+        
+        
+        
+        */
+
+        //5 4 3 2 1 0  ----------- 0 1 2 3 4 5
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

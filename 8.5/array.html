@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        //数组函数
+        //fill()数组填充
+        let arr = [];
+        arr.length=20;
+        let newArr = arr.fill('-',0,10);
+        console.log(newArr)
+        
+
+        //copyWithin(pos, start, end) 数组位置拷贝
+        let arr = [1,2,3,4,5,6,7,8,9];
+        //         0 1 2 3 4 5 6 7 8
+        console.log(arr);
+
+        let newArr = arr.copyWithin(4,0,3)
+        console.log(newArr)
+        
+
+        let arr = ['陈小二','晏紫涵','张廷玉','郭溪'];
+
+        //pop() 在数组尾部弹出一个元素
+        //let result = arr.pop()
+        //console.log(result)
+        //console.log(arr)
+
+        //push() 在数组尾部添加一个元素
+        //arr.push('吴🗡️')
+        //console.log(arr)
+
+
+
+        //shift()在数组的开头移除一个元素
+        //let result = arr.shift()
+        //console.log(result)
+        //console.log(arr);
+
+
+        //unshift() 
+        //arr.unshift('玉米棒子')
+        //console.log(arr)
+
+
+        //keys  values  entries（）
+        let keys = arr.keys();
+        console.log(keys)
+        for(let i of keys){
+            console.log(i)
+        }
+
+        let values = arr.values();
+        console.log(values)
+        for(let i of values){
+            console.log(i)
+        }
+
+
+        let entries = arr.entries();
+        console.log(entries)
+        for(let [i,j] of entries){
+            console.log(i,j)
+        }
+        
+
+        //concat() 数组连接
+        let arr1 = [1,2,3,5,6];
+        let arr2 = ['a','b','c'];
+
+        //let result = arr1.concat(arr2);
+        let result = [...arr1,...arr2]
+        console.log(result)
+
+        //join() 
+        let url = 'http://www.baidu.com';
+        let arr = url.split('.');
+        
+        console.log(arr)
+        let str = arr.join('.')
+        console.log(str)
+
+        
+
+        let arr = ['陈小二','晏紫涵','张廷玉','郭溪'];
+        //slice(开始位置，结束位置)
+        let newArr = arr.slice(1,3) 
+        console.log(newArr)
+        */
+
+        //splice() 数组元素操作函数
+        //let arr = ['陈小二','晏紫涵','张廷玉','郭溪'];
+        //删除操作
+        //arr.splice(1,3)
+        //console.log(arr)
+
+        //添加操作
+        //arr.splice(2,0,'晨曦')
+        //console.log(arr)
+
+        //修改元素
+        //arr.splice(1,1,'小燕子')
+        //console.log(arr)
+
+        /*
+        let arr1 = [
+            ['晏紫涵','陈小二','郭溪'],
+            ['晨曦','张恬玉','曾静怡'],
+        ];
+        console.log(arr1);
+
+        //let stu = arr1.flat();
+        let stu = arr1.flatMap(function(data){
+            let newarr = []
+            //操作
+            for(let i= 0;i<data.length;i++){
+                newarr.push(data[i])
+            }
+            return newarr;
+        })
+        console.log(stu)
+        
+
+        let arr = [2,43,347,62123];
+
+        //filter() 过滤操作,返回结果数组
+
+        let newArr = arr.filter(function(data){
+            if(data>100){
+                return true;
+            }
+        });
+
+        console.log(newArr)
+
+        //forEach()对数组中的每个元素进行操作
+        arr.forEach(function(data){
+            console.log(data%10)
+        })
+
+        //every() 检测数组元素是否都符合要求
+        let result = arr.every(function(data){
+            if(data%2==1){
+                return true;
+            }   
+        })
+
+        console.log(result)
+
+        //some() 检测数组元素是否有元素符合要求
+        let result1 = arr.some(function(data){
+            if(data%2==1){
+                return true;
+            }   
+        })
+        console.log(result1)
+
+
+        //map()对每个元素执行函数操作
+        arr.map(function(value,index,array){
+
+            console.log(value,index,array)
+        })
+
+
+        //reverse（） 数组倒叙
+        let numArr = [1,1234,24,545,721,243,3572352];
+        console.log(numArr)
+        let newNumArr = numArr.reverse();
+        console.log(newNumArr)
+
+
+        //sort() 自定义排序规则
+        let newArr2 = numArr.sort(function(x,y){
+            if(x > y){
+                return -1
+            }else if(x == y){
+                return 0
+            }else{
+                return 1
+            }
+        })
+
+        console.log(newArr2)
+
+        //reduce() 合并方法  reduceRight() 从右向左操作
+        let sum = numArr.reduce(function(total,value,index,array){
+
+            return total+=value
+
+        },0) 
+
+        console.log(sum)
+        */
+
+        let letters = ['a','b','c','g','d','e','f','g','h'];
+
+        //at() 给个位置，给你数据
+        //let result  = letters.at(3)
+        let result  = letters[3]
+        //console.log(result)
+
+
+        //find()  找到第一个符合要求的数据元素
+        let result1 = letters.find(function(value,index,array){
+            //这里写要求
+            if(value > 'b'){
+                return value
+            }
+        })
+
+        //findIndex()  找到第一个符合要求的数据元素的索引
+        let result2 = letters.findIndex(function(value,index,array){
+            //这里写要求
+            if(value > 'b'){
+                return value
+            }
+        })
+
+        //findLast()  找到第一个符合要求的数据元素 从后向前查找
+        let result3 = letters.findLast(function(value,index,array){
+            //这里写要求
+            if(value > 'b'){
+                return value
+            }
+        })
+
+        //findLast()  找到第一个符合要求的数据元素 从后向前查找
+        let result4 = letters.findLastIndex(function(value,index,array){
+            //这里写要求
+            if(value > 'b'){
+                return value
+            }
+        })
+        console.log(result4)
+
+        //indexOf（） 根据值查找索引 
+        let index = letters.indexOf('g')
+        console.log(index)
+
+         //lastIndexOf（） 根据值查找索引 
+         let index2 = letters.lastIndexOf('g')
+        console.log(index2)
+
+        //includes()  查找是否具有指定的值
+        let result5 =  letters.includes('z')
+        console.log(result5)
+
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

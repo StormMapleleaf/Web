@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        //声明一个函数
+        function show(name,{UserAge:age,userSex:sex},height){
+            console.log(name)
+            console.log(age)
+            console.log(sex)
+            console.log(height)
+        }
+
+        //声明一个对象
+        let faceToSun = {
+            userName:'李向阳',
+            UserAge:18,
+            userSex:'男',
+            say(){
+                console.log('双枪陈向阳')
+            }
+        }
+
+        //调用函数
+        show('刘三',faceToSun,'180斤')
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            :foucus  焦点选择器
+            :checked 选中选择器
+            :target  锚点选择器
+            :root   根选择器(html标签)
+            :empty  空元素选择器
+            :enabled  可见元素选择器
+            :disabled  不可见元素选择器
+            :not()    排除选择器
+        */
+
+        input:focus{
+            background-color:#eee;
+        }
+
+    
+        input:checked+span{
+            color:red
+        }
+
+        :root{
+            background-color: bisque;
+        }
+
+        div:empty{
+            height:150px;
+            width:800px;
+            background-color: aqua ;
+        }
+
+        #nono>div:not(.blue){
+            height:20px;
+            border:1px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+        用户名：<input type="text" name="uname" value="">
+        <hr>
+        密码：<input type="password" name="" id="">
+        <hr>
+        <input type="radio" name="sex" value="man"><span>男</span>
+        <input type="radio" name="sex" value="woman"><span>女</span>
+        <hr>
+
+
+    </form>
+    <hr>
+    <div class="kong"></div>
+    <hr>
+    <div id="nono">
+        <div class="red">1</div>
+        <div class="red">2</div>
+        <div class="blue">3</div>
+        <div class="red">4</div>
+        <div class="red">5</div>
+        <div class="red">6</div>
+    </div>
+</body>
+</html>

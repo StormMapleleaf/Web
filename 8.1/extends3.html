@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //父构造方法
+        function Father(name,sex,age){
+            //这里的this代表父对象实例
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+
+            this.say = function(){
+                console.log('扯犊子');
+            }
+        }
+
+        //父对象原型
+        Father.prototype.chou = function(){
+            console.log('抽烟');
+        }
+
+
+        //子构造方法
+        function Son(name1,sex1,age1){
+            //这里的this 代表子对象实例
+            //盗用其他构造方法  call&apply
+            Father.call(this,name1,sex1,age1); 
+            /*
+            //相当于
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+
+            this.say = function(){
+                console.log('扯犊子');
+            }
+            */
+
+            //朝子对象实例中添加成员
+            this.run=function(){
+                console.log('跑起来');
+            }
+        }
+
+        //原型继承（原型链继承操作）
+        Son.prototype=new Father();
+
+
+        Son.prototype.drink=function(){
+            console.log('喝快乐水～');
+        }
+
+
+        //实例话对象
+        let xiaoer = new Son('xiaoer','man',18);
+
+        //访问成员
+        console.log(xiaoer.name);
+        console.log(xiaoer.sex);
+        console.log(xiaoer.age);
+        xiaoer.say();
+        xiaoer.chou();
+        xiaoer.run()
+        xiaoer.drink()
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

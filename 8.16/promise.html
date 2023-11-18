@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Promise 构造方法 自带的
+        let pro = new Promise(function(resolve,reject){
+            //console.log(resolve)  自动传入
+            //console.log(reject)  自动传入
+
+
+            //改变对象状态 PromiseState
+            //();//改变状态  成功的状态
+
+            //改变对象状态 PromiseState
+            //reject()//改变状态
+
+
+            //成功改变对象的属性值  PromiseResult
+            //resolve('oh yes 我成功了！');
+
+ 
+            //失败时候改变对象的属性值PromiseResult
+            reject('oh no 我失败了！')
+        });
+
+
+        //Promise对象的使用
+        pro.then(function(value){//表示操作成功的函数
+            console.log('then中的成功操作',value)
+        },function(value){//表示失败的函数
+            console.log('then中的失败操作',value)
+        });
+        console.log(pro)
+    </script>
+</body>
+</html>

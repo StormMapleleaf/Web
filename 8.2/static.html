@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //声明一个学生类
+        class Student{
+
+            constructor(){
+                this.name = 'xuesheng';
+                this.sex = 'man'
+                this.age = 18
+            }
+
+            //静态方法的作用(实例话对象操作)
+            static create(){
+                return new Student();
+            }
+        }
+
+        //调用静态方法
+        let xiaoer = Student.create();
+        console.log(xiaoer)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

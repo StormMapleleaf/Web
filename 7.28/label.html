@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //break配合标签语法可以控制跳出循环的层级（break默认是跳出当前循环）
+        let num = 0;
+        out:for(let i = 0;i<10;i++){
+            for(let j=0;j<10;j++){
+                console.log(i,j)
+                //判断条件
+                if(i == 5 && j==5){
+                   //break;//跳出当前循环
+                   break out;//跳出out循环
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

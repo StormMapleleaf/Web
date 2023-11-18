@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <script>
+      let headMeta = document.createElement('meta')
+      headMeta.setAttribute('charset','UTF-8')
+      headMeta.setAttribute('name','viewport')
+      headMeta.setAttribute('contant','width=device-width, initial-scale=1.0') 
+      let headTitle = document.createElement('title')
+
+      let headLink = document.createElement('link')
+      headLink.setAttribute('rel','stylesheet')
+      headLink.setAttribute('href','./style.css')
+      document.head.appendChild(headMeta)
+      document.head.appendChild(headTitle)
+      document.head.appendChild(headLink)
+      
+    </script> 
+  </head>
+  <body>
+    <!---使用节点操作完全重现页面中的内容-->
+    <script>
+<<<<<<< HEAD
+      //创建外层div元素节点
+      let containerDiv = document.createElement('div')
+      let header = document.createElement('header')
+      let main = document.createElement('main')
+      let footer = document.createElement('footer')
+      //处理属性
+      containerDiv.setAttribute('class','page-container')
+      header.setAttribute('class','page-header')
+      main.setAttribute('class','page-content')
+      footer.setAttribute('class','page-footer')
+      //添加到body中
+      document.body.appendChild(containerDiv)
+      containerDiv.appendChild(header)
+      containerDiv.appendChild(main)
+      containerDiv.appendChild(footer)
+      //header
+      
+      //Create
+      let headerContent = document.createElement('div')
+      let logo = document.createElement('div')
+      let img1 = document.createElement('img')
+      let text = document.createElement('div')
+      let tt = document.createTextNode('导航')
+      let split = document.createElement('div')
+      let img2 = document.createElement('img')
+      let navigation = document.createElement('div')
+      let nav1 = document.createElement('li')
+      let n1 = document.createTextNode('C友会')
+      let nav2 = document.createElement('li')
+      let n2 = document.createTextNode('高校俱乐部')
+      let nav3 = document.createElement('li')
+      let n3 = document.createTextNode('城市俱乐部')
+      let nav4 = document.createElement('li')
+      let n4 = document.createTextNode('俱乐部头条')
+      let nav5 = document.createElement('li')
+      let n5 = document.createTextNode('活动中心')
+      let nav6 = document.createElement('li')
+      let n6 = document.createTextNode('合作企业')
+      let nav7 = document.createElement('li')
+      let n7 = document.createTextNode('职位广场')
+      let nav8 = document.createElement('li')
+      let n8 = document.createTextNode('SIG')
+      let nav9 = document.createElement('li')
+      let n9 = document.createTextNode('猿粉风采')
+
+
+      //Handle
+      headerContent.setAttribute('class','page-header-content')
+      logo.setAttribute('class','logo')
+      img1.setAttribute('src','./image/csdnnav@3x.png')
+      img1.setAttribute('class','menu-icon')
+      text.setAttribute('class','text')
+      split.setAttribute('class','split')
+      img2.setAttribute('src','./image/logo1.svg')
+      img2.setAttribute('class','logo-img')
+      navigation.setAttribute('class','navigation')
+      nav1.setAttribute('class','selected')
+
+
+      //Attend
+      header.appendChild(headerContent)
+      headerContent.appendChild(logo)
+      logo.appendChild(img1)
+      logo.appendChild(text)
+      text.appendChild(tt)
+      logo.appendChild(split)
+      logo.appendChild(img2)
+      headerContent.appendChild(navigation)
+      navigation.appendChild(nav1)
+      navigation.appendChild(nav2)
+      navigation.appendChild(nav3)
+      navigation.appendChild(nav4)
+      navigation.appendChild(nav5)
+      navigation.appendChild(nav6)
+      navigation.appendChild(nav7)
+      navigation.appendChild(nav8)
+      navigation.appendChild(nav9)
+      nav1.appendChild(n1)
+      nav2.appendChild(n2)
+      nav3.appendChild(n3)
+      nav4.appendChild(n4)
+      nav5.appendChild(n5)
+      nav6.appendChild(n6)
+      nav7.appendChild(n7)
+      nav8.appendChild(n8)
+      nav9.appendChild(n9)
+      
+
+
+      //main
+      
+        let mainBanner = document.createElement('div')
+        let mainTeams = document.createElement('ul')
+        let mainSections = document.createElement('div')
+        mainBanner.setAttribute('class','banner')
+        mainTeams.setAttribute('class','teams')
+        mainSections.setAttribute('class','sections')
+        main.appendChild(mainBanner)
+        main.appendChild(mainTeams)
+        main.appendChild(mainSections)
+      
+      //banner
+      
+        
+          let imgb1 = document.createElement('img')
+          let arrl = document.createElement('div')
+              let limg = document.createElement('img')
+          let arrr = document.createElement('div')
+              let rimg = document.createElement('img')
+          let ulb = document.createElement('ul')
+              let ulb1 = document.createElement('li')
+              let ulb2 = document.createElement('li')
+              let ulb3 = document.createElement('li')
+        
+        
+          imgb1.setAttribute('src','./image/banner1@2x.png')
+          imgb1.setAttribute('class','banner-image')
+          arrl.setAttribute('class','arrow left')
+              limg.setAttribute('src','./image/路径.svg')
+          arrr.setAttribute('class','arrow right')
+              rimg.setAttribute('src','./image/路径.svg')
+          ulb.setAttribute('class','pageration')
+          ulb2.setAttribute('class','selected')    
+        
+        
+          mainBanner.appendChild(imgb1)
+          mainBanner.appendChild(arrl)
+          arrl.appendChild(limg)
+          mainBanner.appendChild(arrr)
+          arrr.appendChild(rimg)
+          mainBanner.appendChild(ulb)
+          ulb.appendChild(ulb1)
+          ulb.appendChild(ulb2)
+          ulb.appendChild(ulb3)
+        
+      
+
+      //teams
+      //Create1
+      let mitem = document.createElement('li')
+      let mcontent = document.createElement('div')
+      let mimg = document.createElement('img')
+      let mtitle = document.createElement('div')
+      let mtitleWord = document.createTextNode('数据科学SIG')
+      let mbutton = document.createElement('button')
+      let mbuttonWord = document.createTextNode('申请加入')
+
+      mitem.setAttribute('class','teams-item')
+      mcontent.setAttribute('class','content')
+      mimg.setAttribute('class','icon')
+      mimg.setAttribute('src','./image/数据icon.svg')
+      mtitle.setAttribute('class','title')
+
+      mainTeams.appendChild(mitem)
+      mitem.appendChild(mcontent)
+      mcontent.appendChild(mimg)
+      mcontent.appendChild(mtitle)
+      mtitle.appendChild(mtitleWord)
+      mitem.appendChild(mbutton)
+      mbutton.appendChild(mbuttonWord)
+      //Create2
+      let mitem2 = document.createElement('li')
+      let mcontent2 = document.createElement('div')
+      let mimg2= document.createElement('img')
+      let mtitle2 = document.createElement('div')
+      let mtitleWord2 = document.createTextNode('区块链.SIG')
+      let mbutton2 = document.createElement('button')
+      let mbuttonWord2 = document.createTextNode('申请加入')
+
+      mitem2.setAttribute('class','teams-item')
+      mcontent2.setAttribute('class','content')
+      mimg2.setAttribute('class','icon')
+      mimg2.setAttribute('src','./image/区块链.svg')
+      mtitle2.setAttribute('class','title')
+
+      mainTeams.appendChild(mitem2)
+      mitem2.appendChild(mcontent2)
+      mcontent2.appendChild(mimg2)
+      mcontent2.appendChild(mtitle2)
+      mtitle2.appendChild(mtitleWord2)
+      mitem2.appendChild(mbutton2)
+      mbutton2.appendChild(mbuttonWord2)
+      //Create3
+      let m3item = document.createElement('li')
+      let m3content = document.createElement('div')
+      let m3img = document.createElement('img')
+      let m3title = document.createElement('div')
+      let m3titleWord = document.createTextNode('云计算SIG')
+      let m3button = document.createElement('button')
+      let m3buttonWord = document.createTextNode('申请加入')
+
+      m3item.setAttribute('class','teams-item')
+      m3content.setAttribute('class','content')
+      m3img.setAttribute('class','icon')
+      m3img.setAttribute('src','./image/云计算.svg')
+      m3title.setAttribute('class','title')
+
+      mainTeams.appendChild(m3item)
+      m3item.appendChild(m3content)
+      m3content.appendChild(m3img)
+      m3content.appendChild(m3title)
+      m3title.appendChild(m3titleWord)
+      m3item.appendChild(m3button)
+      m3button.appendChild(m3buttonWord)
+      //Create4
+      let m4item = document.createElement('li')
+      let m4content = document.createElement('div')
+      let m4img = document.createElement('img')
+      let m4title = document.createElement('div')
+      let m4titleWord = document.createTextNode('数据库SIG')
+      let m4button = document.createElement('button')
+      let m4buttonWord = document.createTextNode('申请加入')
+
+      m4item.setAttribute('class','teams-item')
+      m4content.setAttribute('class','content')
+      m4img.setAttribute('class','icon')
+      m4img.setAttribute('src','./image/数据库.svg')
+      m4title.setAttribute('class','title')
+
+      mainTeams.appendChild(m4item)
+      m4item.appendChild(m4content)
+      m4content.appendChild(m4img)
+      m4content.appendChild(m4title)
+      m4title.appendChild(m4titleWord)
+      m4item.appendChild(m4button)
+      m4button.appendChild(m4buttonWord)
+      
+      //sections
+      let scontent = document.createElement('div')
+      scontent.setAttribute('class','content')
+      mainSections.appendChild(scontent)
+
+      //top-meun
+      let tMeun = document.createElement('div')
+      tMeun.setAttribute('class','top-menu')
+      scontent.appendChild(tMeun)
+
+      let topTitle = document.createElement('div')
+      topTitle.setAttribute('class','title')
+      tMeun.appendChild(topTitle)
+
+      let topText= document.createElement('div')
+      topText.setAttribute('class','text')
+      topTitle.appendChild(topText)
+      let topTextWord= document.createTextNode('最新活动')
+      topText.appendChild(topTextWord)
+      let topNav= document.createElement('ul')
+      topNav.setAttribute('class','nav')
+      topTitle.appendChild(topNav)
+
+
+      //li*5
+      let tl1= document.createElement('li')
+      let tl1w= document.createTextNode('直播')
+      tl1.appendChild(tl1w)
+      topNav.appendChild(tl1)
+      let tl2= document.createElement('li')
+      let tl2w= document.createTextNode('沙龙')
+      tl2.appendChild(tl2w)
+      topNav.appendChild(tl2)
+      let tl3= document.createElement('li')
+      let tl3w= document.createTextNode('讲座')
+      tl3.appendChild(tl3w)
+      topNav.appendChild(tl3)
+      let tl4= document.createElement('li')
+      let tl4w= document.createTextNode('夏令营')
+      tl4.appendChild(tl4w)
+      topNav.appendChild(tl4)
+      let tl5= document.createElement('li')
+      let tl5w= document.createTextNode('访学')
+      tl5.appendChild(tl5w)
+      topNav.appendChild(tl5)
+
+ 
+      let topMore= document.createElement('div')
+      topMore.setAttribute('class','more')
+      tMeun.appendChild(topMore)
+
+      let moreWord= document.createTextNode('更多')
+      topMore.appendChild(moreWord)
+      let moreimg= document.createElement('img')
+      moreimg.setAttribute('src','./image/arrow.svg')
+      moreimg.setAttribute('class','arrow')
+      topMore.appendChild(moreimg)
+
+      //let moreOperate= document.createElement('div')
+     // moreOperate.setAttribute('class','operate')
+      //topMore.appendChild(moreOperate)
+
+      //activity
+      let act = document.createElement('ul')
+      act.setAttribute('class','activity')
+      scontent.appendChild(act)
+
+      //Create1
+      let actli = document.createElement('li')
+      act.appendChild(actli)
+      let aposter = document.createElement('div')
+      aposter.setAttribute('class','poster')
+      actli.appendChild(aposter)
+      let imgPos = document.createElement('img')
+      imgPos.setAttribute('class','poster-img')
+      imgPos.setAttribute('src','./image/fm1@2x.png')
+      aposter.appendChild(imgPos)
+      let imgPl = document.createElement('img')
+      imgPl.setAttribute('class','play')
+      //play
+      imgPl.setAttribute('src','./image/播放.png')
+      aposter.appendChild(imgPl)
+      let labelPos = document.createElement('div')
+      let labelPosw = document.createTextNode('直播')
+
+      labelPos.appendChild(labelPosw)
+      labelPos.setAttribute('class','label')
+      aposter.appendChild(labelPos)
+      
+
+      //title
+      let atitle = document.createElement('div')
+      atitle.setAttribute('class','title')
+      actli.appendChild(atitle)
+      let attext = document.createElement('div')
+      let atoperateww = document.createTextNode('标题文字内容标题文字内容标题啊三大时代')
+      attext.appendChild(atoperateww)
+      attext.setAttribute('class','text')
+      atitle.appendChild(attext)
+      let atoperate = document.createElement('div')
+      let atoperatew = document.createTextNode('设置提醒')
+      atoperate.appendChild(atoperatew)
+      atoperate.setAttribute('class','operate')
+      atitle.appendChild(atoperate)
+
+      //Create2
+      let a2ctli = document.createElement('li')
+      act.appendChild(a2ctli)
+      let a2poster = document.createElement('div')
+      a2poster.setAttribute('class','poster')
+      a2ctli.appendChild(a2poster)
+      let i2mgPos = document.createElement('img')
+      i2mgPos.setAttribute('class','poster-img')
+      i2mgPos.setAttribute('src','./image/fm2@3x.png')
+      a2poster.appendChild(i2mgPos)
+      let i2mgPl = document.createElement('img')
+      i2mgPl.setAttribute('class','play')
+      let l2abelPos = document.createElement('div')
+      let l2abelPosw = document.createTextNode('沙龙')
+      l2abelPos.appendChild(l2abelPosw)
+      l2abelPos.setAttribute('class','label')
+      a2poster.appendChild(l2abelPos)
+      //title
+      let a2title = document.createElement('div')
+      a2title.setAttribute('class','title')
+      a2ctli.appendChild(a2title)
+      let a2ttext = document.createElement('div')
+      let a2toperateww = document.createTextNode('机器学习实战系列套餐')
+      a2ttext.appendChild(a2toperateww)
+      a2ttext.setAttribute('class','text')
+      a2title.appendChild(a2ttext)
+      let a2toperate = document.createElement('div')
+      let a2toperatew = document.createTextNode('预约报名')
+      a2toperate.appendChild(a2toperatew)
+      a2toperate.setAttribute('class','operate')
+      a2title.appendChild(a2toperate)
+
+      //Create3
+      let a22ctli = document.createElement('li')
+      act.appendChild(a22ctli)
+      let a22poster = document.createElement('div')
+      a22poster.setAttribute('class','poster')
+      a22ctli.appendChild(a22poster)
+      let i22mgPos = document.createElement('img')
+      i22mgPos.setAttribute('class','poster-img')
+      i22mgPos.setAttribute('src','./image/fm3@3x.png')
+      a22poster.appendChild(i22mgPos)
+      let i22mgPl = document.createElement('img')
+      i22mgPl.setAttribute('class','play')
+      let l22abelPos = document.createElement('div')
+      let l22abelPosw = document.createTextNode('其他')
+      l22abelPos.appendChild(l22abelPosw)
+      l22abelPos.setAttribute('class','label')
+      a22poster.appendChild(l22abelPos)
+      //title
+      let a22title = document.createElement('div')
+      a22title.setAttribute('class','title')
+      a22ctli.appendChild(a22title)
+      let a22ttext = document.createElement('div')
+      let a22toperateww = document.createTextNode('标题文字内容标题文字内容标题啊三大时代')
+      a22ttext.appendChild(a22toperateww)
+      a22ttext.setAttribute('class','text')
+      a22title.appendChild(a22ttext)
+     
+
+      
+      //Create4
+
+      let a222ctli = document.createElement('li')
+      act.appendChild(a222ctli)
+      let a222poster = document.createElement('div')
+      a222poster.setAttribute('class','poster')
+      a222ctli.appendChild(a222poster)
+      let i222mgPos = document.createElement('img')
+      i222mgPos.setAttribute('class','poster-img')
+      i222mgPos.setAttribute('src','./image/fm4@3x.png')
+      a222poster.appendChild(i222mgPos)
+      let i222mgPl = document.createElement('img')
+      i222mgPl.setAttribute('class','play')
+      let l222abelPos = document.createElement('div')
+      let l222abelPosw = document.createTextNode('直播')
+      l222abelPos.appendChild(l222abelPosw)
+      l222abelPos.setAttribute('class','label')
+      a222poster.appendChild(l222abelPos)
+      //title
+      let a222title = document.createElement('div')
+      a222title.setAttribute('class','title')
+      a222ctli.appendChild(a222title)
+      let a222ttext = document.createElement('div')
+      let a222toperateww = document.createTextNode('标题文字内容标题文字内容标题啊三大时代')
+      a222ttext.appendChild(a222toperateww)
+      a222ttext.setAttribute('class','text')
+      a222title.appendChild(a222ttext)
+     
+   
+
+      //top-meun
+      let t2Meun = document.createElement('div')
+      t2Meun.setAttribute('class','top-menu')
+      scontent.appendChild(t2Meun)
+     
+      let top2Title = document.createElement('div')
+      top2Title.setAttribute('class','title')
+      t2Meun.appendChild(top2Title)
+
+      let top2Text= document.createElement('div')
+      top2Text.setAttribute('class','text')
+      top2Title.appendChild(top2Text)
+      let top2TextWord= document.createTextNode('猿粉风采')
+      top2Text.appendChild(top2TextWord)
+      
+
+
+     
+
+ 
+      let top2More= document.createElement('div')
+      top2More.setAttribute('class','more')
+      t2Meun.appendChild(top2More)
+
+      let more2Word= document.createTextNode('更多')
+      top2More.appendChild(more2Word)
+      let more2img= document.createElement('img')
+      more2img.setAttribute('src','./image/arrow.svg')
+      more2img.setAttribute('class','arrow')
+      top2More.appendChild(more2img)
+
+
+      //shows
+      let show = document.createElement('div')
+      show.setAttribute('class','shows')
+      scontent.appendChild(show)
+
+      //left
+      let sleft = document.createElement('div')
+      sleft.setAttribute('class','left')
+      show.appendChild(sleft)
+
+      let leftItem = document.createElement('div')
+      leftItem.setAttribute('class','item')
+      sleft.appendChild(leftItem)
+
+      let leftimg = document.createElement('img')
+      leftimg.setAttribute('src','./image/1.png')
+      leftItem.appendChild(leftimg)
+
+      
+
+      let leftWord = document.createElement('div')
+      let leftww = document.createTextNode('  文字简介，最多显示一asda行文字asdasd简介最多…sda行文字asdasd简介最多…sda行文字asdasd简介最多…sda行文字asdasd简介最多…')
+      leftWord.appendChild(leftww)
+      leftWord.setAttribute('class','label')
+      leftItem.appendChild(leftWord)
+      //right
+      let sright = document.createElement('ul')
+      sright.setAttribute('class','right')
+      show.appendChild(sright)
+      //Create1
+      let rli = document.createElement('li')
+      rli.setAttribute('class','item')
+      sright.appendChild(rli)
+
+      let leftim = document.createElement('img')
+      leftim.setAttribute('src','./image/1.png')
+      rli.appendChild(leftim)
+
+      let leftWor = document.createElement('div')
+      let leftwww = document.createTextNode('文字简介，最多显示一asda行文字asdasd简介最多…')
+      leftWor.appendChild(leftwww)
+      leftWor.setAttribute('class','label')
+      rli.appendChild(leftWor)
+      //Create2
+      let r2li = document.createElement('li')
+      r2li.setAttribute('class','item')
+      sright.appendChild(r2li)
+
+      let l2eftim = document.createElement('img')
+      l2eftim.setAttribute('src','./image/1.png')
+      r2li.appendChild(l2eftim)
+
+      let l2eftWor = document.createElement('div')
+      let l2eftwww = document.createTextNode('文字简介，最多显示一asda行文字asdasd简介最多…')
+      l2eftWor.appendChild(l2eftwww)
+      l2eftWor.setAttribute('class','label')
+      r2li.appendChild(l2eftWor)
+      //Create3
+      let r22li = document.createElement('li')
+      r22li.setAttribute('class','item')
+      sright.appendChild(r22li)
+
+      let l22eftim = document.createElement('img')
+      l22eftim.setAttribute('src','./image/1.png')
+      r22li.appendChild(l22eftim)
+
+      let l22eftWor = document.createElement('div')
+      let l22eftwww = document.createTextNode('文字简介，最多显示一asda行文字asdasd简介最多…')
+      l22eftWor.appendChild(l22eftwww)
+      l22eftWor.setAttribute('class','label')
+      r22li.appendChild(l22eftWor)
+      //Create4
+      let r222li = document.createElement('li')
+      r222li.setAttribute('class','item')
+      sright.appendChild(r222li)
+
+      let l222eftim = document.createElement('img')
+      l222eftim.setAttribute('src','./image/1.png')
+      r222li.appendChild(l222eftim)
+
+      let l222eftWor = document.createElement('div')
+      let l222eftwww = document.createTextNode('文字简介，最多显示一asda行文字asdasd简介最多…')
+      l222eftWor.appendChild(l222eftwww)
+      l222eftWor.setAttribute('class','label')
+      r222li.appendChild(l222eftWor)
+=======
+      let link = document.createElement('link')
+
+      link.setAttribute('rel','stylesheet')
+      link.setAttribute('href','./test.css')
+>>>>>>> master
+
+      let head = document.getElementsByTagName('head')[0]
+      head.appendChild(link)
+    </script>
+  </body>
+</html>

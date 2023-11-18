@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        //关于函数的默认值
+        function person(name='娃娃',sex='男',age=1){
+            console.log('我的名字是：'+name)
+            console.log('我的性别是：'+sex)
+            console.log('我的年龄是：'+age)
+        }
+
+        //调用函数
+        //person('温明博','未知','88');
+
+        person();
+
+        */
+
+
+        //早期无默认值的情况
+        //关于函数的默认值
+        function person(name,sex,age){
+            //此处添加默认值
+            if(name === undefined){
+                name = '娃娃'
+            }
+
+            if(sex === undefined){
+                sex = '男'
+            }   
+
+            if(age === undefined){
+                age = 1
+            }
+
+
+            console.log('我的名字是：'+name)
+            console.log('我的性别是：'+sex)
+            console.log('我的年龄是：'+age)
+        }
+
+        //调用函数
+        //person('温明博','未知','88');
+
+        person();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

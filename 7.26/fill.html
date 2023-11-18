@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .fill{
+            width:100px;
+            height:100px;
+            background-color: green;
+            position: absolute;
+            left:0;
+            top:0;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: backwards;
+        }
+
+
+        @keyframes move {
+            0%{
+                left:0;
+                top:0;
+            }
+
+            100%{
+                left:500px;
+                top:500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fill"></div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style-type: none;
+        }
+        #wrap{
+            width: 100vw;
+            height:100vh;
+            background-color: gray;
+        }
+
+        .pages{
+            width:100vw;
+            height:100vh;
+            background-color: bisque;
+
+        }
+
+        .index{
+
+            left:0;
+            top:0;
+            width:100vw;
+            height:100vh;
+            background-color: red;
+            transform: translateY(-100vh);
+            transition: all .3s ease-in;
+            opacity: 0;
+            
+        }
+
+        .index:target{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .order{
+            width:100vw;
+            height:100vh;
+            background-color: green;
+            transform: translateY(-200vh);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .order:target{
+            transform: translateY(-100vh);
+            opacity: 1;
+        }
+
+        .personal{
+            width:100vw;
+            height:100vh;
+            background-color: blue;
+            transform: translateY(-300vh);
+            opacity: 0;
+            transition: all 0.3s ease-out;
+
+        }
+
+        .personal:target{
+            transform: translateY(-200vh);
+            opacity: 1;
+        }
+
+
+
+
+        
+
+        .nav{
+            width:100vw;
+            height:5vh;
+            background-color: aquamarine;
+            position: fixed;
+            left:0;
+            bottom:0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .nav li{
+            width:30vw;
+            height:5vh;
+            background-color: pink;
+            text-align: center;
+            line-height: 5vh;
+        }
+
+        
+
+
+  
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="pages">
+            <div class="index" id="index"></div>
+            <div class="order" id="order"></div>
+            <div class="personal" id="personal"></div>
+        </div>
+        <ul class="nav">
+            <li><a href="#index">首页</a></li>
+            <li><a href="#order">订单</a></li>
+            <li><a href="#personal">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+</html>

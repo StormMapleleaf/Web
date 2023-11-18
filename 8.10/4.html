@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick = "func()">新文档流操作</button>
+
+    <script>
+        //文档方法
+
+        //open() 打开一个新的文档流
+
+        function func(){
+            //打开文档流
+            document.open();
+
+            //向文档中写入内容
+            document.write('视频不开，对象不来~');
+            document.write('视频不开，对象不来~');
+            document.write('视频不开，对象不来~');
+            //document.writeln('视频不开，对象不来')  ; // writeln  = write + \n
+            //document.writeln('视频不开，对象不来')  ; // writeln  = write + \n
+            //document.writeln('视频不开，对象不来')  ; // writeln  = write + \n
+
+
+
+            //关闭文档流
+            document.close()
+
+        }
+
+        /*
+
+        1. 打开页面会创建一个文档流
+        2. 吧源代码中的内容写入当前文档流
+        3. 页面加载完毕文档流写完，执行关闭文档流操作
+
+
+        4. 点击按钮后
+
+        5. 打开新的文档流（原页面消失）
+        6. 向文档中写入内容
+        7. 关闭文档流（不写关闭，程序也会关闭）
+        */
+
+    </script>
+    
+</body>
+</html>

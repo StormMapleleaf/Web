@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="mydiv">div1</div>
+    <hr>
+    <div class="mydiv">div2</div>
+
+    <script>
+
+        //获取2个div
+        let mydiv1 = document.getElementsByClassName('mydiv')[0]
+
+
+        let mydiv2 = document.getElementsByClassName('mydiv')[1]
+
+        console.log(mydiv1)
+        console.log(mydiv2)
+
+
+        //isSameNode() 检测是否是同一个节点
+        console.log(mydiv1.isSameNode(mydiv2))
+
+        //isEqualNode() 检测两个节点是否相同  标签名 属性和子节点都先通
+        console.log(mydiv1.isEqualNode(mydiv2))
+
+    </script>
+    
+</body>
+</html>

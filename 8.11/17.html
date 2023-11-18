@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width:300PX;
+            height: 300PX;
+            border: 1px solid red;
+            overflow: scroll;
+        }
+
+        #inner{
+            width: 1000px;
+            height:1000px;
+            background:linear-gradient(45deg,red,green);
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <div id="inner"></div>
+    </div>
+    <script>
+
+        let mydiv = document.getElementById('mydiv')
+        let inner = document.getElementById('inner')
+
+        //scrollWidth 没有滚动条出现时，元素内容的总宽度
+        console.log(mydiv.scrollWidth)
+
+        //scrollHeight 没有滚动条出现时，元素内容的总高度
+        console.log(mydiv.scrollHeight)
+
+    </script>
+</body>
+</html>

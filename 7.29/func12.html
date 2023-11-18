@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //闭包：能不用就不用，影响系统的变量回收。
+        
+        //闭包：将函数内部的一个局部变量 提升到全局环境当中使用（变量本身而非变量的值）
+        //定义一个函数  （函数运行完毕会回收所有局部变量）
+        function person(){
+            //定义一个变量
+            let sex ='男';//被outer函数强制带到全局内，无法被函数自动回收
+
+            //定义一个函数
+            function outer(){
+                //是否可以访问sex变量（person中的）
+                //console.log(sex)
+                return sex;
+            }
+
+            //将一个内部函数当作值返回
+            return outer;
+
+
+        }
+
+        //调用person
+        let result =  person();
+        console.log(result)
+
+        //再次调用result
+        let sss = result();
+        console.log(sss)
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

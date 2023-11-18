@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        E F    后代选择器（选择元素E内部所有的复合F选择器标签）  
+        E>F    父子选择器（选择符合选择器E的元素内部第一层复合选择器F的标签）
+        E+F    相邻选择器
+        E~F    兄弟选择器
+        */
+        main section{
+            border:1px solid red;
+        }
+
+
+        .game>p>b{
+            color:violet
+        }
+
+        .first+p{
+            color:green
+        }
+
+        .first~p{
+            font-size:30px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <article>斗破苍穹</article>
+        <article>一念永恒</article>
+        <article>狐妖小红娘</article>
+        <article>不良人</article>
+        <article>
+            <section>一人之下</section>
+            <section>刺客伍六七</section>
+        </article>
+    </main>
+    <div>
+        <article>斗破苍穹</article>
+        <article>一念永恒</article>
+        <article>狐妖小红娘</article>
+        <article>不良人</article>
+        <article>
+            <section>一人之下</section>
+            <section>刺客伍六七</section>
+        </article>
+    </div>
+    <hr>
+    <div class="game">
+        <p>
+            <b>王者荣耀</b>
+            <b>云顶之弈</b>
+        </p>
+    </div>
+    <div class="game">
+        <b>传奇</b>
+        <b>石器时代</b>
+        <b>梦幻西游</b>
+    </div>
+    <hr>
+    <p>詹姆斯.赵四</p>
+    <p class="first">刘能</p>
+    <p>詹姆斯.赵四</p>
+    <p>贵州科比</p>
+</body>
+</html>

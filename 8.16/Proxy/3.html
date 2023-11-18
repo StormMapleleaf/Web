@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        /*
+        //对象
+        let human = {
+            name:'zhangsan',
+            sex:'woman',
+            age:18,
+            say(){
+                console.log('及你太美')
+            }
+        }
+
+        //获取对象的成员
+        //console.log(human.name)
+
+        //Object.getOwnPropertyDescriptor
+        let result = Object.getOwnPropertyDescriptor(human,'name')
+        console.log(result)
+
+
+        //反射对象Reflect 
+        let result2 = Reflect.get(human,'name')
+        console.log(result2)
+
+        console.log(Reflect)
+        */
+
+
+
+
+        //代理操作
+        let human = {
+            name:'zhangsan',
+            sex:'woman',
+            age:18,
+            say(){
+                console.log('及你太美')
+            }
+        }
+
+        let proxy = new Proxy(human,{
+            /*
+            //没有设置get方法,可以调用Object的默认读取属性的方法 get    通
+            //设置了get方法，覆盖原有的get，导致无法读取属性值          截断 ，导致不通 
+            //再次调用了程序的默认读取属性的方法  get   （升级版本的Object属性操作）  继续连接原有操作
+
+            get:function(target,property,receiver){
+                //这里就是你的自由发挥区域  
+                //假设获取性别，就给年龄
+                if(property == 'sex'){
+                    property='age'
+                }
+                return Reflect.get(target,property,receiver)
+            }
+            */
+
+            get:Reflect.get
+  
+        });
+
+
+        console.log(proxy.name)
+
+    </script>
+    
+</body>
+</html>

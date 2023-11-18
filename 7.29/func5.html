@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //定义函数计算两个数的和
+
+        function sum(x,y){
+            //求和计算
+            let result = x +y;
+            return result;
+        }
+
+
+        //console.log(sum(5,6))
+
+
+        //计算n个数的求和函数
+
+        function sum2(){
+            //计算数据的和
+
+            //函数内部有一个变量 arguments (箭头函数没有)
+
+            //arguments 用于接受所有传入实参的变量 【数组对象】  [0:5,1:6] (脑中想象)
+            //console.log(arguments);
+
+            //获取arguments中的某个数据
+            //console.log(arguments[1])
+
+            //获取实参的个数
+            //console.log(arguments.length)
+
+            //代表当前函数本身
+            console.log(arguments.callee)
+
+
+            //声明一个统计变量
+            let total = 0;
+
+            //使用for循环获取所有传入的实参
+            for(let i = 0;i<arguments.length;i++){
+               total+=arguments[i];
+            }
+
+            console.log(total)
+
+
+        }
+
+        //调用函数
+        //sum2(5,6);
+        //sum2(5,6,7,8,9);
+        sum2(1,2,22,4,67,6,7,81,9);
+
+
+        /*
+
+        //1.具有返回值的函数！ 可以被变量接受
+        //2.执行过程函数，没有返回数据  不会使用变量接受
+
+
+        //你去厕所拉屎，把屎带回来
+        function xiaodelashi(){
+            //其他流程
+
+            return 'shi';
+        }
+
+        let conghao = xiaodelashi();
+        console.log(conghao)
+
+
+        //你去厕所尿尿
+        function xiaodexuxu(){
+            //脱裤子
+            //普～放屁，
+            //撒尿
+            //抖一抖
+        }
+
+        let conghao2 =xiaodexuxu();
+        console.log(conghao2)
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

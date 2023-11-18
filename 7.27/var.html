@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //变量
+        //1.声明变量  var  早期变量声明方式  es5之前
+        var my = '南风';
+        console.log(my);
+
+        //覆盖变量
+        my = 'southwind';
+        console.log(my);
+
+        //同名声明
+        var my = '我不卖，你死心吧～'
+        console.log(my);
+
+        //2.let 关键字
+
+        let you = '朱豪';
+        console.log(you);
+
+        //变量覆盖
+
+        you = '朱好';
+        console.log(you);
+
+        //同名声明
+        //let you = '祝你好运';
+        console.log(you);
+
+
+        //let 与var 的区别
+        //1. let不允许重新定义相同变量  var可以
+        //2. let定义的变量不可以在定义之前使用 var可以
+        //3.作用域  let的作用域仅限于定义变量的区块中
+
+        //console.log(she);
+        //let she = '听雨'
+
+        /*
+        for(let i = 0;i<10;i++){
+            //
+        }
+
+        if(true){
+            let j = 99;
+        }
+
+        console.log(j);
+        */
+
+        let it = '小狗狗';
+        console.log(it)
+        console.log(window.it)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

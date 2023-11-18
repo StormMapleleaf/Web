@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" name="username" >
+
+
+    <script>
+        //属性节点
+
+
+        //获取指定的属性节点，补能独立存在，存在于元素节点中
+
+        let inputElement = document.getElementsByName('username')[0]
+        //获取元素节点的属性节点  元素节点.attributes.属性名
+        //let nameNode = inputElement.attributes.name;
+        //console.log(nameNode.nodeType)
+
+        //获取属性节点 getNamedItem(name)
+
+        //let typeNode = inputElement.attributes.getNamedItem('name')
+        //console.log(typeNode)
+
+        //删除属性节点removeNamedItem(NAME)
+        //inputElement.attributes.removeNamedItem('type')
+
+
+        //设置属性节点 setNamedItem(属性节点)  
+
+        //创建属性节点
+        let valueNode = document.createAttribute('value')
+        valueNode.nodeValue = '陈小二'
+        console.log(valueNode)
+
+        inputElement.attributes.setNamedItem(valueNode)                 
+
+
+
+
+    </script>
+    
+</body>
+</html>

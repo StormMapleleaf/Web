@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //父构造方法和对象原型
+        function Father(){
+            this.name='爹地';
+            this.sex='男';
+            this.age = 56;
+            this.chou=function(){
+                console.log('打死你个龟孙～');
+            }
+        }
+
+        Father.prototype.skin = 'yellow';
+        Father.prototype.fight = function(){
+            console.log('父见子未亡，抽出七匹狼～');
+        }
+
+        //子构造方法
+        function Son(){
+            //盗用构造函数
+            Father.call(this)
+            this.height = 180;
+            this.study = function(){
+                console.log('学个der啊～');
+            }
+        }
+
+        //声明继承函数
+        function extendOperate(Father,Son){
+            //根据传入的父对象创造实例(子对象的原型)
+            let obj = Object.create(Father.prototype)
+            //为子对象指定构造方法
+            obj.constructor = Son;
+            //为子对象注定对象原型
+            Son.prototype = obj;
+        }
+
+        //调用继承函数
+        extendOperate(Father,Son);
+
+        //实例话子对象
+        let xiaozhang = new Son();
+        console.log(xiaozhang.name);
+        console.log(xiaozhang.sex);
+        xiaozhang.chou()
+        console.log(xiaozhang.height)
+        xiaozhang.study()
+
+        console.log(xiaozhang instanceof Son)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

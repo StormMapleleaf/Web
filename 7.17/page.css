@@ -1,0 +1,262 @@
+/*重置页面元素的默认样式  简单写法  */
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.mb20{
+    clear:both;
+    height:20px;
+}
+
+.mb5{
+    clear:both;
+    height:5px;
+}
+
+.mb10{
+    clear:both;
+    height:10px;
+}
+
+
+
+
+#wrap{
+    width:1000px;
+    margin:0 auto;
+}
+
+/*页面顶部区域样式*/
+#header{
+    height:150px;
+}
+
+.logo{
+    width:150px;
+    height:80px;
+    background-color: antiquewhite;
+    float:left; 
+}
+
+.search{
+    width:350px;
+    height:80px;
+    background-color: blueviolet;
+    float:left;
+    margin:0 150px;
+}
+
+.userinfo{
+    width:150px;
+    height:80px;
+    background-color: aquamarine;
+    float:right;
+}
+
+.navi{
+    height: 60px;
+    background-color: chocolate;
+    float:left;
+}
+
+.navi li{
+    float:left;
+    background-color: cornflowerblue;
+    padding:10px 40px;
+    margin:0 10px
+}
+
+.pay{
+    width:150px;
+    height:60px;
+    background-color: red;
+    float:right;
+}
+
+
+/*页面主体区域样式*/
+#main{
+}
+
+.first{
+    background-color: blue;
+    height:300px;
+}
+
+.first .ppt{
+    float:left;
+    width:750px;
+    height:300px;
+    background-color: red;
+}
+
+.first .notice{
+    float:right;
+    width:230px;
+    height:300px;
+    background-color: pink;
+}
+
+.notice li,.second .list li{
+    background-color:cyan;
+    height:30px;
+    margin:5px;
+}
+
+.second,.fifth,.sixth{
+    height:500px;
+    width:1000px;
+    background-color: darkgoldenrod;
+}
+
+
+.good{
+    float:left;
+    width:750px;
+    height:500px;
+    background-color: red;
+}
+
+.good ul{
+    height:500px
+}
+
+.good ul li{
+    width:33%;
+    height:33%;
+    background-color:bisque;
+    float:left;
+    border:1px solid black;
+}
+
+
+.list{
+    float:right;
+    width:230px;
+    height:500px;
+    background-color:yellowgreen;
+}
+
+.third{
+    height:150px;
+    background-color: red;
+}
+
+.third .cover{
+    width:140px;
+    height:150px;
+    background-color: purple;
+    float:left;
+}
+
+.third .fiction{
+    float:right;
+    width:800px;
+    height:150px;
+    background-color: aquamarine;
+}
+
+.fiction ul li{
+    width:150px;
+    height:150px;
+    background-color: green;
+    margin-left:10px;
+    float:right;
+}
+
+
+.forth,.seventh,.eighth{
+    background-color: brown;
+    overflow: hidden;
+}
+
+.forth>div,.seventh>div,.eighth>div{
+    float:left;
+    width:240px;
+    background-color: aqua;
+    margin:5px;
+}
+
+.forth>div>h3,.seventh>div>h3,.eighth>div>h3{
+    width:240px;
+    height:30px;
+    background-color: red;
+}
+
+.forth>div>p,.seventh>div>p,.eighth>div>p{
+    height:150px;
+    background-color: green;
+}
+
+.forth>div>ul>li,.seventh>div>ul>li,.eighth>div>ul>li{
+    height:30px;
+    margin:10px;
+    background-color: pink;
+}
+
+
+/*五区域*/
+
+.fifth .show,.sixth .show{
+    width:33%;
+    height:500px;
+    background-color: green;
+    float: left;
+}
+
+.fifth>.good>ul,.sixth>.good>ul{
+    width:67%;
+    float:right
+}
+
+.fifth>.good>ul>li,.sixth>.good>ul>li{
+    width:49%;
+}
+
+.fifth>.list>p,.sixth>.list>p{
+    height:150px;
+    background-color: blue;
+}
+/*六区域*/
+.sixth .list li{
+    height:30px;
+    margin:5px;
+    background-color: aquamarine;
+}
+
+/*页面底部区域样式*/
+#footer{
+    background-color: blue; 
+}
+
+.green{
+    height:100px;
+    background-color: aquamarine;
+}
+
+.flink{
+    height:80px;
+    background-color: antiquewhite;
+}
+
+.icp{
+    height:90px;
+    background-color: blue;
+}
+
+.report{
+    height:50px;
+    background-color: brown;
+}
+
+
+.ads{
+    width:150px;
+    height:200px;
+    background-color: black;
+    position: fixed;
+    right:10px;
+    bottom:10px;
+}
